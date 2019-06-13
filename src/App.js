@@ -828,109 +828,135 @@ class App extends Component {
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-7 text-center heading-section ftco-animate">
-                <span className="subheading">Blog</span>
-                <h2>Recent Blog</h2>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in
-                </p>
+                <span className="subheading">КОМАНДА ПРОЕКТА</span>
+                <h2>Команда проекта</h2>
+                <p>Исполнители проекта - КАРПОУ</p>
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-4 ftco-animate">
+            <div className="row justify-content-md-center">
+              <div className="col-md-4 text-center   ftco-animate">
                 <div className="blog-entry">
                   <a
                     href="blog-single.html"
                     className="block-20"
-                    style={{ backgroundImage: `url(${image_1})` }}
+                    style={{ backgroundImage: `url(${image_4})` }}
                   />
                   <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Серхио Лухан Мора</a>
+                    </h3>
                     <div className="meta mb-3">
                       <div>
-                        <a href="#">July 12, 2018</a>
-                      </div>
-                      <div>
-                        <a href="#">Admin</a>
-                      </div>
-                      <div>
-                        <a href="#" className="meta-chat">
-                          <span className="icon-chat" /> 3
-                        </a>
+                        <a href="#">международный эксперт</a>
                       </div>
                     </div>
-                    <h3 className="heading">
-                      <a href="#">
-                        Even the all-powerful Pointing has no control about the
-                        blind texts
-                      </a>
-                    </h3>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 ftco-animate">
-                <div className="blog-entry" data-aos-delay="100">
+              <div className="col-md-4 text-center ftco-animate">
+                <div className="blog-entry">
                   <a
                     href="blog-single.html"
                     className="block-20"
-                    style={{
-                      backgroundImage: `url(${image_2})`
-                    }}
+                    style={{ backgroundImage: `url(${image_5})` }}
                   />
-                  <div className="text p-4">
+                  <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Максат Абдыкапаров</a>
+                    </h3>
                     <div className="meta mb-3">
                       <div>
-                        <a href="#">July 12, 2018</a>
-                      </div>
-                      <div>
-                        <a href="#">Admin</a>
-                      </div>
-                      <div>
-                        <a href="#" className="meta-chat">
-                          <span className="icon-chat" /> 3
-                        </a>
+                        <a href="#">национальный эксперт</a>
                       </div>
                     </div>
-                    <h3 className="heading">
-                      <a href="#">
-                        Even the all-powerful Pointing has no control about the
-                        blind texts
-                      </a>
-                    </h3>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 ftco-animate">
-                <div className="blog-entry" data-aos-delay="200">
+            </div>
+            <div className="row justify-content-md-center">
+              <div className="col-md-3 text-center   ftco-animate">
+                <div className="blog-entry">
                   <a
                     href="blog-single.html"
                     className="block-20"
-                    style={{
-                      backgroundImage: `url(${image_3})`
-                    }}
+                    style={{ backgroundImage: `url(${image_4})` }}
                   />
-                  <div className="text p-4">
+                  <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Тимур Аманов </a>
+                    </h3>
                     <div className="meta mb-3">
                       <div>
-                        <a href="#">July 12, 2018</a>
-                      </div>
-                      <div>
-                        <a href="#">Admin</a>
-                      </div>
-                      <div>
-                        <a href="#" className="meta-chat">
-                          <span className="icon-chat" /> 3
-                        </a>
+                        <a href="#">Тренер</a>
                       </div>
                     </div>
-                    <h3 className="heading">
-                      <a href="#">
-                        Even the all-powerful Pointing has no control about the
-                        blind texts
-                      </a>
-                    </h3>
                   </div>
                 </div>
+              </div>
+              <div className="col-md-3 text-center   ftco-animate">
+                <div className="blog-entry">
+                  <a
+                    href="blog-single.html"
+                    className="block-20"
+                    style={{ backgroundImage: `url(${image_4})` }}
+                  />
+                  <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Кожоназар Рысбаев </a>
+                    </h3>
+                    <div className="meta mb-3">
+                      <div>
+                        <a href="#">Тренер</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 text-center   ftco-animate">
+                <div className="blog-entry">
+                  <a
+                    href="blog-single.html"
+                    className="block-20"
+                    style={{ backgroundImage: `url(${image_4})` }}
+                  />
+                  <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Элис Матиев</a>
+                    </h3>
+                    <div className="meta mb-3">
+                      <div>
+                        <a href="#">Тренер</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 text-center   ftco-animate">
+                <div className="blog-entry">
+                  <a
+                    href="blog-single.html"
+                    className="block-20"
+                    style={{ backgroundImage: `url(${image_4})` }}
+                  />
+                  <div className="text p-4 d-block">
+                    <h3 className="heading">
+                      <a href="#">Алмаз Жолдошбеков</a>
+                    </h3>
+                    <div className="meta mb-3">
+                      <div>
+                        <a href="#">Тренер</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-md-7 text-center heading-section ftco-animate">
+                <p style={{ margin: "1em 0 1em 0" }}>
+                  Также, большой вклад внесли волонтеры проекта с различных
+                  ВУЗов КР.
+                </p>
               </div>
             </div>
           </div>

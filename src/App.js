@@ -471,7 +471,7 @@ class App extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate">
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-3 d-flex justify-content-center mb-3">
@@ -495,7 +495,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate">
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-1 d-flex justify-content-center mb-3">
@@ -509,15 +509,18 @@ class App extends Component {
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
-                    <h3 className="heading">Design</h3>
+                    <h3 className="heading">Долгосрочная цель</h3>
                     <p>
-                      Even the all-powerful Pointing has no control about the
-                      blind texts it is an almost unorthographic.
+                      Внесение вклада в сокращение уровня безработицы, особенно
+                      среди таких социальных групп, как люди с особыми
+                      потребностями, и подготовка профессиональных работников,
+                      которые будут способствовать социально-экономическому
+                      развитию Кыргызской Республики.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate">
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-2 d-flex justify-content-center mb-3">
@@ -531,34 +534,12 @@ class App extends Component {
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
-                    <h3 className="heading">Development</h3>
+                    <h3 className="heading">Краткосрочная цель</h3>
                     <p>
-                      Even the all-powerful Pointing has no control about the
-                      blind texts it is an almost unorthographic.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-                <div className="media block-6 services d-block text-center">
-                  <div className="d-flex justify-content-center">
-                    <div className="icon color-4 d-flex justify-content-center mb-3">
-                      <span className="align-self-center icon-live_help" />
-                      <span>
-                        <FontAwesomeIcon
-                          icon={["fas", "question"]}
-                          className="align-self-center"
-                          size="3x"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <div className="media-body p-2 mt-3">
-                    <h3 className="heading">Help &amp; Supports</h3>
-                    <p>
-                      Even the all-powerful Pointing has no control about the
-                      blind texts it is an almost unorthographic.
+                      Продвижение обучения в сфере IT для людей с особыми
+                      потребностями и повышение их навыков для трудоустройства.
+                      Данный проект является первым в КР по обучению ЛОВЗ
+                      программированию.
                     </p>
                   </div>
                 </div>

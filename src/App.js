@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./App.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import image_1 from "./assets/img/image_1.jpg";
 import image_2 from "./assets/img/image_2.jpg";
@@ -24,18 +28,125 @@ import dashboard_full_1 from "./assets/img/dashboard_full_1.jpg";
 import dashboard_full_2 from "./assets/img/dashboard_full_2.jpg";
 import dashboard_full_3 from "./assets/img/dashboard_full_3.jpg";
 import loc from "./assets/img/loc.png";
+import eu from "./assets/img/27018.jpg";
+
+library.add(fab, fas);
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <nav
-          className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+          // className="navbar  navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light navbar-fixed-top"
+          className="navbar navbar-default navbar-expand-lg  ftco_navbar ftco-navbar-light navbar-fixed-top"
           id="ftco-navbar"
         >
           <div className="container">
-            <a className="navbar-brand" href="index.html">
+            {/* <a className="navbar-brand" href="index.html">
               KSSDA
+            </a> */}
+            <a class="navbar-brand" href="/">
+              <svg
+                id="logo_kssda"
+                width="73px"
+                height="30px"
+                viewBox="0 0 73 30"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xlink="http://www.w3.org/1999/xlink"
+              >
+                {/* <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch --> */}
+                <title>Logo</title>
+                <desc>Created with Sketch.</desc>
+                <defs />
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Kssda_logo"
+                    transform="translate(-104.000000, -98.000000)"
+                    fill="#FFFFFF"
+                  >
+                    <g id="Logo" transform="translate(104.000000, 98.000000)">
+                      <polygon
+                        id="Fill-147"
+                        points="27.7162025 8.52816456 72.4891139 8.52816456 72.4891139 6.39607595 27.7162025 6.39607595"
+                      />
+                      <polygon
+                        id="Fill-148"
+                        points="27.7162025 14.9242405 57.5650633 14.9242405 57.5650633 12.7921519 27.7162025 12.7921519"
+                      />
+                      <polygon
+                        id="Fill-149"
+                        points="8.52797468 10.6600633 27.7162025 10.6600633 27.7162025 8.52816456 8.52797468 8.52816456"
+                      />
+                      <polygon
+                        id="Fill-150"
+                        points="21.3201266 17.0561392 27.7162025 17.0561392 27.7162025 14.9242405 21.3201266 14.9242405"
+                      />
+                      <polygon
+                        id="Fill-151"
+                        points="10.6598734 29.8482911 27.7162025 29.8482911 27.7162025 27.7163924 10.6598734 27.7163924"
+                      />
+                      <polygon
+                        id="Fill-152"
+                        points="27.7162025 27.7163924 34.1122785 27.7163924 34.1122785 25.5843038 27.7162025 25.5843038"
+                      />
+                      <polygon
+                        id="Fill-153"
+                        points="0 23.4522152 27.7162025 23.4522152 27.7162025 21.3203165 0 21.3203165"
+                      />
+                      <polygon
+                        id="Fill-154"
+                        points="27.7162025 21.3203165 44.7723418 21.3203165 44.7723418 19.1882278 27.7162025 19.1882278"
+                      />
+                      <polygon
+                        id="Fill-155"
+                        points="27.7162025 2.13208861 63.96 2.13208861 63.96 0 27.7162025 0"
+                      />
+                      <polygon
+                        id="Fill-156"
+                        points="14.9240506 4.26398734 27.7162025 4.26398734 27.7162025 2.13208861 14.9240506 2.13208861"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              {/* <svg class="hidden" id="logo_kssda_color" width="73px" height="30px" viewBox="0 0 73 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+                <title>logo_color</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="logo_color">
+                        <polygon id="Fill-147" fill="#DA116F" points="27.7162025 8.52816456 72.4891139 8.52816456 72.4891139 6.39607595 27.7162025 6.39607595"></polygon>
+                        <polygon id="Fill-148" fill="#802C7C" points="27.7162025 14.9242405 57.5650633 14.9242405 57.5650633 12.7921519 27.7162025 12.7921519"></polygon>
+                        <polygon id="Fill-149" fill="#DA116F" points="8.52797468 10.6600633 27.7162025 10.6600633 27.7162025 8.52816456 8.52797468 8.52816456"></polygon>
+                        <polygon id="Fill-150" fill="#802C7C" points="21.3201266 17.0561392 27.7162025 17.0561392 27.7162025 14.9242405 21.3201266 14.9242405"></polygon>
+                        <polygon id="Fill-151" fill="#802C7C" points="10.6598734 29.8482911 27.7162025 29.8482911 27.7162025 27.7163924 10.6598734 27.7163924"></polygon>
+                        <polygon id="Fill-152" fill="#802C7C" points="27.7162025 27.7163924 34.1122785 27.7163924 34.1122785 25.5843038 27.7162025 25.5843038"></polygon>
+                        <polygon id="Fill-153" fill="#DA116F" points="0 23.4522152 27.7162025 23.4522152 27.7162025 21.3203165 0 21.3203165"></polygon>
+                        <polygon id="Fill-154" fill="#DA116F" points="27.7162025 21.3203165 44.7723418 21.3203165 44.7723418 19.1882278 27.7162025 19.1882278"></polygon>
+                        <polygon id="Fill-155" fill="#802C7C" points="27.7162025 2.13208861 63.96 2.13208861 63.96 0 27.7162025 0"></polygon>
+                        <polygon id="Fill-156" fill="#802C7C" points="14.9240506 4.26398734 27.7162025 4.26398734 27.7162025 2.13208861 14.9240506 2.13208861"></polygon>
+                    </g>
+                </g>
+            </svg> */}
+              <span style={{ fontSize: "0.8em", margin: "0 10px 0 10px" }}>
+                KSSDA
+              </span>
+              <img
+                style={{
+                  width: "4.2em",
+                  height: "2.2em"
+                }}
+                src={eu}
+              />
+              <div class="ripple-container" />
             </a>
             <button
               className="navbar-toggler"
@@ -46,61 +157,50 @@ class App extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="oi oi-menu" /> Menu
+              <FontAwesomeIcon
+                icon={["fas", "bars"]}
+                className="align-self-center"
+              />{" "}
+              Меню
             </button>
 
             <div className="collapse navbar-collapse" id="ftco-nav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
                   <a href="index.html" className="nav-link">
-                    Home
+                    О нас
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="about.html" className="nav-link">
-                    About
+                    Цели проекта
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="services.html" className="nav-link">
-                    Services
+                    Программа
                   </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="portfolio.html"
-                    id="dropdown04"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Portfolio
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="portfolio.html">
-                      Portfolio
-                    </a>
-                    <a className="dropdown-item" href="portfolio-single.html">
-                      Portfolio Single
-                    </a>
-                  </div>
                 </li>
                 <li className="nav-item">
                   <a href="blog.html" className="nav-link">
-                    Case Studies
+                    Галлерея
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="blog.html" className="nav-link">
+                    Отзывы
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="contact.html" className="nav-link">
-                    Contact
+                    Контакты
                   </a>
                 </li>
-                <li className="nav-item cta">
+                {/* <li className="nav-item cta">
                   <a href="contact.html" className="nav-link">
                     <span>Get in touch</span>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -123,6 +223,7 @@ class App extends Component {
                   data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
                 >
                   We love to create
+                  <br />
                   <strong>Beautiful</strong> websites
                 </h1>
                 <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
@@ -291,7 +392,11 @@ class App extends Component {
                     </div>
                   </div>
                 </div>
-
+                <FontAwesomeIcon
+                  icon={["fas", "lightbulb"]}
+                  className="align-self-center"
+                  size="3x"
+                />
                 <div className="col-md-3">
                   <a href="#" className="featured-img">
                     <div className="text-1 p-4 d-flex align-items-center">
@@ -358,7 +463,13 @@ class App extends Component {
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-3 d-flex justify-content-center mb-3">
-                      <span className="align-self-center icon-lightbulb-o" />
+                      <span>
+                        <FontAwesomeIcon
+                          icon={["fas", "lightbulb"]}
+                          className="align-self-center"
+                          size="3x"
+                        />
+                      </span>
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
@@ -374,7 +485,13 @@ class App extends Component {
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-1 d-flex justify-content-center mb-3">
-                      <span className="align-self-center icon-laptop" />
+                      <span>
+                        <FontAwesomeIcon
+                          icon={["fas", "laptop"]}
+                          className="align-self-center"
+                          size="3x"
+                        />
+                      </span>
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
@@ -390,7 +507,13 @@ class App extends Component {
                 <div className="media block-6 services d-block text-center">
                   <div className="d-flex justify-content-center">
                     <div className="icon color-2 d-flex justify-content-center mb-3">
-                      <span className="align-self-center icon-gear" />
+                      <span>
+                        <FontAwesomeIcon
+                          icon={["fas", "cog"]}
+                          className="align-self-center"
+                          size="3x"
+                        />
+                      </span>
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
@@ -408,6 +531,13 @@ class App extends Component {
                   <div className="d-flex justify-content-center">
                     <div className="icon color-4 d-flex justify-content-center mb-3">
                       <span className="align-self-center icon-live_help" />
+                      <span>
+                        <FontAwesomeIcon
+                          icon={["fas", "question"]}
+                          className="align-self-center"
+                          size="3x"
+                        />
+                      </span>
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
@@ -438,7 +568,9 @@ class App extends Component {
                     <div className="col-md-6">
                       <form action="#" className="subscribe-form">
                         <div className="form-group">
-                          <span className="icon icon-paper-plane" />
+                          <span className="icon icon-paper-plane">
+                            <FontAwesomeIcon icon={["fas", "paper-plane"]} />
+                          </span>
                           <input
                             type="text"
                             className="form-control"
@@ -955,17 +1087,23 @@ class App extends Component {
                   <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
                     <li className="ftco-animate">
                       <a href="#">
-                        <span className="icon-twitter  far fa-twitter" />
+                        <span className="icon-twitter">
+                          <FontAwesomeIcon icon={["fab", "twitter"]} />
+                        </span>
                       </a>
                     </li>
                     <li className="ftco-animate">
                       <a href="#">
-                        <span className="icon-facebook" />
+                        <span className="icon-facebook">
+                          <FontAwesomeIcon icon={["fab", "facebook"]} />
+                        </span>
                       </a>
                     </li>
                     <li className="ftco-animate">
                       <a href="#">
-                        <span className="icon-instagram" />
+                        <span className="icon-instagram">
+                          <FontAwesomeIcon icon={["fab", "instagram"]} />
+                        </span>
                       </a>
                     </li>
                   </ul>

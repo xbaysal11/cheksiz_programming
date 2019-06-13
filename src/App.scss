@@ -84,16 +84,23 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light {
-	background: transparent!important;
-	position: absolute;
+	// background: transparent!important;
+	@include gradient-background();
+	// position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 3;
-	top: 30px;
+	// top: 30px;
+	top: 0;
 	@include media-breakpoint-down(md) {
-		background: $black!important;
+		// background: $black!important;
+		// background: transparent!important;
+		@include gradient-background();
 		top: 0;
-		position: relative;
+		// position: relative;
+	position: fixed;
+
 	}
 
 	.navbar-brand {
@@ -104,8 +111,8 @@ h1, h2, h3, h4, h5,
 		> .nav-item {
 			> .nav-link {
 				font-size: 16px;
-				padding-top: .9rem;
-				padding-bottom: .9rem;
+				// padding-top: .9rem;
+				// padding-bottom: .9rem;
 				padding-left: 20px;
 				padding-right: 20px;
 				color: darken($white, 6%);

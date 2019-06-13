@@ -457,14 +457,16 @@ class App extends Component {
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-6 text-center heading-section ftco-animate">
-                <span className="subheading">Our Services</span>
+                <span className="subheading">ЦЕЛИ И ЗАДАЧИ ПРОЕКТА</span>
                 <h2 className="mb-4">
-                  Web &amp; Mobile app design, bring your ideas to life
+                  “Продвижение обучения в области IT для людей с особыми
+                  потребностями”
                 </h2>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in
+                  Проект “Продвижение обучения в области IT для людей с особыми
+                  потребностями” реализуется Кыргызской ассоциацией
+                  разработчиков программного обеспечения и услуг (КАРПОУ) и IT
+                  Академией при поддержке Европейского Союза.
                 </p>
               </div>
             </div>
@@ -483,10 +485,12 @@ class App extends Component {
                     </div>
                   </div>
                   <div className="media-body p-2 mt-3">
-                    <h3 className="heading">Strategy</h3>
+                    <h3 className="heading">Старт проекта</h3>
                     <p>
-                      Even the all-powerful Pointing has no control about the
-                      blind texts it is an almost unorthographic.
+                      Проект начал свою работу с января 2018 года, охватывает
+                      все регионы Кыргызстана и направлен на обучение навыков,
+                      востребованных на рынке труда для молодежи с особыми
+                      потребностями.
                     </p>
                   </div>
                 </div>

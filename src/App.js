@@ -222,9 +222,16 @@ class App extends Component {
                   className="mb-4"
                   data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
                 >
-                  We love to create
-                  <br />
-                  <strong>Beautiful</strong> websites
+                  В Кыргызстане{" "}
+                  <span className="text-highl">
+                    <strong> 28 200 тысячи</strong>
+                  </span>{" "}
+                  детей младше 18 лет с ограниченными возможностями здоровья, и
+                  только у{" "}
+                  <span className="text-highl">
+                    <strong>28%</strong>
+                  </span>{" "}
+                  из них есть доступ к образованию.
                 </h1>
                 <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                   <a
@@ -261,7 +268,6 @@ class App extends Component {
                         <div
                           className="user-img mr-3"
                           style={{
-                            // backgroundImage: "url('./assets/img/image_1.jpg');"
                             backgroundImage: `url(${image_1})`
                           }}
                         />
@@ -392,11 +398,6 @@ class App extends Component {
                     </div>
                   </div>
                 </div>
-                <FontAwesomeIcon
-                  icon={["fas", "lightbulb"]}
-                  className="align-self-center"
-                  size="3x"
-                />
                 <div className="col-md-3">
                   <a href="#" className="featured-img">
                     <div className="text-1 p-4 d-flex align-items-center">
@@ -426,17 +427,26 @@ class App extends Component {
               </div>
               <div className="row mt-5 d-flex justify-content-center">
                 <div className="col-md-8 text-center heading-section ftco-animate">
-                  <h2 className="h1">
-                    UI/UX, visual,
-                    <strong className="px-3">Web designer</strong> with more
-                    than 12 years of experience in designing websites and mobile
-                    apps.
-                  </h2>
-                  <p>
+                  <h1 className="h5">
+                    «Сфера образования - это одна из наших ключевых сфер, где мы
+                    сотрудничаем с правительством Кыргызстана. Это пилотный
+                    проект, такие нечасто реализуются даже на международном
+                    уровне. Мы задействованы в сфере образования, потому что это
+                    приносит свои плоды в будущем. Чем более общество
+                    образованное, тем лучше будет развиваться страна. Этот
+                    проект небольшой, но он имеет позитивный эффект и
+                    положительно влияет на участников. Они получили возможность
+                    использовать свой потенциал, чтобы изменить свою жизнь»{" "}
+                    <br />
+                    <span style={{ color: "#7B7B7B" }}>
+                      Посол Европейского Союза в КР, Эдуард Ауэр
+                    </span>
+                  </h1>
+                  {/* <p>
                     <a href="#" className="btn btn-primary mt-3 py-3 px-5">
                       Get in touch
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>

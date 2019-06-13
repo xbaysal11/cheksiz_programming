@@ -3,9 +3,9 @@
 @import "./assets/fonts/icomoon/icomoon.ttf";
 @import "../node_modules/owl.carousel/dist/assets/owl.carousel.css";
 @import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-$font-primary: 'Roboto', sans-serif;
+$font-primary: 'Montserrat', sans-serif;
 
 $white: #fff;
 $black: #404044;
@@ -19,6 +19,7 @@ $primary: #2E3192;
 $secondary: #1BFFFF;
 $tertiary: #29bae4;
 $quarternary: #79efb4;
+$fifternary: #db64ff;
 
 
 @mixin gradient-background(){
@@ -326,7 +327,7 @@ h1, h2, h3, h4, h5,
   	bottom: 0;
   	color: $white;
 	h1 {
-		font-size: 55px;
+		font-size: 40px;
 		color: $white;
 		line-height: 1.2;
 		font-weight: 200;
@@ -335,6 +336,9 @@ h1, h2, h3, h4, h5,
 		}
 		strong{
 			font-weight: 800;
+		}
+		.text-highl{
+			color:$primary!important;
 		}
 	}
 	p {

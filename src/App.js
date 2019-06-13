@@ -45,7 +45,7 @@ class App extends Component {
             {/* <a className="navbar-brand" href="index.html">
               KSSDA
             </a> */}
-            <a class="navbar-brand" href="/">
+            <a className="navbar-brand" href="/">
               <svg
                 id="logo_kssda"
                 width="73px"
@@ -62,9 +62,9 @@ class App extends Component {
                 <g
                   id="Page-1"
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 >
                   <g
                     id="Kssda_logo"
@@ -116,12 +116,12 @@ class App extends Component {
                   </g>
                 </g>
               </svg>
-              {/* <svg class="hidden" id="logo_kssda_color" width="73px" height="30px" viewBox="0 0 73 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              {/* <svg className="hidden" id="logo_kssda_color" width="73px" height="30px" viewBox="0 0 73 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
                 <title>logo_color</title>
                 <desc>Created with Sketch.</desc>
                 <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g id="logo_color">
                         <polygon id="Fill-147" fill="#DA116F" points="27.7162025 8.52816456 72.4891139 8.52816456 72.4891139 6.39607595 27.7162025 6.39607595"></polygon>
                         <polygon id="Fill-148" fill="#802C7C" points="27.7162025 14.9242405 57.5650633 14.9242405 57.5650633 12.7921519 27.7162025 12.7921519"></polygon>
@@ -146,7 +146,7 @@ class App extends Component {
                 }}
                 src={eu}
               />
-              <div class="ripple-container" />
+              <div className="ripple-container" />
             </a>
             <button
               className="navbar-toggler"
@@ -548,57 +548,25 @@ class App extends Component {
           </div>
         </section>
 
-        <section className="ftco-section-parallax">
-          <div className="parallax-img d-flex align-items-center">
-            <div className="container">
-              <div className="row d-flex justify-content-center">
-                <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                  <h2>Subcribe to our Newsletter</h2>
-                  <p>
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts. Separated they live in
-                  </p>
-                  <div className="row d-flex justify-content-center mt-5">
-                    <div className="col-md-6">
-                      <form action="#" className="subscribe-form">
-                        <div className="form-group">
-                          <span className="icon icon-paper-plane">
-                            <FontAwesomeIcon icon={["fas", "paper-plane"]} />
-                          </span>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter email address"
-                          />
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="ftco-section">
+        <section className="ftco-section ftco-section-members">
           <div className="container">
             <div className="row no-gutters justify-content-center mb-5 pb-5">
-              <div className="col-md-7 text-center heading-section ftco-animate">
-                <span className="subheading">Works</span>
+              <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <span className="subheading">УЧАСТНИКИ КУРСА</span>
                 <h2 className="mb-4">
-                  View our works below to see our design and way of development.
+                  В рамках Проекта 20 молодых лиц с особыми потребностями
+                  получили навыки.
                 </h2>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in
+                  В рамках Проекта 20 молодых лиц с особыми потребностями
+                  получили навыки, востребованные на рынке труда через
+                  краткосрочные курсы по разработке программного обеспечения.
                 </p>
               </div>
             </div>
-            <div className="row">
+            <div className="row justify-content-start">
               <div
-                className="block-3 d-md-flex ftco-animate"
+                className="block-3 d-flex  ftco-animate"
                 data-scrollax-parent="true"
               >
                 <a
@@ -608,93 +576,73 @@ class App extends Component {
                   data-scrollax=" properties: { translateY: '-20%'}"
                 />
                 <div className="text">
-                  <h4 className="subheading">Illustration</h4>
+                  <h4 className="subheading">Требования</h4>
                   <h2 className="heading">
-                    <a href="portfolio.html">
-                      Even the all-powerful Pointing has no control
-                    </a>
+                    <a href="portfolio.html">Требования</a>
                   </h2>
                   <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic life One day
-                    however a small line of blind text by the name of Lorem
-                    Ipsum decided to leave for the far World of Grammar.
-                  </p>
-                  <p>
-                    <a href="portfolio.html" className="btn btn-primary px-4">
-                      View Portfolio
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div
-                className="block-3 d-md-flex ftco-animate"
-                data-scrollax-parent="true"
-              >
-                <a
-                  href="portfolio.html"
-                  className="image image-2 order-2"
-                  style={{ backgroundImage: `url(${work_2})` }}
-                  data-scrollax=" properties: { translateY: '-20%'}"
-                />
-                <div className="text order-1">
-                  <h4 className="subheading">Application</h4>
-                  <h2 className="heading">
-                    <a href="portfolio.html">
-                      Even the all-powerful Pointing has no control
-                    </a>
-                  </h2>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic life One day
-                    however a small line of blind text by the name of Lorem
-                    Ipsum decided to leave for the far World of Grammar.
-                  </p>
-                  <p>
-                    <a href="portfolio.html" className="btn btn-primary px-4">
-                      View Portfolio
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div
-                className="block-3 d-md-flex ftco-animate"
-                data-scrollax-parent="true"
-              >
-                <a
-                  href="portfolio.html"
-                  className="image"
-                  style={{ backgroundImage: `url(${work_2})` }}
-                  data-scrollax=" properties: { translateY: '-20%'}"
-                />
-                <div className="text">
-                  <h4 className="subheading">Web Design</h4>
-                  <h2 className="heading">
-                    <a href="portfolio.html">
-                      Even the all-powerful Pointing has no control
-                    </a>
-                  </h2>
-                  <p>
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic life One day
-                    however a small line of blind text by the name of Lorem
-                    Ipsum decided to leave for the far World of Grammar.
-                  </p>
-                  <p>
-                    <a href="portfolio.html" className="btn btn-primary px-4">
-                      View Portfolio
-                    </a>
+                    Лица с особыми потребностями в возрасте от 15 до 30 лет.
+                    Жители всех регионов КР.
                   </p>
                 </div>
               </div>
             </div>
+            <div className="row justify-content-end">
+              <div
+                className="block-3 d-flex  ftco-animate"
+                data-scrollax-parent="true"
+              >
+                <div className="text">
+                  <h4 className="subheading">Этапы</h4>
+                  <h2 className="heading">
+                    <a href="portfolio.html">
+                      Все кандидаты прошли через 3 этапа отбора:
+                    </a>
+                  </h2>
+                  <p>
+                    онлайн-заявка <br />
+                    подача документов <br />
+                    интервью
+                  </p>
+                </div>
+                <a
+                  href="portfolio.html"
+                  className="image"
+                  style={{ backgroundImage: `url(${work_1})` }}
+                  data-scrollax=" properties: { translateY: '-20%'}"
+                />
+              </div>
+            </div>
             <div className="row">
-              <div className="col-md-12 text-center">
-                <span>
-                  <a href="#" className="btn btn-primary py-3 px-5">
-                    View All Projects
-                  </a>
-                </span>
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                <div className="block-18 text-center">
+                  <div className="text text-white">
+                    <strong className="number" data-number="400">
+                      116
+                    </strong>
+                    <span>Заявок</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                <div className="block-18 text-center">
+                  <div className="text text-white">
+                    <strong className="number" data-number="1000">
+                      35
+                    </strong>
+                    <span>Отобранных участников</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                <div className="block-18 text-center">
+                  <div className="text text-white">
+                    <strong className="number" data-number="8000">
+                      20
+                    </strong>
+                    <span>Выпускников проекта</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -830,57 +778,6 @@ class App extends Component {
                         <span className="position">System Analytics</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="ftco-section ftco-counter" id="section-counter">
-          <div className="container">
-            <div className="row justify-content-center mb-5 pb-5">
-              <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                <h2>Our achievements</h2>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div className="block-18 text-center">
-                  <div className="text">
-                    <strong className="number" data-number="400">
-                      0
-                    </strong>
-                    <span>
-                      Customers are satisfied with our professional support
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div className="block-18 text-center">
-                  <div className="text">
-                    <strong className="number" data-number="1000">
-                      0
-                    </strong>
-                    <span>Amazing preset options to be mixed and combined</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                <div className="block-18 text-center">
-                  <div className="text">
-                    <strong className="number" data-number="8000">
-                      0
-                    </strong>
-                    <span>
-                      Average response time on live chat support channel
-                    </span>
                   </div>
                 </div>
               </div>
@@ -1117,7 +1014,7 @@ class App extends Component {
               cy="24"
               r="22"
               fill="none"
-              stroke-width="4"
+              strokeWidth="4"
               stroke="#eeeeee"
             />
             <circle
@@ -1126,7 +1023,7 @@ class App extends Component {
               cy="24"
               r="22"
               fill="none"
-              stroke-width="4"
+              strokeWidth="4"
               stroke-miterlimit="10"
               stroke="#F96D00"
             />

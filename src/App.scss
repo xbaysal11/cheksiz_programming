@@ -571,7 +571,7 @@ h1, h2, h3, h4, h5,
 			right: 0;
 			opacity: 0;
 			height: 80px;
-			background: $white;
+			background: $white ;
 			// border: 1px solid lighten($black,70%);
 			border-top: none;
 			z-index: -1;
@@ -781,22 +781,30 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	.text {
+		
 		.subheading {
 			font-size: 13px;
 			text-transform: uppercase;
 			letter-spacing: .1em;
-			color: lighten($black,50%);
+			color: lighten($white,50%);
 		}
 		.heading {
 			font-size: 30px;
 			margin-bottom: 30px;
 			a{
-				color: $black;
+				color: $white;
 			}
 		}
 		p {
+			color: $white;
 			&:last-child {
 				margin-bottom: 0;
+			}
+			a{
+				color: $white;
+				&:hover{
+					color: $white;
+				}
 			}
 		}
 	}
@@ -1026,14 +1034,20 @@ textarea.form-control {
 	}
 }
 
-.ftco-animate {
-	// opacity: 0;
-	// visibility: hidden;
-	visibility: visible;
-}
-
 .bg-primary {
 	background: $primary!important;
+}
+.ftco-section-members{ 
+	@include gradient-background();
+	.text-white{
+
+	a{
+		color: $white;
+		&:hover{
+			color: $white;
+		}
+	}
+}
 }
 .ftco-section {
 	.ftco-sub-title {

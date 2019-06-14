@@ -1,8 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/variables";
-@import "./assets/fonts/icomoon/icomoon.ttf";
-@import "../node_modules/owl.carousel/dist/assets/owl.carousel.css";
-@import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 $font-primary: 'Montserrat', sans-serif;
@@ -379,6 +376,10 @@ h1, h2, h3, h4, h5,
 		}
 	}
 }
+.icon-quote-left{
+	color: $white;
+	font-size: 20px;
+}
 
 //OWL CAROUSEL
 .owl-carousel {
@@ -401,9 +402,9 @@ h1, h2, h3, h4, h5,
 			margin-top: -10px;
 			@include transition(.7s);
 			span {
-				&:before {
-					font-size: 40px;
-				}
+			color:$primary;
+
+				font-size: 100px;
 			}
 			opacity: 0;
 		}
@@ -415,7 +416,7 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	.owl-dots {
-		text-align: center;
+		text-align: center;	
 		.owl-dot {
 			width: 10px;
 			height: 10px;
@@ -425,6 +426,10 @@ h1, h2, h3, h4, h5,
 			&.active {
 				background: $secondary;
 			}
+			span{
+				display: none;
+
+			}
 		}
 	}
 	&:hover{
@@ -432,6 +437,7 @@ h1, h2, h3, h4, h5,
 			.owl-prev,
 			.owl-next{
 				opacity: 1;
+				background: none;
 			}
 			.owl-prev {
 				left: -20px;
@@ -442,22 +448,22 @@ h1, h2, h3, h4, h5,
 		}
 	}
 }
-.owl-custom-nav {
-	float: right;
-	position: relative;
-	z-index: 10;
-	border: 1px solid red;
-	.owl-custom-prev,
-	.owl-custom-next {
-		padding: 10px;
-		font-size: 30px;
-		background: #ccc;
-		line-height: 0;
-		width: 60px;
-		text-align: center;
-		display: inline-block;
-	}
-} 
+// .owl-custom-nav {
+// 	float: right;
+// 	position: relative;
+// 	z-index: 10;
+// 	border: 1px solid red;
+// 	.owl-custom-prev,
+// 	.owl-custom-next {
+// 		padding: 10px;
+// 		font-size: 30px;
+// 		// background: #ccc;
+// 		line-height: 0;
+// 		width: 60px;
+// 		text-align: center;
+// 		display: inline-block;
+// 	}
+// } 
 
 
 .bg-light {
@@ -1341,6 +1347,8 @@ textarea.form-control {
 	background: $white;
 	display: block;
 	position: relative;
+	font-size: 12px;
+
 	.user-img{
 		width: 100px;
 		height: 100px;
@@ -1364,11 +1372,11 @@ textarea.form-control {
 		font-weight: 500;
 		font-size: 16px;
 		margin-bottom: 0;
-		color: $secondary;
+		color: $primary;
 	}
 	.position{
 		font-size: 13px;
-		color: lighten($secondary, 10%);
+		color: lighten($primary, 10%);
 	}
 }
 

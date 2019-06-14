@@ -9,6 +9,7 @@ import Finance from "./Finance";
 import Team from "./Team";
 import Reviews from "./Reviews";
 import Program from "./Program";
+import Education from "./Education";
 
 export {
   Footer,
@@ -21,5 +22,6 @@ export {
   Finance,
   Team,
   Reviews,
-  Program
+  Program,
+  Education
 };

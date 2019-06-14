@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import image_1 from "../assets/img/image_1.jpg";
-import image_2 from "../assets/img/image_2.jpg";
-import image_3 from "../assets/img/image_3.jpg";
-import image_4 from "../assets/img/image_4.jpg";
-import image_5 from "../assets/img/image_5.jpg";
-import image_6 from "../assets/img/image_6.jpg";
-import person_1 from "../assets/img/person_1.jpg";
+import image_1 from "../assets/img/50605809_516659252155647_7538535789169213440_n.jpg";
+import image_2 from "../assets/img/38878078_429647717523468_2305239364445143040_o.jpg";
+import image_3 from "../assets/img/DSC_0040.JPG";
+import image_4 from "../assets/img/DSC_0018.JPG";
+import image_5 from "../assets/img/45099222_474542216367351_4772021030237503488_o.jpg";
+import image_6 from "../assets/img/DSC_0047.JPG";
+import person_1 from "../assets/img/DSC_0070.JPG";
 
 export default class AboutUs extends Component {
   render() {

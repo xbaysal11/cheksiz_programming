@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import work_1 from "../assets/img/work-1.jpg";
+import work_1 from "../assets/img/37367146_407467006408206_4380283471260549120_n.jpg";
+import work_2 from "../assets/img/38284453_421666701654903_3074187438420131840_n.jpg";
 
 export default class CourseMembers extends Component {
   render() {
@@ -65,7 +66,7 @@ export default class CourseMembers extends Component {
               <a
                 href="portfolio.html"
                 className="image"
-                style={{ backgroundImage: `url(${work_1})` }}
+                style={{ backgroundImage: `url(${work_2})` }}
                 data-scrollax=" properties: { translateY: '-20%'}"
               />
             </div>

@@ -35,7 +35,7 @@ export default class Home extends Component {
                   href="#"
                   className="btn btn-primary btn-outline-white px-5 py-3"
                 >
-                  Get in touch
+                  Поехали!
                 </a>
               </p>
             </div>

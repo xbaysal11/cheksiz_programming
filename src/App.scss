@@ -477,7 +477,10 @@ h1, h2, h3, h4, h5,
 	background: $primary;
 }
 
-
+.program-section{
+	background: $white;
+}
+ 
 //BUTTON
 .btn {
 	cursor: pointer;
@@ -489,7 +492,7 @@ h1, h2, h3, h4, h5,
 	&.btn-primary {
 		background: lighten($primary,25%);
 		border: 2px solid lighten($primary,25%);
-		color: $primary;
+		color: $white;
 		&:hover {
 			border: 2px solid $primary;
 			background: transparent;
@@ -767,6 +770,22 @@ h1, h2, h3, h4, h5,
 	.heading-section-white{
 		h2{
 			font-weight: 400 !important;
+		}
+	}
+}
+.ftco-section-program {
+	position: relative;
+	.parallax-img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		padding: 5em 0;
+	}
+	.heading-section-black{
+		h2{
+			font-weight: 400 !important;
+			color:$black; 
 		}
 	}
 }
@@ -1322,9 +1341,6 @@ textarea.form-control {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-
-
-
 
 
 //TESTIMONY

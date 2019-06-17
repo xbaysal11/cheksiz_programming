@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import Fade from "react-reveal/Fade";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -41,27 +42,28 @@ const Item = ({ img, text, autor, age }) => (
 export default class Reviews extends Component {
   render() {
     return (
-      <section className="ftco-section testimony-section bg-light">
-        <div className="container">
-          <div className="row justify-content-center mb-5 pb-5">
-            <div className="col-md-7 text-center heading-section ftco-animate">
-              <span className="subheading">ОТЗЫВЫ</span>
-              <h2 className="mb-4">ОТЗЫВЫ ВЫПУСКНИКОВ</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in
-              </p>
+      <Fade>
+        <section className="ftco-section testimony-section bg-light">
+          <div className="container">
+            <div className="row justify-content-center mb-5 pb-5">
+              <div className="col-md-7 text-center heading-section ftco-animate">
+                <span className="subheading">ОТЗЫВЫ</span>
+                <h2 className="mb-4">ОТЗЫВЫ ВЫПУСКНИКОВ</h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                  Separated they live in
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="row ftco-animate">
-            <div className="col-md-12">
-              <OwlCarousel className="owl-theme" loop margin={10} nav>
-                <Item
-                  autor="Омурбек Байышбеков"
-                  age="27 лет"
-                  img={person_1}
-                  text=" “До участия в проекте я работал учителем английского
+            <div className="row ftco-animate">
+              <div className="col-md-12">
+                <OwlCarousel className="owl-theme" loop margin={10} nav>
+                  <Item
+                    autor="Омурбек Байышбеков"
+                    age="27 лет"
+                    img={person_1}
+                    text=" “До участия в проекте я работал учителем английского
                         языка и не имел представления о программировании. Весной
                         2018 в инстаграме я прочитал объявление о запуске
                         проекта и подал заявку. Пройдя успешно 3 этапа отбора я
@@ -74,12 +76,12 @@ export default class Reviews extends Component {
                         барьеров. В свою очередь хочу искренне поблагодарить
                         Евросоюз за оказанную нам такую замечательную
                         поддержку.”"
-                />
-                <Item
-                  autor="Омурбек Байышбеков"
-                  age="24 года"
-                  img={person_1}
-                  text="  “Я с детства увлекалась компьютерами и после школы
+                  />
+                  <Item
+                    autor="Омурбек Байышбеков"
+                    age="24 года"
+                    img={person_1}
+                    text="  “Я с детства увлекалась компьютерами и после школы
                   хотела поступить на факультет компьютерной инженерии, но
                   родители были против, и в итоге я поступила в отделение
                   Международных отношений. Позже, по причине инвалидности
@@ -94,12 +96,12 @@ export default class Reviews extends Component {
                   можно заниматься, не выходя из дома. Также, оно дает
                   возможность создать что-то своими руками. Девушки также
                   могут успешно работать в этой сфере.”"
-                />
-                <Item
-                  autor="Мирбек кызы Айзат"
-                  age="27 лет"
-                  img={person_1}
-                  text='“Программирование не требует постоянного присутствия на
+                  />
+                  <Item
+                    autor="Мирбек кызы Айзат"
+                    age="27 лет"
+                    img={person_1}
+                    text='“Программирование не требует постоянного присутствия на
                   рабочем месте, это мне подходит. Также оно расширяет мой
                   кругозор — с каждым днем я получаю новые знания. При
                   поступлении в Академию мы сдавали тест. Это был мой
@@ -113,12 +115,13 @@ export default class Reviews extends Component {
                   "Родители верят в меня. Столько всего уже пройдено", — и
                   осталась. Сейчас я рада, что не поддалась трудностям в
                   начале пути.”'
-                />
-              </OwlCarousel>
+                  />
+                </OwlCarousel>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Fade>
     );
   }
 }

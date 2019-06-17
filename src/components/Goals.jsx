@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Fade from "react-reveal/Fade";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -33,37 +35,38 @@ const Item = ({ title, description, icon, color }) => (
 export default class Goals extends Component {
   render() {
     return (
-      <section className="ftco-section">
-        <div className="container">
-          <div className="row justify-content-center mb-5 pb-5">
-            <div className="col-md-6 text-center heading-section ftco-animate">
-              <span className="subheading">ЦЕЛИ И ЗАДАЧИ ПРОЕКТА</span>
-              <h2 className="mb-4">
-                “Продвижение обучения в области IT для людей с особыми
-                потребностями”
-              </h2>
-              <p>
-                Проект “Продвижение обучения в области IT для людей с особыми
-                потребностями” реализуется Кыргызской ассоциацией разработчиков
-                программного обеспечения и услуг (КАРПОУ) и IT Академией при
-                поддержке Европейского Союза.
-              </p>
+      <Fade>
+        <section className="ftco-section">
+          <div className="container">
+            <div className="row justify-content-center mb-5 pb-5">
+              <div className="col-md-6 text-center heading-section ftco-animate">
+                <span className="subheading">ЦЕЛИ И ЗАДАЧИ ПРОЕКТА</span>
+                <h2 className="mb-4">
+                  “Продвижение обучения в области IT для людей с особыми
+                  потребностями”
+                </h2>
+                <p>
+                  Проект “Продвижение обучения в области IT для людей с особыми
+                  потребностями” реализуется Кыргызской ассоциацией
+                  разработчиков программного обеспечения и услуг (КАРПОУ) и IT
+                  Академией при поддержке Европейского Союза.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="row">
-            <Item
-              title="Старт проекта"
-              description="Проект начал свою работу с января 2018 года, охватывает все
+            <div className="row">
+              <Item
+                title="Старт проекта"
+                description="Проект начал свою работу с января 2018 года, охватывает все
                     регионы Кыргызстана и направлен на обучение навыков,
                     востребованных на рынке труда для молодежи с особыми
                     потребностями.
 "
-              icon={["fas", "lightbulb"]}
-              color="1"
-            />
-            <Item
-              title="Долгосрочная цель"
-              description="
+                icon={["fas", "lightbulb"]}
+                color="1"
+              />
+              <Item
+                title="Долгосрочная цель"
+                description="
 Внесение вклада в сокращение уровня безработицы, особенно
                     среди таких социальных групп, как люди с особыми
                     потребностями, и подготовка профессиональных работников,
@@ -71,12 +74,12 @@ export default class Goals extends Component {
                     развитию Кыргызской Республики.
 
 "
-              icon={["fas", "laptop"]}
-              color="2"
-            />
-            <Item
-              title="Краткосрочная цель"
-              description="
+                icon={["fas", "laptop"]}
+                color="2"
+              />
+              <Item
+                title="Краткосрочная цель"
+                description="
 
                     Продвижение обучения в сфере IT для людей с особыми
                     потребностями и повышение их навыков для трудоустройства.
@@ -84,12 +87,13 @@ export default class Goals extends Component {
                     программированию.
                   
 "
-              icon={["fas", "cog"]}
-              color="3"
-            />
+                icon={["fas", "cog"]}
+                color="3"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Fade>
     );
   }
 }

@@ -53,7 +53,7 @@ export default class CourseMembers extends Component {
                     href="portfolio.html"
                     className="image"
                     style={{ backgroundImage: `url(${work_1})` }}
-                    data-scrollax=" properties: { translateY: '-20%'}"
+                    // data-scrollax=" properties: { translateY: '-20%'}"
                   />
                   <div className="text">
                     <h4 className="subheading">Требования</h4>
@@ -77,9 +77,7 @@ export default class CourseMembers extends Component {
                   <div className="text">
                     <h4 className="subheading">Этапы</h4>
                     <h2 className="heading">
-                      <a href="portfolio.html">
-                        Все кандидаты прошли через 3 этапа отбора:
-                      </a>
+                      <a href="#">Все кандидаты прошли через 3 этапа отбора:</a>
                     </h2>
                     <p>
                       онлайн-заявка <br />
@@ -88,10 +86,10 @@ export default class CourseMembers extends Component {
                     </p>
                   </div>
                   <a
-                    href="portfolio.html"
+                    href="#"
                     className="image"
                     style={{ backgroundImage: `url(${work_2})` }}
-                    data-scrollax=" properties: { translateY: '-20%'}"
+                    // data-scrollax=" properties: { translateY: '-20%'}"
                   />
                 </div>
               </div>

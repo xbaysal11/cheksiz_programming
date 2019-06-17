@@ -40,7 +40,7 @@ const Button = ({ categoryName, dataFilter }) => (
   <button
     type="button"
     data-filter={`${dataFilter}`}
-    style={{ width: "180px", margin: "25px 15px", padding: "8px 15px" }}
+    style={{ width: "180px", margin: "15px", padding: "8px 15px" }}
     className="btn btn-primary"
   >
     {categoryName}
@@ -85,7 +85,16 @@ export default class Gallery extends Component {
                     odio nihil a quod voluptates minima porro eligendi
                     reiciendis, voluptatibus nemo! Ex, tempora?
                   </p>
-                  <div className=" text-center">
+                  <div
+                    className=" text-center"
+                    style={{
+                      marginTop: "2em",
+                      paddingTop: "2em",
+                      borderTop: "1px solid white",
+                      width: "100%",
+                      textAlign: "center"
+                    }}
+                  >
                     <Button categoryName="All" dataFilter="all" />
                     {[GROUP1, GROUP2].map((_, idx) => (
                       <Button
@@ -123,6 +132,24 @@ export default class Gallery extends Component {
                         ))}
                     </div>
                   </div>
+                </div>
+                <div
+                  style={{
+                    marginTop: "2em",
+                    paddingTop: "2em",
+                    borderTop: "1px solid white",
+                    width: "100%",
+                    textAlign: "center"
+                  }}
+                >
+                  <iframe
+                    width="835"
+                    height="470"
+                    src="https://www.youtube-nocookie.com/embed/pg-t7gacdxg"
+                    frameborder="0"
+                    // allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  />
                 </div>
               </div>
             </div>

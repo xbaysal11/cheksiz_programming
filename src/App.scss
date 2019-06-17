@@ -470,8 +470,7 @@ h1, h2, h3, h4, h5,
 	background: #f8faff!important;
 }
 #bg-light-uniq{
-
-	margin-top: 47em;
+	margin-top: 53em;
 }
 .bg-primary{
 	background: $primary;
@@ -641,7 +640,7 @@ h1, h2, h3, h4, h5,
 .services{
 	.icon{
 		width: 90px;
-		height: 50px;
+		height: 54px;
 		position: relative;
 		&:before, &:after{
 			position: absolute;
@@ -672,9 +671,9 @@ h1, h2, h3, h4, h5,
 			}
 		}
 		&.color-2{
-			background: lighten($secondary, 25%);
+			background: $secondary;
 			span{
-				color: $secondary;
+				color: darken($secondary, 20%);
 			}
 			&:before{
 				top: -20px;
@@ -682,7 +681,7 @@ h1, h2, h3, h4, h5,
 				height: 0;
 				border-style: solid;
 				border-width: 0 45px 20px 45px;
-				border-color: transparent transparent lighten($secondary,25%) transparent;
+				border-color: transparent transparent $secondary transparent;
 			}
 			&:after{
 				bottom: -20px;
@@ -690,7 +689,7 @@ h1, h2, h3, h4, h5,
 				height: 0;
 				border-style: solid;
 				border-width: 20px 45px 0 45px;
-				border-color: lighten($secondary,25%) transparent transparent transparent;
+				border-color: $secondary transparent transparent transparent;
 			}
 		}
 		&.color-3{
@@ -1531,7 +1530,6 @@ textarea.form-control {
 }
 
 .block-6 {
-	margin-bottom: 40px;
 	.icon {
 		span {
 			&:before {

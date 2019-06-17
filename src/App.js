@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { LightgalleryProvider } from "react-lightgallery";
+
 import {
   Header,
   Footer,
@@ -11,7 +13,8 @@ import {
   Finance,
   Team,
   Reviews,
-  Program
+  Program,
+  Gallery
   // Education
 } from "./components";
 
@@ -21,18 +24,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Home />
-        <AboutUs />
-        <Goals />
-        <CourseMembers />
-        {/* <Education /> */}
-        <Methodic />
-        <Program />
-        <Finance />
-        <Team />
-        <Reviews />
-        <Footer />
+        <LightgalleryProvider>
+          <Header />
+          <Home />
+          <AboutUs />
+          <Goals />
+          <CourseMembers />
+          {/* <Education /> */}
+          <Methodic />
+          <Program />
+          <Finance />
+
+          <Gallery />
+          <Team />
+          <Reviews />
+          <Footer />
+        </LightgalleryProvider>
 
         {/* loader */}
         {/* <div id="ftco-loader" className="show fullscreen">

@@ -41,7 +41,7 @@ const Button = ({ categoryName, dataFilter }) => (
     type="button"
     data-filter={`${dataFilter}`}
     style={{ width: "180px", margin: "15px", padding: "8px 15px" }}
-    className="btn btn-primary"
+    className="btn btn-outline-white"
   >
     {categoryName}
   </button>

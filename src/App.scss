@@ -7,27 +7,22 @@ $font-primary: 'Montserrat', sans-serif;
 $white: #fff;
 $black: #404044;
 
-// $primary: #ee76ad;
-// $secondary: #efac78;
-// $tertiary: #29bae4;
-// $quarternary: #79efb4;
-
-$primary: #2E3192;
-$secondary: #1BFFFF;
+$primary: #0312CF ;
+$secondary:  #02A9E5;
 $tertiary: #29bae4;
 $quarternary: #79efb4;
-$fifternary: #db64ff;
+// $fifternary: #db64ff;
 
 
 @mixin gradient-background(){
-	background: #2E3192 ;
-	background: -moz-linear-gradient(45deg, #2E3192 0%,  #1BFFFF 100%);
-	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(238,118,173,1)), color-stop(100%,  #1BFFFF));
-	background: -webkit-linear-gradient(45deg, #2E3192  0%,  #1BFFFF 100%);
-	background: -o-linear-gradient(45deg, #2E3192 0%,  #1BFFFF 100%);
-	background: -ms-linear-gradient(45deg,#2E3192  0%,  #1BFFFF 100%);
-	background: linear-gradient(45deg, #2E3192 0%,  #1BFFFF 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E3192', endColorstr=' #1BFFFF', GradientType=1 );
+	background: $primary ;
+	background: -moz-linear-gradient(45deg, $primary 0%,  $secondary 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(238,118,173,1)), color-stop(100%,  $secondary));
+	background: -webkit-linear-gradient(45deg, $primary  0%,  $secondary 100%);
+	background: -o-linear-gradient(45deg, $primary 0%,  $secondary 100%);
+	background: -ms-linear-gradient(45deg,$primary  0%,  $secondary 100%);
+	background: linear-gradient(45deg, $primary 0%,  $secondary 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr=' $secondary', GradientType=1 );
 }
 
 @mixin border-radius($radius) {
@@ -335,7 +330,9 @@ h1, h2, h3, h4, h5,
 			font-weight: 800;
 		}
 		.text-highl{
-			color:$primary!important;
+			// color:$primary!important;
+			color:lighten($primary,25%)!important;
+
 		}
 	}
 	p {
@@ -489,8 +486,9 @@ h1, h2, h3, h4, h5,
 		outline: none;
 	}
 	&.btn-primary {
-		background: lighten($primary,25%);
-		border: 2px solid lighten($primary,25%);
+		background: lighten($primary,15%);
+		// background: $primary;
+		border: 2px solid lighten($primary,15%);
 		color: $white;
 		&:hover {
 			border: 2px solid $primary;
@@ -1534,18 +1532,26 @@ div.gallery {
 	position: absolute;
 	top: 0;
 	left: 0;
+	background: black;
+	display: inline-block;	
   }
   
-  div.gallery:hover {
+  div.gallery:hover img {
     -webkit-transform: scale(1.2);
- transform: scale(1.2);
+	transform: scale(1.2);
+	 opacity: 0.7;
   }
   
   div.gallery img {
+	display: block;
 	width: 100%;
 	height: auto;
-	// -webkit-transition: 0.6s ease;
-	transition: 100s ease;
+
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	 -ms-transition: all 0.5s linear;
+	  -o-transition: all 0.5s linear;
+		 transition: all 0.5s linear;
 
   }
   

@@ -113,7 +113,7 @@ export default class Gallery extends Component {
                             gallery_category={
                               m_state &&
                               m_state.activeFilter.selector === ".mix"
-                                ? "qwert  "
+                                ? "alls"
                                 : po.group
                             }
                             order="1"

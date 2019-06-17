@@ -44,13 +44,13 @@ export default class Team extends Component {
                 name="Серхио Лухан Мора"
                 img={person_4}
                 prof="Международный эксперт"
-                size="4"
+                size="3"
               />
               <Item
                 name="Максат Абдыкапаров"
                 img={person_4}
                 prof="Национальный эксперт"
-                size="4"
+                size="3"
               />
             </div>
             <div className="row justify-content-md-center">

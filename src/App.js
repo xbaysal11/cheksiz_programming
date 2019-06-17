@@ -34,7 +34,6 @@ class App extends Component {
           <Methodic />
           <Program />
           <Finance />
-
           <Gallery />
           <Team />
           <Reviews />

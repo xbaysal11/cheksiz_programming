@@ -1463,27 +1463,31 @@ textarea.form-control {
 
 //blocks 
 .block-20 {
+	text-align: center;
 	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	height: 350px;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
 	position: relative;
 	display: block;
+	margin:0 auto;
 }
 .blog-entry{
-	background: $white;
-	-webkit-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	-ms-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	-o-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	border: 1px solid lighten($black,71%);
+	// background: $white;
+	// -webkit-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
+	// -moz-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
+	// -ms-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
+	// -o-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
+	// box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
+	// border: 1px solid lighten($black,71%);
 	@include media-breakpoint-up(md){
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 	}
 	@include media-breakpoint-down(sm){
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 	}
 	.text {
 		position: relative;
@@ -1491,12 +1495,10 @@ textarea.form-control {
 		border-radius: 2px;
 		.heading {
 			font-size: 18px;
-			margin-bottom: 16px;
+			// margin-bottom: 16px;
 			a {
-				color: $black;
-				&:hover, &:focus, &:active {
-					color: $primary;
-				}
+				color: $primary;
+				font-weight: bold;
 			}
 		}
 		.meta-chat{
@@ -1511,13 +1513,13 @@ textarea.form-control {
 		> div {
 			display: inline-block;
 			margin-right: 5px;
-			margin-bottom: 5px;
+			// margin-bottom: 5px;
 			font-size: 15px;
 			a {
-				color: lighten($black, 40%);
+				color: $black;
 				font-size: 15px;
 				&:hover {
-					color: lighten($black, 80%);
+					// color: lighten($black, 80%);
 				}
 			}
 		}
@@ -1534,15 +1536,15 @@ div.gallery {
   
   div.gallery:hover {
 	// border: 1px solid #777;
-	
   }
   
   div.gallery img {
 	width: 100%;
 	height: auto;
+
 	&:hover{
 		width: 120%;
-		
+
 	}
   }
   

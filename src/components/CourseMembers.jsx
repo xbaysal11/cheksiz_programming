@@ -50,7 +50,7 @@ export default class CourseMembers extends Component {
                   data-scrollax-parent="true"
                 >
                   <a
-                    href="portfolio.html"
+                    href="#"
                     className="image"
                     style={{ backgroundImage: `url(${work_1})` }}
                     // data-scrollax=" properties: { translateY: '-20%'}"
@@ -58,7 +58,7 @@ export default class CourseMembers extends Component {
                   <div className="text">
                     <h4 className="subheading">Требования</h4>
                     <h2 className="heading">
-                      <a href="portfolio.html">Требования</a>
+                      <a href="#">Требования</a>
                     </h2>
                     <p>
                       Лица с особыми потребностями в возрасте от 15 до 30 лет.
@@ -77,7 +77,7 @@ export default class CourseMembers extends Component {
                   <div className="text">
                     <h4 className="subheading">Этапы</h4>
                     <h2 className="heading">
-                      <a href="#">Все кандидаты прошли через 3 этапа отбора:</a>
+                      <a href="#">3 этапа отбора:</a>
                     </h2>
                     <p>
                       онлайн-заявка <br />

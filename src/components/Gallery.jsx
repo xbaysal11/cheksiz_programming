@@ -73,7 +73,7 @@ export default class Gallery extends Component {
     }
     return (
       <Fade>
-        <section className="ftco-section-parallax">
+        <section id="gallery" className="ftco-section-parallax">
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">

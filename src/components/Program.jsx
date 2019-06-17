@@ -22,7 +22,7 @@ class Program extends Component {
   render() {
     return (
       <div>
-        <section className="ftco-section-program">
+        <section id="program" className="ftco-section-program">
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">

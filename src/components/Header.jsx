@@ -24,7 +24,7 @@ export default class Header extends Component {
             {/* <a className="navbar-brand" href="index.html">
               KSSDA
             </a> */}
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href="#">
               <svg
                 id="logo_kssda"
                 width="73px"
@@ -146,32 +146,32 @@ export default class Header extends Component {
             <div className="collapse navbar-collapse" id="ftco-nav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <a href="index.html" className="nav-link">
+                  <a href="#about-us" className="nav-link">
                     О нас
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="about.html" className="nav-link">
+                  <a href="#goals" className="nav-link">
                     Цели проекта
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="services.html" className="nav-link">
+                  <a href="#program" className="nav-link">
                     Программа
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="blog.html" className="nav-link">
-                    Галлерея
+                  <a href="#gallery" className="nav-link">
+                    Галерея
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="blog.html" className="nav-link">
+                  <a href="#reviews" className="nav-link">
                     Отзывы
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="contact.html" className="nav-link">
+                  <a href="#contacts" className="nav-link">
                     Контакты
                   </a>
                 </li>

@@ -14,7 +14,7 @@ export default class AboutUs extends Component {
   render() {
     return (
       <Fade>
-        <div id="bg-light-uniq" className="bg-light">
+        <div id="about-us" className="bg-light">
           <section className="ftco-section-featured ftco-animate">
             <div className="container-fluid" data-scrollax-parent="true">
               <div

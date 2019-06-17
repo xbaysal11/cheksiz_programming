@@ -15,7 +15,7 @@ export default class Footer extends Component {
   render() {
     return (
       <Fade>
-        <footer className="ftco-footer ftco-bg-dark ftco-section">
+        <footer id="contacts" className="ftco-footer ftco-bg-dark ftco-section">
           <div className="container">
             <div className="row mb-5">
               <div className="col-md">
@@ -125,32 +125,32 @@ export default class Footer extends Component {
                   <h2 className="ftco-heading-2">Cсылки</h2>
                   <ul className="list-unstyled">
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a href="#about-us" className="py-2 d-block">
                         О нас
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a href="#goals" className="py-2 d-block">
                         Цели проекта
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a href="#program" className="py-2 d-block">
                         Программа
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="py-2 d-block">
-                        Галлерея
+                      <a href="#gallery" className="py-2 d-block">
+                        Галерея
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a href="#reviews" className="py-2 d-block">
                         Отзывы
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a href="#contacts" className="py-2 d-block">
                         Контакты
                       </a>
                     </li>

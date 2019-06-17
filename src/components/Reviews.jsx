@@ -43,7 +43,10 @@ export default class Reviews extends Component {
   render() {
     return (
       <Fade>
-        <section className="ftco-section testimony-section bg-light">
+        <section
+          id="reviews"
+          className="ftco-section testimony-section bg-light"
+        >
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-7 text-center heading-section ftco-animate">

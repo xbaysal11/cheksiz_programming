@@ -42,6 +42,7 @@ $quarternary: #79efb4;
 
 html {
 	// overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 body {
 	font-family: $font-primary;
@@ -330,8 +331,8 @@ h1, h2, h3, h4, h5,
 			font-weight: 800;
 		}
 		.text-highl{
-			// color:$primary!important;
-			color:lighten($primary,25%)!important;
+			color:$primary!important;
+			// color:lighten($primary,25%)!important;
 
 		}
 	}
@@ -466,8 +467,8 @@ h1, h2, h3, h4, h5,
 .bg-light {
 	background: #f8faff!important;
 }
-#bg-light-uniq{
-	margin-top: 53em;
+#about-us{
+	margin-top: 55em;
 }
 .bg-primary{
 	background: $primary;
@@ -791,6 +792,7 @@ h1, h2, h3, h4, h5,
 
 //### .block-3
 .block-3 {
+	width: 90%;
 	@include media-breakpoint-up(md){
 		margin-bottom: 7em;
 	}

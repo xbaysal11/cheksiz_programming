@@ -1,12 +1,30 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import ReactOdometer from "react-odometerjs";
+import "odometer/themes/odometer-theme-default.css";
 
 import work_1 from "../assets/img/37367146_407467006408206_4380283471260549120_n.jpg";
 import work_2 from "../assets/img/38284453_421666701654903_3074187438420131840_n.jpg";
 
 export default class CourseMembers extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      requested: 0,
+      graduated: 0,
+      choosed: 0
+    };
+  }
+  componentDidMount() {
+    this.setState({ graduated: 20 });
+    this.setState({ choosed: 35 });
+    this.setState({ requested: 116 });
+  }
+
   render() {
+    const { requested, graduated, choosed } = this.state;
     return (
       <Fade>
         <section className="ftco-section ftco-section-members">
@@ -84,7 +102,7 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number" data-number="400">
-                      116
+                      <ReactOdometer value={requested} format="d" />
                     </strong>
                     <span>Заявок</span>
                   </div>
@@ -94,7 +112,7 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number" data-number="1000">
-                      35
+                      <ReactOdometer value={choosed} format="d" />
                     </strong>
                     <span>Отобранных участников</span>
                   </div>
@@ -104,7 +122,7 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number" data-number="8000">
-                      20
+                      <ReactOdometer value={graduated} format="d" />
                     </strong>
                     <span>Выпускников проекта</span>
                   </div>

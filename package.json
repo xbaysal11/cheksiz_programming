@@ -17,6 +17,7 @@
     "react-dom": "^16.8.6",
     "react-lightgallery": "^0.4.3",
     "react-modal": "^3.8.1",
+    "react-odometerjs": "^2.1.1",
     "react-owl-carousel": "^2.3.1",
     "react-responsive-modal": "^4.0.1",
     "react-reveal": "^1.2.2",

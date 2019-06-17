@@ -2,6 +2,28 @@ import React, { Component } from "react";
 
 import person_4 from "../assets/img/person_4.jpg";
 
+const Item = ({ name, img, prof, size }) => (
+  <div className={`col-md-${size} text-center   ftco-animate`}>
+    <div className="blog-entry">
+      <a
+        href="blog-single.html"
+        className="block-20"
+        style={{ backgroundImage: `url(${img})` }}
+      />
+      <div className="text p-4 d-block">
+        <h3 className="heading">
+          <a href="#">{name}</a>
+        </h3>
+        <div className="meta mb-3">
+          <div>
+            <a href="#">{prof}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export default class Team extends Component {
   render() {
     return (
@@ -15,122 +37,34 @@ export default class Team extends Component {
             </div>
           </div>
           <div className="row justify-content-md-center">
-            <div className="col-md-4 text-center   ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Серхио Лухан Мора</a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">международный эксперт</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 text-center ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Максат Абдыкапаров</a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">национальный эксперт</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Item
+              name="Серхио Лухан Мора"
+              img={person_4}
+              prof="Международный эксперт"
+              size="4"
+            />
+            <Item
+              name="Максат Абдыкапаров"
+              img={person_4}
+              prof="Национальный эксперт"
+              size="4"
+            />
           </div>
           <div className="row justify-content-md-center">
-            <div className="col-md-3 text-center   ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Тимур Аманов </a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">Тренер</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 text-center   ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Кожоназар Рысбаев </a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">Тренер</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 text-center   ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Элис Матиев</a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">Тренер</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-3 text-center   ftco-animate">
-              <div className="blog-entry">
-                <a
-                  href="blog-single.html"
-                  className="block-20"
-                  style={{ backgroundImage: `url(${person_4})` }}
-                />
-                <div className="text p-4 d-block">
-                  <h3 className="heading">
-                    <a href="#">Алмаз Жолдошбеков</a>
-                  </h3>
-                  <div className="meta mb-3">
-                    <div>
-                      <a href="#">Тренер</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Item name="Тимур Аманов " img={person_4} prof="Тренер" size="3" />
+            <Item
+              name="Кожоназар Рысбаев "
+              img={person_4}
+              prof="Тренер"
+              size="3"
+            />
+            <Item name="Элис Матиев" img={person_4} prof="Тренер" size="3" />
+            <Item
+              name="Алмаз Жолдошбеков"
+              img={person_4}
+              prof="Тренер"
+              size="3"
+            />
           </div>
           <div className="row justify-content-center">
             <div className="col-md-7 text-center heading-section ftco-animate">

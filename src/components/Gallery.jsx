@@ -2,7 +2,7 @@ import React, { Component, createRef } from "react";
 
 import Fade from "react-reveal/Fade";
 import mixitup from "mixitup";
-import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
+import { LightgalleryItem } from "react-lightgallery";
 
 // import "../../node_modules/lightgallery.js/dist/css/lightgallery.min.css";
 
@@ -40,7 +40,8 @@ const Button = ({ categoryName, dataFilter }) => (
   <button
     type="button"
     data-filter={`${dataFilter}`}
-    className="btn btn-primary mt-3 mb-3 py-1 px-3"
+    style={{ width: "180px", margin: "25px 15px", padding: "8px 15px" }}
+    className="btn btn-primary"
   >
     {categoryName}
   </button>
@@ -76,7 +77,7 @@ export default class Gallery extends Component {
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">
-                <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <div className="col-md-12 text-center heading-section heading-section-white ftco-animate">
                   <h2>Галерея</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -128,7 +129,6 @@ export default class Gallery extends Component {
           </div>
         </section>
       </Fade>
-      // </LightgalleryProvider>
     );
   }
 }

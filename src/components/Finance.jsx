@@ -10,7 +10,7 @@ export default class Finance extends Component {
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">
-                <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <div className="col-md-10 text-center heading-section heading-section-white ftco-animate">
                   <h2>ФИНАНСИРОВАНИЕ СТУДЕНТОВ</h2>
                   <p>
                     Следующие расходы на участие в проекте были покрыты за счет

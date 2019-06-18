@@ -39,7 +39,7 @@ export default class Goals extends Component {
         <section id="goals" className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
-              <div className="col-md-6 text-center heading-section ftco-animate">
+              <div className="col-md-8 text-center heading-section ftco-animate">
                 <span className="subheading">ЦЕЛИ И ЗАДАЧИ ПРОЕКТА</span>
                 <h2 className="mb-4">
                   “Продвижение обучения в области IT для людей с особыми

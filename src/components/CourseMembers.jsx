@@ -30,7 +30,7 @@ export default class CourseMembers extends Component {
         <section className="ftco-section ftco-section-members">
           <div className="container">
             <div className="row no-gutters justify-content-center mb-5 pb-5">
-              <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <div className="col-md-9 text-center heading-section heading-section-white ftco-animate">
                 <span className="subheading">УЧАСТНИКИ КУРСА</span>
                 <h2 className="mb-4">
                   В рамках Проекта 20 молодых лиц с особыми потребностями
@@ -61,8 +61,9 @@ export default class CourseMembers extends Component {
                       <a href="#">Требования</a>
                     </h2>
                     <p>
-                      Лица с особыми потребностями в возрасте от 15 до 30 лет.
-                      Жители всех регионов КР.
+                      ⚫ Лица с особыми потребностями в возрасте от 15 до 30
+                      лет.
+                      <br />⚫ Жители всех регионов КР.
                     </p>
                   </div>
                 </div>
@@ -80,9 +81,8 @@ export default class CourseMembers extends Component {
                       <a href="#">3 этапа отбора:</a>
                     </h2>
                     <p>
-                      онлайн-заявка <br />
-                      подача документов <br />
-                      интервью
+                      ⚫ Онлайн-заявка <br />
+                      ⚫ Подача документов <br />⚫ Интервью
                     </p>
                   </div>
                   <a

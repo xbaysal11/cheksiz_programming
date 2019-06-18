@@ -36,7 +36,7 @@ export default class Education extends Component {
         <section className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
-              <div className="col-md-6 text-center heading-section ftco-animate">
+              <div className="col-md-10 text-center heading-section ftco-animate">
                 <span className="subheading">ОБУЧЕНИЕ СТУДЕНТОВ</span>
                 <h2 className="mb-4">
                   Обучение для всех участников проходило с июля 2018 по январь
@@ -55,6 +55,7 @@ export default class Education extends Component {
                 <Item
                   title="Первый этап"
                   subtitle="июль 2018"
+                  // icon="❶"
                   icon={["fas", "cat"]}
                   text="Тренинг в г. Бишкек с использованием 17 адаптированных уроков, которые предусматривали подготовку в течение 2-х недель. Занятия проходили по 4-6 часов каждый день, кроме воскресенья. В конце каждой недели участники проходили предварительный тест на основе заданий тренеров."
                 />

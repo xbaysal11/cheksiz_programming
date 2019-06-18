@@ -145,9 +145,9 @@ export default class Gallery extends Component {
                   <iframe
                     width="835"
                     height="470"
-                    src="https://www.youtube-nocookie.com/embed/pg-t7gacdxg"
+                    src="https://www.youtube-nocookie.com/embed/fnNh66l7GRI"
                     frameborder="0"
-                    // allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   />
                 </div>

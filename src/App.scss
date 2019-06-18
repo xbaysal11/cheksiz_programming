@@ -1530,6 +1530,55 @@ textarea.form-control {
 	font-weight: bold;
 	align-self: center;
 }
+
+.vertical-timeline-element{
+	background: $white;
+	margin:1em 0;
+	
+	.svg-inline--fa.fa-w-16,.svg-inline--fa.fa-w-14,.svg-inline--fa.fa-w-18  {
+		width: 0.3em;
+	}
+	.vertical-timeline-element-content {
+		// background:$primary;
+		@include gradient-background();
+		box-shadow: 0 7px 20px -5px rgba(0,0,0,.2);	
+		h1,h2,h3,h4,h5,p{
+			color:$white;
+		font-size: 0.8em;
+
+		}
+		.vertical-timeline-element-subtitle{
+			color: darken($white,15%);
+			font-weight: 100;
+		}
+		.vertical-timeline-element-title{
+			font-weight: bold;
+		}
+		.vertical-timeline-element-text{
+			font-weight: 600;
+		}
+	}
+}
+
+@media only screen and (max-width: 1169px){
+	.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+		border-right: 7px solid $primary;
+	
+	}
+	.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(odd):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+		border-right: 7px solid $primary;
+		border-left: 7px solid $white !important;
+	
+	}
+}
+.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+	border-right: 7px solid $primary;
+
+}
+.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(odd):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+	border-left: 7px solid $secondary;
+
+}
 div.gallery {
 	position: absolute;
 	top: 0;

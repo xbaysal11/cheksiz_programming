@@ -145,7 +145,7 @@ export default class Header extends Component {
 
             <div className="collapse navbar-collapse" id="ftco-nav">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
+                <li className="nav-item ">
                   <a href="#about-us" className="nav-link">
                     О нас
                   </a>

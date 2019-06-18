@@ -14,8 +14,8 @@ import {
   Team,
   Reviews,
   Program,
-  Gallery
-  // Education
+  Gallery,
+  Education
 } from "./components";
 
 import "./App.scss";
@@ -30,7 +30,7 @@ class App extends Component {
           <AboutUs />
           <Goals />
           <CourseMembers />
-          {/* <Education /> */}
+          <Education />
           <Methodic />
           <Program />
           <Finance />

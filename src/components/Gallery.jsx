@@ -4,12 +4,6 @@ import Fade from "react-reveal/Fade";
 import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
 
-// import "../../node_modules/lightgallery.js/dist/css/lightgallery.min.css";
-
-// import image_1 from "../assets/img/50605809_516659252155647_7538535789169213440_n.jpg";
-// import image_2 from "../assets/img/38878078_429647717523468_2305239364445143040_o.jpg";
-// import image_3 from "../assets/img/DSC_0040.JPG";
-
 const GROUP1 = [
   "https://images.unsplash.com/flagged/photo-1551706646-9c816bfbff8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
   "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
@@ -95,14 +89,22 @@ export default class Gallery extends Component {
                       textAlign: "center"
                     }}
                   >
-                    <Button categoryName="All" dataFilter="all" />
-                    {[GROUP1, GROUP2].map((_, idx) => (
-                      <Button
-                        key={idx}
-                        categoryName={`Category ${idx}`}
-                        dataFilter={`.group_${idx}`}
-                      />
-                    ))}
+                    <Button categoryName="Все" dataFilter="all" />
+                    {[GROUP1, GROUP2].map((_, idx) =>
+                      idx === 0 ? (
+                        <Button
+                          key={idx}
+                          categoryName={`И-К, сентябрь 2018`}
+                          dataFilter={`.group_${idx}`}
+                        />
+                      ) : (
+                        <Button
+                          key={idx}
+                          categoryName={`Бишкек, июль 2018`}
+                          dataFilter={`.group_${idx}`}
+                        />
+                      )
+                    )}
 
                     <div ref={this.mix_container} className="container-gallery">
                       {[GROUP1, GROUP2]

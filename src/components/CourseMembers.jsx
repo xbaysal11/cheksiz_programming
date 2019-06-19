@@ -99,7 +99,7 @@ export default class CourseMembers extends Component {
               <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                 <div className="block-18 text-center">
                   <div className="text text-white">
-                    <strong className="number" data-number="400">
+                    <strong className="number">
                       <ReactOdometer value={requested} format="d" />
                     </strong>
                     <span>Заявок</span>
@@ -109,7 +109,7 @@ export default class CourseMembers extends Component {
               <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                 <div className="block-18 text-center">
                   <div className="text text-white">
-                    <strong className="number" data-number="1000">
+                    <strong className="number">
                       <ReactOdometer value={choosed} format="d" />
                     </strong>
                     <span>Отобранных участников</span>
@@ -119,7 +119,7 @@ export default class CourseMembers extends Component {
               <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                 <div className="block-18 text-center">
                   <div className="text text-white">
-                    <strong className="number" data-number="8000">
+                    <strong className="number">
                       <ReactOdometer value={graduated} format="d" />
                     </strong>
                     <span>Выпускников проекта</span>

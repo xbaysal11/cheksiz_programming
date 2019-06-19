@@ -8,7 +8,36 @@ import image_3 from "../assets/img/DSC_0040.JPG";
 import image_4 from "../assets/img/DSC_0018.JPG";
 import image_5 from "../assets/img/45099222_474542216367351_4772021030237503488_o.jpg";
 import image_6 from "../assets/img/DSC_0047.JPG";
-import person_1 from "../assets/img/DSC_0070.JPG";
+// import person_1 from "../assets/img/DSC_0070.JPG";
+
+const PhotoItem = ({ img, size }) => (
+  <div className={`col-md-${size}`}>
+    <div className="featured-img">
+      {/* <div className="text-1 p-4 d-flex align-items-center">
+      <h3>
+        Racks
+        <br />
+        <span className="tag">Website</span>
+      </h3>
+    </div> */}
+      <img src={img} className="img-fluid" alt="" />
+      {/* <div className="text p-4 d-flex align-items-center">
+      <div className="user d-flex align-items-center">
+        <div
+          className="user-img mr-3"
+          style={{
+            backgroundImage: `url(${person_1})`
+          }}
+        />
+        <h3>
+          John Bruce <br />
+          <span className="position">Designer</span>
+        </h3>
+      </div>
+    </div> */}
+    </div>
+  </div>
+);
 
 export default class AboutUs extends Component {
   render() {
@@ -21,177 +50,25 @@ export default class AboutUs extends Component {
                 className="row no-gutters d-flex align-items-center"
                 data-scrollax=" properties: { translateY: '-30%'}"
               >
-                <div className="col-md-3 mb-3">
-                  <a href="#" className="featured-img">
-                    <div className="text-1 p-4 d-flex align-items-center">
-                      <h3>
-                        The Verge
-                        <br />
-                        <span className="tag">Website</span>
-                      </h3>
-                    </div>
-                    <img src={image_1} className="img-fluid" alt="" />
-                    <div className="text p-4 d-flex align-items-center">
-                      <div className="user d-flex align-items-center">
-                        <div
-                          className="user-img mr-3"
-                          style={{
-                            backgroundImage: `url(${image_1})`
-                          }}
-                        />
-                        <h3>
-                          John Bruce <br />
-                          <span className="position">Designer</span>
-                        </h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
+                <PhotoItem img={image_1} size="3 mb-3" />
                 <div className="col-md-6">
                   <div className="row no-gutters">
                     <div className="col-md-12">
                       <div className="row no-gutters d-flex align-items-end">
-                        <div className="col-md-8">
-                          <a href="#" className="featured-img">
-                            <div className="text-1 p-4 d-flex align-items-center">
-                              <h3>
-                                Racks
-                                <br />
-                                <span className="tag">Website</span>
-                              </h3>
-                            </div>
-                            <img src={image_5} className="img-fluid" alt="" />
-                            <div className="text p-4 d-flex align-items-center">
-                              <div className="user d-flex align-items-center">
-                                <div
-                                  className="user-img mr-3"
-                                  style={{
-                                    backgroundImage: `url(${person_1})`
-                                  }}
-                                />
-                                <h3>
-                                  John Bruce <br />
-                                  <span className="position">Designer</span>
-                                </h3>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div className="col-md-4">
-                          <a href="#" className="featured-img">
-                            <div className="text-1 p-4 d-flex align-items-center">
-                              <h3>
-                                Zendesk
-                                <br />
-                                <span className="tag">Website</span>
-                              </h3>
-                            </div>
-                            <img src={image_4} className="img-fluid" alt="" />
-                            <div className="text p-4 d-flex align-items-center">
-                              <div className="user d-flex align-items-center">
-                                <div
-                                  className="user-img mr-3"
-                                  style={{
-                                    backgroundImage: `url(${person_1})`
-                                  }}
-                                />
-                                <h3>
-                                  John Bruce <br />
-                                  <span className="position">Designer</span>
-                                </h3>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
+                        <PhotoItem img={image_5} size={8} />
+                        <PhotoItem img={image_4} size={4} />
                       </div>
                     </div>
 
                     <div className="col-md-12">
                       <div className="row no-gutters d-flex align-items-start">
-                        <div className="col-md-8">
-                          <a href="#" className="featured-img">
-                            <div className="text-1 p-4 d-flex align-items-center">
-                              <h3>
-                                Curator
-                                <br />
-                                <span className="tag">Website</span>
-                              </h3>
-                            </div>
-                            <img src={image_6} className="img-fluid" alt="" />
-                            <div className="text p-4 d-flex align-items-center">
-                              <div className="user d-flex align-items-center">
-                                <div
-                                  className="user-img mr-3"
-                                  style={{
-                                    backgroundImage: `url(${person_1})`
-                                  }}
-                                />
-                                <h3>
-                                  John Bruce <br />
-                                  <span className="position">Designer</span>
-                                </h3>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="col-md-4">
-                          <a href="#" className="featured-img">
-                            <div className="text-1 p-4 d-flex align-items-center">
-                              <h3>
-                                Tasty
-                                <br />
-                                <span className="tag">Website</span>
-                              </h3>
-                            </div>
-                            <img src={image_3} className="img-fluid" alt="" />
-                            <div className="text p-4 d-flex align-items-center">
-                              <div className="user d-flex align-items-center">
-                                <div
-                                  className="user-img mr-3"
-                                  style={{
-                                    backgroundImage: `url(${person_1})`
-                                  }}
-                                />
-                                <h3>
-                                  John Bruce <br />
-                                  <span className="position">Designer</span>
-                                </h3>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
+                        <PhotoItem img={image_6} size={8} />
+                        <PhotoItem img={image_3} size={4} />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-3">
-                  <a href="#" className="featured-img">
-                    <div className="text-1 p-4 d-flex align-items-center">
-                      <h3>
-                        Voyage
-                        <br />
-                        <span className="tag">Website</span>
-                      </h3>
-                    </div>
-                    <img src={image_2} className="img-fluid" alt="" />
-                    <div className="text p-4 d-flex align-items-center">
-                      <div className="user d-flex align-items-center">
-                        <div
-                          className="user-img mr-3"
-                          style={{
-                            backgroundImage: `url(${person_1})`
-                          }}
-                        />
-                        <h3>
-                          John Bruce <br />
-                          <span className="position">Designer</span>
-                        </h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                <PhotoItem img={image_2} size={3} />
               </div>
               <div className="row mt-5 d-flex justify-content-center">
                 <div className="col-md-8 text-center heading-section ftco-animate">
@@ -210,11 +87,6 @@ export default class AboutUs extends Component {
                       Посол Европейского Союза в КР, Эдуард Ауэр
                     </span>
                   </h1>
-                  {/* <p>
-                    <a href="#" className="btn btn-primary mt-3 py-3 px-5">
-                      Get in touch
-                    </a>
-                  </p> */}
                 </div>
               </div>
             </div>

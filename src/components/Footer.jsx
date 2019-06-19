@@ -162,7 +162,11 @@ export default class Footer extends Component {
                   <h2 className="ftco-heading-2">Контакты</h2>
                   <ul className="list-unstyled">
                     <li>
-                      <a href="#" className="py-2 d-block">
+                      <a
+                        href="mailto:office.kssda@gmail.com"
+                        className="py-2 d-block"
+                        target="_blank"
+                      >
                         office.kssda@gmail.com
                       </a>
                     </li>
@@ -174,14 +178,20 @@ export default class Footer extends Component {
                   <h2 className="ftco-heading-2">Социальные сети</h2>
                   <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
                     <li className="ftco-animate">
-                      <a href="#">
+                      <a
+                        href="https://www.facebook.com/CheksizProgramming/"
+                        target="_blank"
+                      >
                         <span className="icon-facebook">
                           <FontAwesomeIcon icon={["fab", "facebook"]} />
                         </span>
                       </a>
                     </li>
                     <li className="ftco-animate">
-                      <a href="#">
+                      <a
+                        href="https://www.instagram.com/cheksizprogrammingkg/"
+                        target="_blank"
+                      >
                         <span className="icon-instagram">
                           <FontAwesomeIcon icon={["fab", "instagram"]} />
                         </span>

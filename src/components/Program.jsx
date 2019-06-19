@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import Modal from "react-responsive-modal";
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
-
 class Program extends Component {
   state = {
     open: false
@@ -36,7 +31,7 @@ class Program extends Component {
                     <a
                       href="#"
                       onClick={this.onOpenModal}
-                      class="btn btn-primary mt-3 py-3 px-5"
+                      className="btn btn-primary mt-3 py-3 px-5"
                     >
                       ПРОГРАММА КУРСА
                     </a>

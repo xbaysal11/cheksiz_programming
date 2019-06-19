@@ -1495,11 +1495,8 @@ textarea.form-control {
 		border-radius: 2px;
 		.heading {
 			font-size: 18px;
-			// margin-bottom: 16px;
-			a {
-				color: $primary;
-				font-weight: bold;
-			}
+			color: $primary;
+			font-weight: 700;
 		}
 		.meta-chat{
 			color: lighten($black, 40%);
@@ -1530,6 +1527,64 @@ textarea.form-control {
 	font-weight: bold;
 	align-self: center;
 }
+
+.promos {
+	width: 100%;
+	margin: 0 auto;
+
+	// margin-top: 50px;
+  }
+  .promo {
+	width: 19%;
+	height: 100%;
+	margin: 0 5px;
+	// background: $primary;
+	@include gradient-background();	
+	color: $white;
+	font-size: 0.8em!important;
+
+	float: left;
+  }
+  .deal {
+	padding: 10px 0 0 0;
+  }
+  .deal span {
+	display: block;
+	text-align: center;
+  }
+  .deal span:first-of-type {
+	font-size: 1.5em; 
+	font-weight: 600; 
+  }
+  .deal span:last-of-type {
+	font-size: 13px;
+  }
+  .promo .price {
+	display: block;
+	height: 90px;
+	background:$primary;
+	// background: darken($primary,3%);
+	// @include gradient-background();	
+	margin: 15px 0 10px 0;
+	text-align: center;
+	font-size: 1.4em;
+	padding: 12px 3px;
+  }
+  .promos ul {
+	display: block;
+	margin: 20px 0 10px 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+  }
+  .promos li {
+	display: block;
+	margin: 10px 0 0 0;
+  }
+  .scale {
+	transform: scale(1.2);
+	box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
+  }
 
 .vertical-timeline-element{
 	background: $white;

@@ -12,8 +12,22 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, fas);
-
-const Item = ({ date, title, subtitle, icon, text }) => (
+const TableItem = ({ title, subtitle, date, location, scale }) => (
+  <div className={` promo ${scale}`}>
+    <div className="deal">
+      <span>{title}</span>
+      <span>{date}</span>
+    </div>
+    <span className="price">{subtitle}</span>
+    <ul className="features">
+      <li>
+        <FontAwesomeIcon icon={["fas", "map-marker-alt"]} size="1x" />{" "}
+        {location}
+      </li>
+    </ul>
+  </div>
+);
+const StepItem = ({ date, title, subtitle, icon, text }) => (
   <VerticalTimelineElement
     className="vertical-timeline-element"
     date={date}
@@ -51,29 +65,63 @@ export default class Education extends Component {
               </div>
             </div>
             <div className="row">
+              <div className="promos col-md-12">
+                <TableItem
+                  title="Первый Этап"
+                  date="2 недели в июле"
+                  subtitle="Обучение в группах"
+                  location="г. Бишкек, КТУ “Манас”"
+                />
+                <TableItem
+                  title="Второй Этап"
+                  date="июль-сентябрь"
+                  subtitle="Дистанционное обучение"
+                  location="Удаленно"
+                />
+                <TableItem
+                  title="Третий Этап"
+                  date="2 недели в сентябре"
+                  subtitle="Обучение в группах"
+                  location="Иссык-Куль, лагерь “Жетиген”"
+                />
+                <TableItem
+                  title="Четвертый Этап"
+                  date="октябрь-ноябрь"
+                  subtitle="Дистанционное обучение"
+                  location="Удаленно"
+                />
+                <TableItem
+                  title="Пятый Этап"
+                  date="1 неделя в декабре"
+                  subtitle={"Обучение в группах \u000A и экзамены"}
+                  location="г. Бишкек, отель “Bridges”"
+                />
+              </div>
+            </div>
+            <div className="row">
               <VerticalTimeline>
-                <Item
+                <StepItem
                   title="Первый этап"
                   subtitle="июль 2018"
                   // icon="❶"
                   icon={["fas", "cat"]}
                   text="Тренинг в г. Бишкек с использованием 17 адаптированных уроков, которые предусматривали подготовку в течение 2-х недель. Занятия проходили по 4-6 часов каждый день, кроме воскресенья. В конце каждой недели участники проходили предварительный тест на основе заданий тренеров."
                 />
-                <Item
+                <StepItem
                   title="Второй этап"
                   subtitle="июль-сентябрь 2018"
                   // date="date"
                   icon={["fas", "horse"]}
                   text="Был предназначен для дистанционного обучения на дому участников или их рабочих местах в течение периода до сентября. За этот период участникам необходимо было начать работу над выпускным проектом. В течение этого периода все студенты работали онлайн с тренерами и командой IT-Академии."
                 />
-                <Item
+                <StepItem
                   title="Третий этап"
                   subtitle="сентябрь 2018"
                   // date="date"
                   icon={["fas", "dove"]}
                   text="Обучение в течение 2-х недель на базе лагеря Жетиген на Иссык-Куле с использованием 21 адаптированного урока."
                 />
-                <Item
+                <StepItem
                   title="Четвертый этап"
                   subtitle="октябрь-декабрь 2018"
                   // date="date"
@@ -81,7 +129,7 @@ export default class Education extends Component {
                   text="Был посвящен дистанционному обучению в течение периода до декабря.
                   "
                 />
-                <Item
+                <StepItem
                   title="Пятый этап"
                   subtitle="январь 2019"
                   // date="date"

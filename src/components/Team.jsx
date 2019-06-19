@@ -7,18 +7,14 @@ import person_4 from "../assets/img/person_4.jpg";
 const Item = ({ name, img, prof, size }) => (
   <div className={`col-md-${size} text-center   ftco-animate`}>
     <div className="blog-entry">
-      <a
-        href="blog-single.html"
-        className="block-20"
-        style={{ backgroundImage: `url(${img})` }}
-      />
+      <div className="block-20" style={{ backgroundImage: `url(${img})` }} />
       <div className="text p-4 d-block">
         <h3 className="heading">
-          <a href="#">{name}</a>
+          <div href="#">{name}</div>
         </h3>
         <div className="meta mb-3">
           <div>
-            <a href="#">{prof}</a>
+            <div href="#">{prof}</div>
           </div>
         </div>
       </div>

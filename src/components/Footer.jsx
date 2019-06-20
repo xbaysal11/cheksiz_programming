@@ -109,6 +109,7 @@ export default class Footer extends Component {
                           height: "2.2em"
                         }}
                         src={eu}
+                        alt=""
                       />
                       <div className="ripple-container" />
                     </a>
@@ -166,6 +167,7 @@ export default class Footer extends Component {
                         href="mailto:office.kssda@gmail.com"
                         className="py-2 d-block"
                         target="_blank"
+                        rel="noreferrer noopener"
                       >
                         office.kssda@gmail.com
                       </a>
@@ -181,6 +183,7 @@ export default class Footer extends Component {
                       <a
                         href="https://www.facebook.com/CheksizProgramming/"
                         target="_blank"
+                        rel="noreferrer noopener"
                       >
                         <span className="icon-facebook">
                           <FontAwesomeIcon icon={["fab", "facebook"]} />
@@ -191,6 +194,7 @@ export default class Footer extends Component {
                       <a
                         href="https://www.instagram.com/cheksizprogrammingkg/"
                         target="_blank"
+                        rel="noreferrer noopener"
                       >
                         <span className="icon-instagram">
                           <FontAwesomeIcon icon={["fab", "instagram"]} />

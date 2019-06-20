@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -43,98 +45,92 @@ const StepItem = ({ date, title, subtitle, icon, text }) => (
   </VerticalTimelineElement>
 );
 
-export default class Education extends Component {
+class Education extends Component {
   render() {
+    const { t } = this.props;
+
     return (
       <Fade>
         <section className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-10 text-center heading-section ftco-animate">
-                <span className="subheading">ОБУЧЕНИЕ СТУДЕНТОВ</span>
-                <h2 className="mb-4">
-                  Обучение для всех участников проходило с июля 2018 по январь
-                  2019 г. по следующему графику:
-                </h2>
-                <p>
-                  Проект “Продвижение обучения в области IT для людей с особыми
-                  потребностями” реализуется Кыргызской ассоциацией
-                  разработчиков программного обеспечения и услуг (КАРПОУ) и IT
-                  Академией при поддержке Европейского Союза.
-                </p>
+                <span className="subheading">{t("Education Subheading")}</span>
+                <h2 className="mb-4">{t("Education Title")}</h2>
+                <p>{t("Education Description")}</p>
               </div>
             </div>
+            {/* {t("")} */}
             <div className="row">
               <div className="promos col-md-12">
                 <TableItem
-                  title="Первый Этап"
-                  date="2 недели в июле"
-                  subtitle="Обучение в группах"
-                  location="г. Бишкек, КТУ “Манас”"
+                  title={t("Education Stage1 Title")}
+                  date={t("Education Stage1 Date")}
+                  subtitle={t("Education Stage1 Subtitle")}
+                  location={t("Education Stage1 location")}
                 />
                 <TableItem
-                  title="Второй Этап"
-                  date="июль-сентябрь"
-                  subtitle="Дистанционное обучение"
-                  location="Удаленно"
+                  title={t("Education Stage2 Title")}
+                  date={t("Education Stage2 Date")}
+                  subtitle={t("Education Stage2 Subtitle")}
+                  location={t("Education Stage2 location")}
                 />
                 <TableItem
-                  title="Третий Этап"
-                  date="2 недели в сентябре"
-                  subtitle="Обучение в группах"
-                  location="Иссык-Куль, лагерь “Жетиген”"
+                  title={t("Education Stage3 Title")}
+                  date={t("Education Stage3 Date")}
+                  subtitle={t("Education Stage3 Subtitle")}
+                  location={t("Education Stage3 location")}
                 />
                 <TableItem
-                  title="Четвертый Этап"
-                  date="октябрь-ноябрь"
-                  subtitle="Дистанционное обучение"
-                  location="Удаленно"
+                  title={t("Education Stage4 Title")}
+                  date={t("Education Stage4 Date")}
+                  subtitle={t("Education Stage4 Subtitle")}
+                  location={t("Education Stage4 location")}
                 />
                 <TableItem
-                  title="Пятый Этап"
-                  date="1 неделя в декабре"
-                  subtitle={"Обучение в группах \u000A и экзамены"}
-                  location="г. Бишкек, отель “Bridges”"
+                  title={t("Education Stage5 location")}
+                  date={t("Education Stage5 Date")}
+                  subtitle={t("Education Stage5 Subtitle")}
+                  location={t("Education Stage5 location")}
                 />
               </div>
             </div>
             <div className="row">
               <VerticalTimeline>
                 <StepItem
-                  title="Первый этап"
-                  subtitle="июль 2018"
+                  title={t("Education Line Stage1 location")}
+                  subtitle={t("Education Line Stage1 Date")}
                   // icon="❶"
+                  text={t("Education Line Stage1 Subtitle")}
                   icon={["fas", "cat"]}
-                  text="Тренинг в г. Бишкек с использованием 17 адаптированных уроков, которые предусматривали подготовку в течение 2-х недель. Занятия проходили по 4-6 часов каждый день, кроме воскресенья. В конце каждой недели участники проходили предварительный тест на основе заданий тренеров."
                 />
                 <StepItem
-                  title="Второй этап"
-                  subtitle="июль-сентябрь 2018"
-                  // date="date"
+                  title={t("Education Line Stage2 location")}
+                  subtitle={t("Education Line Stage2 Date")}
+                  // icon="❶"
+                  text={t("Education Line Stage2 Subtitle")}
                   icon={["fas", "horse"]}
-                  text="Был предназначен для дистанционного обучения на дому участников или их рабочих местах в течение периода до сентября. За этот период участникам необходимо было начать работу над выпускным проектом. В течение этого периода все студенты работали онлайн с тренерами и командой IT-Академии."
                 />
                 <StepItem
-                  title="Третий этап"
-                  subtitle="сентябрь 2018"
-                  // date="date"
+                  title={t("Education Line Stage3 location")}
+                  subtitle={t("Education Line Stage3 Date")}
+                  // icon="❶"
+                  text={t("Education Line Stage3 Subtitle")}
                   icon={["fas", "dove"]}
-                  text="Обучение в течение 2-х недель на базе лагеря Жетиген на Иссык-Куле с использованием 21 адаптированного урока."
                 />
                 <StepItem
-                  title="Четвертый этап"
-                  subtitle="октябрь-декабрь 2018"
-                  // date="date"
+                  title={t("Education Line Stage4 location")}
+                  subtitle={t("Education Line Stage4 Date")}
+                  // icon="❶"
+                  text={t("Education Line Stage4 Subtitle")}
                   icon={["fas", "dog"]}
-                  text="Был посвящен дистанционному обучению в течение периода до декабря.
-                  "
                 />
                 <StepItem
-                  title="Пятый этап"
-                  subtitle="январь 2019"
-                  // date="date"
+                  title={t("Education Line Stage5 location")}
+                  subtitle={t("Education Line Stage5 Date")}
+                  // icon="❶"
+                  text={t("Education Line Stage5 Subtitle")}
                   icon={["fas", "kiwi-bird"]}
-                  text="Сессия и выпускные экзамены. Лекции и семинары по социальным навыкам от партнеров КАРПОУ. Выпускники, успешно сдавшие экзамены, получили сертификаты от IT отрасли."
                 />
               </VerticalTimeline>
             </div>
@@ -144,3 +140,4 @@ export default class Education extends Component {
     );
   }
 }
+export default withTranslation()(Education);

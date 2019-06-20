@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 
 import image_1 from "../assets/img/50605809_516659252155647_7538535789169213440_n.jpg";
 import image_2 from "../assets/img/38878078_429647717523468_2305239364445143040_o.jpg";
@@ -39,8 +40,9 @@ const PhotoItem = ({ img, size }) => (
   </div>
 );
 
-export default class AboutUs extends Component {
+class AboutUs extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade>
         <div id="about-us" className="bg-light">
@@ -73,18 +75,10 @@ export default class AboutUs extends Component {
               <div className="row mt-5 d-flex justify-content-center">
                 <div className="col-md-8 text-center heading-section ftco-animate">
                   <h1 className="h5">
-                    «Сфера образования - это одна из наших ключевых сфер, где мы
-                    сотрудничаем с правительством Кыргызстана. Это пилотный
-                    проект, такие нечасто реализуются даже на международном
-                    уровне. Мы задействованы в сфере образования, потому что это
-                    приносит свои плоды в будущем. Чем более общество
-                    образованное, тем лучше будет развиваться страна. Этот
-                    проект небольшой, но он имеет позитивный эффект и
-                    положительно влияет на участников. Они получили возможность
-                    использовать свой потенциал, чтобы изменить свою жизнь»{" "}
+                    {t("About Us Text")}
                     <br />
                     <span style={{ color: "#7B7B7B" }}>
-                      Посол Европейского Союза в КР, Эдуард Ауэр
+                      {t("About Us Autor")}
                     </span>
                   </h1>
                 </div>
@@ -96,3 +90,4 @@ export default class AboutUs extends Component {
     );
   }
 }
+export default withTranslation()(AboutUs);

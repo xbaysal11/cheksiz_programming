@@ -5,7 +5,7 @@ import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
 
 const GROUP1 = [
-  "https://images.unsplash.com/flagged/photo-1551706646-9c816bfbff8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+  "https://docs.google.com/uc?id=0B9o1MNFt5ld1N3k1cm9tVnZxQjg",
   "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
 ];
 
@@ -19,11 +19,9 @@ const PhotoItem = ({ category, gallery_category, order, img, text }) => (
   <div className={`mix ${category}`} data-order={order}>
     <div className="responsive">
       <div className="gallery">
-        <a>
-          <LightgalleryItem group={gallery_category} src={img}>
-            <img src={img} style={{ width: "100%" }} />
-          </LightgalleryItem>
-        </a>
+        <LightgalleryItem group={gallery_category} src={img}>
+          <img src={img} style={{ width: "100%" }} alt="" />
+        </LightgalleryItem>
         {/* <div className="desc">{text}</div> */}
       </div>
     </div>
@@ -94,13 +92,13 @@ export default class Gallery extends Component {
                       idx === 0 ? (
                         <Button
                           key={idx}
-                          categoryName={`И-К, сентябрь 2018`}
+                          categoryName={`Бишкек, июль 2018`}
                           dataFilter={`.group_${idx}`}
                         />
                       ) : (
                         <Button
                           key={idx}
-                          categoryName={`Бишкек, июль 2018`}
+                          categoryName={`И-К, сентябрь 2018`}
                           dataFilter={`.group_${idx}`}
                         />
                       )
@@ -145,6 +143,7 @@ export default class Gallery extends Component {
                   }}
                 >
                   <iframe
+                    title="video"
                     width="835"
                     height="470"
                     src="https://www.youtube-nocookie.com/embed/fnNh66l7GRI"

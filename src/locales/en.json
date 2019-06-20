@@ -1,0 +1,87 @@
+{
+  "Header About Us": "About Us",
+  "Header Goals": "Goals",
+  "Header Program": "Program",
+  "Header Gallery": "Gallery",
+  "Header Testimonial": "Testimonial",
+  "Header Contacts": "Contacts",
+
+  "About Us Text": "Education is one of our key areas where we work with the government of Kyrgyzstan. This is a pilot project, such infrequently implemented even at the international level. We are involved in education, because it is bearing fruit in the future. The more educated the society, the better the country will develop. This project is small, but it has a positive effect and a positive effect on the participants. They got the opportunity to use their potential to change their lives",
+  "About Us Autor": "European Union Ambassador to the Kyrgyz Republic, Edward Auer",
+
+  "Goals Subheading": "GOALS AND OBJECTIVES OF THE PROJECT",
+  "Goals Title": "“Promotion of IT training for people with special needs”",
+  "Goals Description": "The project “Promoting IT Training for People with Special Needs” is being implemented by the Kyrgyz Association of Software and Services Developers (CARPOU) and the IT Academy with the support of the European Union.",
+  "Goals Start": "Project start",
+  "Goals Start Description": "The project began its work in January 2018, covers all regions of Kyrgyzstan and is aimed at training skills that are in demand in the labor market for young people with special needs.",
+  "Goals Long": "Long term goal",
+  "Goals Long Description": "Contributing to reducing unemployment, especially among social groups such as people with special needs, and training professional workers who will contribute to the socio-economic development of the Kyrgyz Republic.",
+  "Goals Short": "Short term goal",
+  "Goals Short Description": "Promotion of training in IT for people with special needs and increasing their skills for employment. This project is the first in the Kyrgyz Republic for the training of persons with disabilities programming.",
+
+  "Member Subheading": "COURSE PARTICIPANTS",
+  "Member Title": "Under the project, 20 young people with special needs received skills.",
+  "Member Description": "Under the Project, 20 young people with special needs received skills demanded in the labor market through short-term courses in software development.",
+  "Member Subheading1": "Requirements",
+  "Member Title1": "Requirements",
+  "Member Description1-1": "Persons with special needs aged 15 to 30 years.",
+  "Member Description1-2": "Residents of all regions of the Kyrgyz Republic.",
+  "Member Subheading2": "Stages",
+  "Member Title2": "3 stages of selection:",
+  "Member Description2-1": "Online application",
+  "Member Description2-2": "Submission of documents",
+  "Member Description2-3": "Interview",
+
+  "Odometer Requested": "Applications",
+  "Odometer Choosed": "Selected participants",
+  "Odometer Graduated": "Project graduates",
+
+  "Education Subheading": "TRAINING STUDENTS",
+  "Education Title": "Training for all participants took place from July 2018 to January 2019 according to the following schedule",
+  "Education Description": "The project “Promoting IT Training for People with Special Needs” is being implemented by the Kyrgyz Association of Software and Services Developers (CARPOU) and the IT Academy with the support of the European Union.",
+
+  "Education Stage1 Title": "First stage",
+  "Education Stage1 Date": "2 weeks in July",
+  "Education Stage1 Subtitle": "Training in groups",
+  "Education Stage1 location": "Bishkek, KTU “Manas”",
+
+  "Education Stage2 Title": "Second Stage",
+  "Education Stage2 Date": "July-September",
+  "Education Stage2 Subtitle": "Distance learning",
+  "Education Stage2 location": "Remotely",
+
+  "Education Stage3 Title": "Third Stage",
+  "Education Stage3 Date": "2 weeks in September",
+  "Education Stage3 Subtitle": "Training in groups",
+  "Education Stage3 location": "Issyk-Kul, Zhetigen camp",
+
+  "Education Stage4 Title": "Fourth Stage",
+  "Education Stage4 Date": "October-November",
+  "Education Stage4 Subtitle": "Distance learning",
+  "Education Stage4 location": "Remotely",
+
+  "Education Stage5 Title": "Fifth Stage",
+  "Education Stage5 Date": "1 week in December",
+  "Education Stage5 Subtitle": "Group studies and exams",
+  "Education Stage5 location": "Bishkek, hotel “Bridges”",
+
+  "Education Line Stage1 Title": "First stage",
+  "Education Line Stage1 Date": "July 2018",
+  "Education Line Stage1 Subtitle": "Training in Bishkek using 17 adapted lessons, which provided training for 2 weeks. Classes were held for 4-6 hours every day, except Sunday. At the end of each week, the participants passed a preliminary test based on the trainers' assignments.",
+
+  "Education Line Stage2 Title": "Second Stage",
+  "Education Line Stage2 Date": "July-September 2018",
+  "Education Line Stage2 Subtitle": "Was intended for distance learning at home of participants or their workplaces during the period up to September. During this period, participants had to start work on a graduation project. During this period, all students worked online with trainers and the IT-Academy team.",
+
+  "Education Line Stage3 Title": "Third Stage",
+  "Education Line Stage3 Date": "September 2018",
+  "Education Line Stage3 Subtitle": "Training for 2 weeks at the base of the Zhetigen camp in Issyk-Kul using 21 adapted lessons.",
+
+  "Education Line Stage4 Title": "Fourth Stage",
+  "Education Line Stage4 Date": "October-December 2018",
+  "Education Line Stage4 Subtitle": "It was dedicated to distance learning during the period up to December.",
+
+  "Education Line Stage5 Title": "Fifth Stage",
+  "Education Line Stage5 Date": "January 2019",
+  "Education Line Stage5 Subtitle": "Session and final exams. Lectures and workshops on social skills from CARPOU partners. Graduates who successfully passed the exams received certificates from the IT industry."
+}

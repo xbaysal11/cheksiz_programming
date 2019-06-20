@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -31,62 +32,37 @@ const Item = ({ title, description, icon, color }) => (
     </div>
   </div>
 );
-
-export default class Goals extends Component {
+class Goals extends Component {
   render() {
+    const { t } = this.props;
+
     return (
       <Fade>
         <section id="goals" className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-8 text-center heading-section ftco-animate">
-                <span className="subheading">ЦЕЛИ И ЗАДАЧИ ПРОЕКТА</span>
-                <h2 className="mb-4">
-                  “Продвижение обучения в области IT для людей с особыми
-                  потребностями”
-                </h2>
-                <p>
-                  Проект “Продвижение обучения в области IT для людей с особыми
-                  потребностями” реализуется Кыргызской ассоциацией
-                  разработчиков программного обеспечения и услуг (КАРПОУ) и IT
-                  Академией при поддержке Европейского Союза.
-                </p>
+                <span className="subheading">{t("Goals Subheading")} </span>
+                <h2 className="mb-4">{t("Goals Title")}</h2>
+                <p>{t("Goals Description")}</p>
               </div>
             </div>
             <div className="row">
               <Item
-                title="Старт проекта"
-                description="Проект начал свою работу с января 2018 года, охватывает все
-                    регионы Кыргызстана и направлен на обучение навыков,
-                    востребованных на рынке труда для молодежи с особыми
-                    потребностями.
-"
+                title={t("Goals Start")}
+                description={t("Goals Start Description")}
                 icon={["fas", "lightbulb"]}
                 color="1"
               />
               <Item
-                title="Долгосрочная цель"
-                description="
-Внесение вклада в сокращение уровня безработицы, особенно
-                    среди таких социальных групп, как люди с особыми
-                    потребностями, и подготовка профессиональных работников,
-                    которые будут способствовать социально-экономическому
-                    развитию Кыргызской Республики.
-
-"
+                title={t("Goals Short")}
+                description={t("Goals Short Description")}
                 icon={["fas", "laptop"]}
                 color="2"
               />
               <Item
-                title="Краткосрочная цель"
-                description="
-
-                    Продвижение обучения в сфере IT для людей с особыми
-                    потребностями и повышение их навыков для трудоустройства.
-                    Данный проект является первым в КР по обучению ЛОВЗ
-                    программированию.
-                  
-"
+                title={t("Goals Long")}
+                description={t("Goals Long Description")}
                 icon={["fas", "cog"]}
                 color="3"
               />
@@ -97,3 +73,4 @@ export default class Goals extends Component {
     );
   }
 }
+export default withTranslation()(Goals);

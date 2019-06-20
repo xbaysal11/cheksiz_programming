@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
+import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+
+import VisibilitySensor from "react-visibility-sensor";
 import ReactOdometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 
 import work_1 from "../assets/img/37367146_407467006408206_4380283471260549120_n.jpg";
 import work_2 from "../assets/img/38284453_421666701654903_3074187438420131840_n.jpg";
 
-export default class CourseMembers extends Component {
+class CourseMembers extends Component {
   constructor(props) {
     super(props);
 
@@ -22,25 +25,23 @@ export default class CourseMembers extends Component {
     this.setState({ choosed: 35 });
     this.setState({ requested: 116 });
   }
+  onChange(isVisible) {
+    console.log("Element is now %s", isVisible ? "visible" : "hidden");
+  }
 
   render() {
     const { requested, graduated, choosed } = this.state;
+    const { t } = this.props;
+
     return (
       <Fade>
         <section className="ftco-section ftco-section-members">
           <div className="container">
             <div className="row no-gutters justify-content-center mb-5 pb-5">
               <div className="col-md-9 text-center heading-section heading-section-white ftco-animate">
-                <span className="subheading">УЧАСТНИКИ КУРСА</span>
-                <h2 className="mb-4">
-                  В рамках Проекта 20 молодых лиц с особыми потребностями
-                  получили навыки.
-                </h2>
-                <p>
-                  В рамках Проекта 20 молодых лиц с особыми потребностями
-                  получили навыки, востребованные на рынке труда через
-                  краткосрочные курсы по разработке программного обеспечения.
-                </p>
+                <span className="subheading">{t("Member Subheading")} </span>
+                <h2 className="mb-4">{t("Member Title")}</h2>
+                <p>{t("Member Description")}</p>
               </div>
             </div>
             <Fade left>
@@ -49,21 +50,21 @@ export default class CourseMembers extends Component {
                   className="block-3 d-flex  ftco-animate"
                   data-scrollax-parent="true"
                 >
-                  <a
-                    href="#"
+                  <div
                     className="image"
                     style={{ backgroundImage: `url(${work_1})` }}
                     // data-scrollax=" properties: { translateY: '-20%'}"
                   />
                   <div className="text">
-                    <h4 className="subheading">Требования</h4>
+                    <h4 className="subheading">{t("Member Subheading1")}</h4>
                     <h2 className="heading">
-                      <a href="#">Требования</a>
+                      <div>{t("Member Title1")}</div>
                     </h2>
                     <p>
-                      ⚫ Лица с особыми потребностями в возрасте от 15 до 30
-                      лет.
-                      <br />⚫ Жители всех регионов КР.
+                      <ul>
+                        <li>{t("Member Description1-1")}</li>
+                        <li>{t("Member Description1-2")}</li>
+                      </ul>
                     </p>
                   </div>
                 </div>
@@ -76,17 +77,19 @@ export default class CourseMembers extends Component {
                   data-scrollax-parent="true"
                 >
                   <div className="text">
-                    <h4 className="subheading">Этапы</h4>
+                    <h4 className="subheading">{t("Member Subheading2")}</h4>
                     <h2 className="heading">
-                      <a href="#">3 этапа отбора:</a>
+                      <div>{t("Member Title2")}</div>
                     </h2>
                     <p>
-                      ⚫ Онлайн-заявка <br />
-                      ⚫ Подача документов <br />⚫ Интервью
+                      <ul>
+                        <li>{t("Member Description2-1")}</li>
+                        <li>{t("Member Description2-2")}</li>
+                        <li>{t("Member Description2-3")}</li>
+                      </ul>
                     </p>
                   </div>
-                  <a
-                    href="#"
+                  <div
                     className="image"
                     style={{ backgroundImage: `url(${work_2})` }}
                     // data-scrollax=" properties: { translateY: '-20%'}"
@@ -100,9 +103,16 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">
-                      <ReactOdometer value={requested} format="d" />
+                      <VisibilitySensor>
+                        {({ isVisible }) => (
+                          <ReactOdometer
+                            value={isVisible ? requested : "000"}
+                            format="d"
+                          />
+                        )}
+                      </VisibilitySensor>
                     </strong>
-                    <span>Заявок</span>
+                    <span>{t("Odometer Requested")}</span>
                   </div>
                 </div>
               </div>
@@ -110,9 +120,16 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">
-                      <ReactOdometer value={choosed} format="d" />
+                      <VisibilitySensor>
+                        {({ isVisible }) => (
+                          <ReactOdometer
+                            value={isVisible ? choosed : "000"}
+                            format="d"
+                          />
+                        )}
+                      </VisibilitySensor>
                     </strong>
-                    <span>Отобранных участников</span>
+                    <span>{t("Odometer Choosed")}</span>
                   </div>
                 </div>
               </div>
@@ -120,9 +137,16 @@ export default class CourseMembers extends Component {
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">
-                      <ReactOdometer value={graduated} format="d" />
+                      <VisibilitySensor>
+                        {({ isVisible }) => (
+                          <ReactOdometer
+                            value={isVisible ? graduated : "000"}
+                            format="d"
+                          />
+                        )}
+                      </VisibilitySensor>
                     </strong>
-                    <span>Выпускников проекта</span>
+                    <span>{t("Odometer Graduated")}</span>
                   </div>
                 </div>
               </div>
@@ -133,3 +157,4 @@ export default class CourseMembers extends Component {
     );
   }
 }
+export default withTranslation()(CourseMembers);

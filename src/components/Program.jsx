@@ -29,7 +29,7 @@ class Program extends Component {
                   </p>
                   <p>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={this.onOpenModal}
                       className="btn btn-primary mt-3 py-3 px-5"
                     >

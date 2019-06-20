@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -11,8 +12,9 @@ import eu from "../assets/img/27018.jpg";
 
 library.add(fab, fas);
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
+    const { t, i18n } = this.props;
     return (
       <Fade>
         <nav
@@ -24,7 +26,7 @@ export default class Header extends Component {
             {/* <a className="navbar-brand" href="index.html">
               KSSDA
             </a> */}
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="#!">
               <svg
                 id="logo_kssda"
                 width="73px"
@@ -124,6 +126,7 @@ export default class Header extends Component {
                   height: "2.2em"
                 }}
                 src={eu}
+                alt=""
               />
               <div className="ripple-container" />
             </a>
@@ -147,39 +150,54 @@ export default class Header extends Component {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item ">
                   <a href="#about-us" className="nav-link">
-                    О нас
+                    {t("Header About Us")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#goals" className="nav-link">
-                    Цели проекта
+                    {t("Header Goals")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#program" className="nav-link">
-                    Программа
+                    {t("Header Program")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#gallery" className="nav-link">
-                    Галерея
+                    {t("Header Gallery")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#reviews" className="nav-link">
-                    Отзывы
+                    {t("Header Testimonial")}
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#contacts" className="nav-link">
-                    Контакты
+                    {t("Header Contacts")}
                   </a>
                 </li>
-                {/* <li className="nav-item cta">
-                  <a href="contact.html" className="nav-link">
-                    <span>Get in touch</span>
-                  </a>
-                </li> */}
+                <li className="nav-item">
+                  <button
+                    className="btn-lang"
+                    onClick={() => i18n.changeLanguage("ru")}
+                  >
+                    RU
+                  </button>
+                  <button
+                    className="btn-lang"
+                    onClick={() => i18n.changeLanguage("kg")}
+                  >
+                    KG
+                  </button>
+                  <button
+                    className="btn-lang"
+                    onClick={() => i18n.changeLanguage("en")}
+                  >
+                    EN
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -188,3 +206,4 @@ export default class Header extends Component {
     );
   }
 }
+export default withTranslation()(Header);

@@ -1,5 +1,6 @@
 import React, { Component, createRef } from "react";
 
+import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
@@ -39,7 +40,7 @@ const Button = ({ categoryName, dataFilter }) => (
   </button>
 );
 
-export default class Gallery extends Component {
+class Gallery extends Component {
   componentDidMount() {
     this.mixer = mixitup(".container-gallery", {
       selectors: {
@@ -63,6 +64,8 @@ export default class Gallery extends Component {
     if (m_state) {
       console.log(m_state.activeFilter.selector);
     }
+    const { t } = this.props;
+
     return (
       <Fade>
         <section id="gallery" className="ftco-section-parallax">
@@ -70,35 +73,32 @@ export default class Gallery extends Component {
             <div className="container">
               <div className="row d-flex justify-content-center">
                 <div className="col-md-12 text-center heading-section heading-section-white ftco-animate">
-                  <h2>Галерея</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quam laudantium maxime labore, vitae autem ea esse, quae
-                    odio nihil a quod voluptates minima porro eligendi
-                    reiciendis, voluptatibus nemo! Ex, tempora?
-                  </p>
+                  <h2>{t("Gallery Title")}</h2>
+                  <p>{t("Gallery Description")}</p>
                   <div
                     className=" text-center"
                     style={{
                       marginTop: "2em",
                       paddingTop: "2em",
-                      borderTop: "1px solid white",
                       width: "100%",
                       textAlign: "center"
                     }}
                   >
-                    <Button categoryName="Все" dataFilter="all" />
+                    <Button
+                      categoryName={t("Gallery Tab all")}
+                      dataFilter="all"
+                    />
                     {[GROUP1, GROUP2].map((_, idx) =>
                       idx === 0 ? (
                         <Button
                           key={idx}
-                          categoryName={`Бишкек, июль 2018`}
+                          categoryName={t("Gallery Tab 2")}
                           dataFilter={`.group_${idx}`}
                         />
                       ) : (
                         <Button
                           key={idx}
-                          categoryName={`И-К, сентябрь 2018`}
+                          categoryName={t("Gallery Tab 1")}
                           dataFilter={`.group_${idx}`}
                         />
                       )
@@ -137,7 +137,6 @@ export default class Gallery extends Component {
                   style={{
                     marginTop: "2em",
                     paddingTop: "2em",
-                    borderTop: "1px solid white",
                     width: "100%",
                     textAlign: "center"
                   }}
@@ -160,3 +159,4 @@ export default class Gallery extends Component {
     );
   }
 }
+export default withTranslation()(Gallery);

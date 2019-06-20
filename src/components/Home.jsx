@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 
 class Home extends Component {
   render() {
-    const { t, i18n } = this.props;
+    const { t } = this.props;
 
     return (
       <Fade>
@@ -24,23 +24,22 @@ class Home extends Component {
                   className="mb-4"
                   data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
                 >
-                  В Кыргызстане{" "}
+                  {t("Home1")}
                   <span className="text-highl">
-                    <strong>28 200</strong>
-                  </span>{" "}
-                  детей младше 18 лет с ограниченными возможностями здоровья, и
-                  только у{" "}
+                    <strong>{t("Home2")}</strong>
+                  </span>
+                  {t("Home3")}
                   <span className="text-highl">
-                    <strong>28%</strong>
-                  </span>{" "}
-                  из них есть доступ к образованию.
+                    <strong>{t("Home4")}</strong>
+                  </span>
+                  {t("Home5")}
                 </h1>
                 <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                   <a
                     href="#about-us"
                     className="btn btn-primary btn-outline-white px-5 py-3"
                   >
-                    Поехали!
+                    {t("Home Button")}
                   </a>
                 </p>
               </div>

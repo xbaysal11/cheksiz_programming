@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -11,8 +12,9 @@ import eu from "../assets/img/27018.jpg";
 
 library.add(fab, fas);
 
-export default class Footer extends Component {
+class Footer extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade>
         <footer id="contacts" className="ftco-footer ftco-bg-dark ftco-section">
@@ -114,45 +116,41 @@ export default class Footer extends Component {
                       <div className="ripple-container" />
                     </a>
                   </h2>
-                  <p>
-                    В Кыргызстане 28 200 тысячи детей младше 18 лет с
-                    ограниченными возможностями здоровья, и только у 28% из них
-                    есть доступ к образованию.
-                  </p>
+                  <p>{t("Footer Description")}</p>
                 </div>
               </div>
               <div className="col-md">
                 <div className="ftco-footer-widget mb-4 ml-5">
-                  <h2 className="ftco-heading-2">Cсылки</h2>
+                  <h2 className="ftco-heading-2"> {t("Footer Links")}</h2>
                   <ul className="list-unstyled">
                     <li>
                       <a href="#about-us" className="py-2 d-block">
-                        О нас
+                        {t("Header About Us")}
                       </a>
                     </li>
                     <li>
                       <a href="#goals" className="py-2 d-block">
-                        Цели проекта
+                        {t("Header Goals")}
                       </a>
                     </li>
                     <li>
                       <a href="#program" className="py-2 d-block">
-                        Программа
+                        {t("Header Program")}
                       </a>
                     </li>
                     <li>
                       <a href="#gallery" className="py-2 d-block">
-                        Галерея
+                        {t("Header Gallery")}
                       </a>
                     </li>
                     <li>
                       <a href="#reviews" className="py-2 d-block">
-                        Отзывы
+                        {t("Header Testimonial")}
                       </a>
                     </li>
                     <li>
                       <a href="#contacts" className="py-2 d-block">
-                        Контакты
+                        {t("Header Contacts")}
                       </a>
                     </li>
                   </ul>
@@ -160,7 +158,7 @@ export default class Footer extends Component {
               </div>
               <div className="col-md">
                 <div className="ftco-footer-widget mb-4">
-                  <h2 className="ftco-heading-2">Контакты</h2>
+                  <h2 className="ftco-heading-2">{t("Header Contacts")}</h2>
                   <ul className="list-unstyled">
                     <li>
                       <a
@@ -177,7 +175,7 @@ export default class Footer extends Component {
               </div>
               <div className="col-md">
                 <div className="ftco-footer-widget mb-4">
-                  <h2 className="ftco-heading-2">Социальные сети</h2>
+                  <h2 className="ftco-heading-2"> {t("Footer Social")}</h2>
                   <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
                     <li className="ftco-animate">
                       <a
@@ -211,3 +209,4 @@ export default class Footer extends Component {
     );
   }
 }
+export default withTranslation()(Footer);

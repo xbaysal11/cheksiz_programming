@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 
-export default class Methodic extends Component {
+class Methodic extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade>
         <section className="ftco-section-parallax">
@@ -11,12 +13,11 @@ export default class Methodic extends Component {
             <div className="container">
               <div className="row d-flex justify-content-center">
                 <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                  <h2>Методика обучения</h2>
+                  <h2>{t("Methodic Title")}</h2>
                   <p>
-                    Методика обучения: лекции и презентации, практические
-                    занятия, разработка проектов.
+                    {t("Methodic Descrription1")}
                     <br />
-                    Язык проведения курса - русский и кыргызский.
+                    {t("Methodic Descrription2")}
                   </p>
                 </div>
               </div>
@@ -27,3 +28,4 @@ export default class Methodic extends Component {
     );
   }
 }
+export default withTranslation()(Methodic);

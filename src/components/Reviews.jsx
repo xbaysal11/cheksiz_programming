@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
+import { withTranslation } from "react-i18next";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -11,6 +12,8 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import person_1 from "../assets/img/person_1.jpg";
+import person_2 from "../assets/img/person_2.jpg";
+import person_3 from "../assets/img/person_3.jpg";
 
 library.add(fab, fas);
 
@@ -38,9 +41,9 @@ const Item = ({ img, text, autor, age }) => (
     </div>
   </div>
 );
-
-export default class Reviews extends Component {
+class Reviews extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade>
         <section
@@ -50,75 +53,17 @@ export default class Reviews extends Component {
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
               <div className="col-md-7 text-center heading-section ftco-animate">
-                <span className="subheading">ОТЗЫВЫ</span>
-                <h2 className="mb-4">ОТЗЫВЫ ВЫПУСКНИКОВ</h2>
-                <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in
-                </p>
+                <span className="subheading">{t("Testimonial Title")}</span>
+                <h2 className="mb-4">{t("Testimonial Subtitle")}</h2>
+                <p>{t("Testimonial Description")}</p>
               </div>
             </div>
             <div className="row ftco-animate">
               <div className="col-md-12">
                 <OwlCarousel className="owl-theme" loop margin={10} nav>
-                  <Item
-                    autor="Омурбек Байышбеков"
-                    age="27 лет"
-                    img={person_1}
-                    text=" “До участия в проекте я работал учителем английского
-                        языка и не имел представления о программировании. Весной
-                        2018 в инстаграме я прочитал объявление о запуске
-                        проекта и подал заявку. Пройдя успешно 3 этапа отбора я
-                        стал одним из участников проекта. Это было сложно, но,
-                        когда вы видите результаты вашего собственного творения,
-                        это мотивирует вас стараться и не сдаваться. Я рад, что
-                        освоил навыки программирования и открыл для себя новые
-                        возможности. В будущем я планирую реализовать свои цели
-                        с помощью программирования и работать со всем миром без
-                        барьеров. В свою очередь хочу искренне поблагодарить
-                        Евросоюз за оказанную нам такую замечательную
-                        поддержку.”"
-                  />
-                  <Item
-                    autor="Омурбек Байышбеков"
-                    age="24 года"
-                    img={person_1}
-                    text="  “Я с детства увлекалась компьютерами и после школы
-                  хотела поступить на факультет компьютерной инженерии, но
-                  родители были против, и в итоге я поступила в отделение
-                  Международных отношений. Позже, по причине инвалидности
-                  я часто сталкивались с дискриминацией в области
-                  занятости. Несмотря на трудности в поиске работы, в
-                  данный момент я работаю в двух местах - учителем
-                  начальной школы и секретарем в своем родном селе. О
-                  проекте Чексиз Programming я узнала в фейсбук, и подав
-                  заявку, прошла в финал. Участие в проекте дало мне
-                  возможность начать новую, более успешную жизнь. Я думаю,
-                  IT - это самая подходящая профессия для ЛОВЗ, которой
-                  можно заниматься, не выходя из дома. Также, оно дает
-                  возможность создать что-то своими руками. Девушки также
-                  могут успешно работать в этой сфере.”"
-                  />
-                  <Item
-                    autor="Мирбек кызы Айзат"
-                    age="27 лет"
-                    img={person_1}
-                    text='“Программирование не требует постоянного присутствия на
-                  рабочем месте, это мне подходит. Также оно расширяет мой
-                  кругозор — с каждым днем я получаю новые знания. При
-                  поступлении в Академию мы сдавали тест. Это был мой
-                  первый опыт сдачи экзаменов. Я очень боялась, что не
-                  пройду, потому мало обладаю теоретическими знаниями, на
-                  практике все довольно быстро схватываю. С началом
-                  обучения я стала более ответственной. Раньше не было
-                  ничего, что я была обязана делать. Даже для себя. В
-                  Академии сначала было трудно. Где-то в середине обучения
-                  у меня были даже мысли оставить учебу. Потом я подумала:
-                  "Родители верят в меня. Столько всего уже пройдено", — и
-                  осталась. Сейчас я рада, что не поддалась трудностям в
-                  начале пути.”'
-                  />
+                  <Item autor={t("Testimonial Autor1")} age={t("Testimonial Age1")} img={person_1} text={t("Testimonial Text1")} />
+                  <Item autor={t("Testimonial Autor2")} age={t("Testimonial Age2")} img={person_2} text={t("Testimonial Text2")} />
+                  <Item autor={t("Testimonial Autor3")} age={t("Testimonial Age3")} img={person_3} text={t("Testimonial Text3")} />
                 </OwlCarousel>
               </div>
             </div>
@@ -128,3 +73,4 @@ export default class Reviews extends Component {
     );
   }
 }
+export default withTranslation()(Reviews);

@@ -16,23 +16,22 @@ class CourseMembers extends Component {
 
     this.state = {
       requested: 0,
-      graduated: 0,
-      choosed: 0
+      choosed: 0,
+      graduated: 0
     };
   }
   componentDidMount() {
-    this.setState({ graduated: 20 });
-    this.setState({ choosed: 35 });
     this.setState({ requested: 116 });
+    this.setState({ choosed: 35 });
+    this.setState({ graduated: 20 });
   }
   onChange(isVisible) {
     console.log("Element is now %s", isVisible ? "visible" : "hidden");
   }
 
   render() {
-    const { requested, graduated, choosed } = this.state;
     const { t } = this.props;
-
+    const { requested, graduated, choosed } = this.state;
     return (
       <Fade>
         <section className="ftco-section ftco-section-members">

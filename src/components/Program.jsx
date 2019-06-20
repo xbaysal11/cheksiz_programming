@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Modal from "react-responsive-modal";
+import { withTranslation } from "react-i18next";
 
 class Program extends Component {
   state = {
@@ -15,6 +16,7 @@ class Program extends Component {
   };
 
   render() {
+    const { t } = this.props;
     return (
       <div>
         <section id="program" className="ftco-section-program">
@@ -22,18 +24,15 @@ class Program extends Component {
             <div className="container">
               <div className="row d-flex justify-content-center">
                 <div className="col-md-7 text-center heading-section  heading-section-black ftco-animate">
-                  <h2>ПРОГРАММА КУРСА</h2>
-                  <p>
-                    Методика обучения: лекции и презентации, практические
-                    занятия, разработка проектов.
-                  </p>
+                  <h2>{t("Program Title")}</h2>
+                  <p>{t("Program Description")}</p>
                   <p>
                     <a
                       href="#!"
                       onClick={this.onOpenModal}
                       className="btn btn-primary mt-3 py-3 px-5"
                     >
-                      ПРОГРАММА КУРСА
+                      {t("Program Title")}
                     </a>
                   </p>
                 </div>
@@ -503,4 +502,4 @@ class Program extends Component {
     );
   }
 }
-export default Program;
+export default withTranslation()(Program);

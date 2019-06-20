@@ -88,7 +88,7 @@ class Education extends Component {
                   location={t("Education Stage4 location")}
                 />
                 <TableItem
-                  title={t("Education Stage5 location")}
+                  title={t("Education Stage5 Title")}
                   date={t("Education Stage5 Date")}
                   subtitle={t("Education Stage5 Subtitle")}
                   location={t("Education Stage5 location")}
@@ -98,35 +98,35 @@ class Education extends Component {
             <div className="row">
               <VerticalTimeline>
                 <StepItem
-                  title={t("Education Line Stage1 location")}
+                  title={t("Education Line Stage1 Title")}
                   subtitle={t("Education Line Stage1 Date")}
                   // icon="❶"
                   text={t("Education Line Stage1 Subtitle")}
                   icon={["fas", "cat"]}
                 />
                 <StepItem
-                  title={t("Education Line Stage2 location")}
+                  title={t("Education Line Stage2 Title")}
                   subtitle={t("Education Line Stage2 Date")}
                   // icon="❶"
                   text={t("Education Line Stage2 Subtitle")}
                   icon={["fas", "horse"]}
                 />
                 <StepItem
-                  title={t("Education Line Stage3 location")}
+                  title={t("Education Line Stage3 Title")}
                   subtitle={t("Education Line Stage3 Date")}
                   // icon="❶"
                   text={t("Education Line Stage3 Subtitle")}
                   icon={["fas", "dove"]}
                 />
                 <StepItem
-                  title={t("Education Line Stage4 location")}
+                  title={t("Education Line Stage4 Title")}
                   subtitle={t("Education Line Stage4 Date")}
                   // icon="❶"
                   text={t("Education Line Stage4 Subtitle")}
                   icon={["fas", "dog"]}
                 />
                 <StepItem
-                  title={t("Education Line Stage5 location")}
+                  title={t("Education Line Stage5 Title")}
                   subtitle={t("Education Line Stage5 Date")}
                   // icon="❶"
                   text={t("Education Line Stage5 Subtitle")}

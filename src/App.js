@@ -12,7 +12,7 @@ import {
   Methodic,
   Finance,
   Team,
-  Reviews,
+  Testimonial,
   Program,
   Gallery,
   Education
@@ -36,7 +36,7 @@ class App extends Component {
           <Finance />
           <Team />
           <Gallery />
-          <Reviews />
+          <Testimonial />
           <Footer />
         </LightgalleryProvider>
 

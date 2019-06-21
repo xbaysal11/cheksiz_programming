@@ -377,6 +377,7 @@ h1, h2, h3, h4, h5,
 		width: 100%;
 		.owl-prev,
 		.owl-next {
+			outline:none;
 			position: absolute;
 			transform: translateY(-50%);
 			margin-top: -10px;
@@ -777,7 +778,25 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-
+.row-block{
+	padding-top:50px;
+	&:hover{
+		box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+		transition: all 0.5s ease-in-out 0s;
+	}
+}
+.row-block2{
+	&:hover{
+		box-shadow: 0 0 45px rgba(0, 0, 0, 0.25);
+		transition: all 0.5s ease-in-out 0s;
+	}
+}
+.row-block3{
+	padding:1em;
+		box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+		transition: all 0.5s ease-in-out 0s;
+	
+}
 //### .block-3
 .block-3 {
 	width: 90%;
@@ -834,15 +853,9 @@ h1, h2, h3, h4, h5,
 			content: '';
 			box-shadow: 20px 20px 0 0 lighten($primary,25%);
 		}
-		&.image-2{
+		&:hover{
 			&:after{
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				box-shadow: -20px 20px 0 0 lighten($primary,25%);
+				box-shadow: 20px 20px 5px 5px lighten($primary,25%);
 			}
 		}
 		@include media-breakpoint-down(sm) {
@@ -1121,7 +1134,7 @@ textarea.form-control {
 .ftco-footer {
 	font-size: 16px;
 	background: $primary;
-	padding: 12em 0 8em 0;
+	// padding: 8em 0 8em 0;
 	.ftco-footer-logo {
 		text-transform: uppercase;
 		letter-spacing: .1em;
@@ -1307,8 +1320,8 @@ textarea.form-control {
 			margin-top: 5em;
 
 		.bg-quote-left{
-			top: -30px;
-			left: -30px;
+			top: -20px;
+			left: -20px;
 		}
 		.bg-quote-right{
 			bottom: -20px;
@@ -1524,10 +1537,11 @@ textarea.form-control {
 		}
 	}
 }
-.num{
-	font-size: 45px;
+
+.odometer-inside{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-weight: bold;
-	align-self: center;
+	font-size: 40px;
 }
 
 .promos {
@@ -1704,15 +1718,10 @@ div.gallery {
   }
   
   div.gallery img {
-	display: block;
+	// display: block;
 	width: 100%;
-	height: auto;
-
-	-webkit-transition: all 0.5s linear;
-	-moz-transition: all 0.5s linear;
-	 -ms-transition: all 0.5s linear;
-	  -o-transition: all 0.5s linear;
-		 transition: all 0.5s linear;
+	border-radius: 5px;
+	// height: auto;
 
   }
   
@@ -1731,17 +1740,17 @@ div.gallery {
 	margin:5px;
 	cursor: pointer;
 	float: left;
-	width: 25%;
-	position: relative;
-	width: 15.85em;
-	height: 10.5em;
+	width: 24%;
+	// position: relative;
+	// height: 12.5em;
+	// height: auto !important;
 	overflow: hidden;
   }
   
   @media only screen and (max-width: 700px) {
 	.responsive {
 	  width: 45.99999%;
-	  margin: 6px 0;
+	  margin: 6px;
 	}
   }
   

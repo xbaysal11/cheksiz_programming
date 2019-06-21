@@ -81,7 +81,7 @@ class AboutUs extends Component {
               <div className="row d-flex justify-content-center">
                 <div className="col-md-8 text-center heading-section ftco-animate">
                   <h1>
-                    <div>
+                    <div className="row-block3">
                       <FontAwesomeIcon
                         className="bg-quote bg-quote-left"
                         icon={["fas", "quote-left"]}

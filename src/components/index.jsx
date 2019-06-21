@@ -7,7 +7,7 @@ import CourseMembers from "./CourseMembers";
 import Methodic from "./Methodic";
 import Finance from "./Finance";
 import Team from "./Team";
-import Reviews from "./Reviews";
+import Testimonial from "./Testimonial";
 import Program from "./Program";
 import Education from "./Education";
 import Gallery from "./Gallery";
@@ -22,7 +22,7 @@ export {
   Methodic,
   Finance,
   Team,
-  Reviews,
+  Testimonial,
   Program,
   Education,
   Gallery

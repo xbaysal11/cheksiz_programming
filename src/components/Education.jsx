@@ -15,7 +15,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, fas);
 const TableItem = ({ title, subtitle, date, location, scale }) => (
-  <div className={` promo ${scale}`}>
+  <div className={` promo ${scale} row-block2`}>
     <div className="deal">
       <span>{title}</span>
       <span>{date}</span>

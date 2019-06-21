@@ -2,16 +2,23 @@ import React, { Component, createRef } from "react";
 
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+import Masonry from "react-masonry-component";
 import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
 
 const GROUP1 = [
   "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
-  "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
+  "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
+  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
 ];
 
 const GROUP2 = [
   "https://images.unsplash.com/photo-1551833726-deb5e781c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1551833726-deb5e781c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
 ];
@@ -19,12 +26,14 @@ const GROUP2 = [
 const PhotoItem = ({ category, gallery_category, order, img, text }) => (
   <div className={`mix ${category}`} data-order={order}>
     <div className="responsive">
-      <div className="gallery">
-        <LightgalleryItem group={gallery_category} src={img}>
-          <img src={img} style={{ width: "100%" }} alt="" />
-        </LightgalleryItem>
-        {/* <div className="desc">{text}</div> */}
-      </div>
+      <Masonry>
+        <div className="gallery">
+          <LightgalleryItem group={gallery_category} src={img}>
+            <img src={img} alt="" />
+          </LightgalleryItem>
+          {/* <div className="desc">{text}</div> */}
+        </div>
+      </Masonry>
     </div>
   </div>
 );

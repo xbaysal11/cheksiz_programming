@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "react-layerlax": "^0.0.2"
   }
 }

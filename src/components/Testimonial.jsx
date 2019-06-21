@@ -42,7 +42,7 @@ const Item = ({ img, text, autor, age }) => (
     </div>
   </div>
 );
-class Reviews extends Component {
+class Testimonial extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -52,16 +52,22 @@ class Reviews extends Component {
           className="ftco-section testimony-section bg-light"
         >
           <div className="container">
-            <div className="row justify-content-center mb-5 pb-5">
+            <div className="row justify-content-center mb-5 ">
               <div className="col-md-7 text-center heading-section ftco-animate">
                 <span className="subheading">{t("Testimonial Title")}</span>
                 <h2 className="mb-4">{t("Testimonial Subtitle")}</h2>
                 <p>{t("Testimonial Description")}</p>
               </div>
             </div>
-            <div className="row ftco-animate">
-              <div className="col-md-12">
-                <OwlCarousel className="owl-theme" loop margin={10} nav>
+            <div className="row justify-content-center ftco-animate">
+              <div className="col-md-10 ">
+                <OwlCarousel
+                  className="owl-theme"
+                  items={1}
+                  loop
+                  margin={10}
+                  nav
+                >
                   <Item
                     autor={t("Testimonial Autor1")}
                     age={t("Testimonial Age1")}
@@ -89,4 +95,4 @@ class Reviews extends Component {
     );
   }
 }
-export default withTranslation()(Reviews);
+export default withTranslation()(Testimonial);

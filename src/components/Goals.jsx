@@ -14,7 +14,7 @@ import img3 from "../assets/img/3.png";
 library.add(fab, fas);
 
 const Item = ({ title, description, icon, color }) => (
-  <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate">
+  <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate row-block">
     <div className="media block-6 services d-block text-center">
       <div className="d-flex justify-content-center">
         <div
@@ -45,7 +45,7 @@ class Goals extends Component {
       <Fade>
         <section id="goals" className="ftco-section">
           <div className="container">
-            <div className="row justify-content-center mb-5 pb-5">
+            <div className="row justify-content-center mb-5 ">
               <div className="col-md-8 text-center heading-section ftco-animate">
                 <span className="subheading">{t("Goals Subheading")} </span>
                 <h2 className="mb-4">{t("Goals Title")}</h2>

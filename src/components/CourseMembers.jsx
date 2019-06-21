@@ -3,12 +3,17 @@ import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import VisibilitySensor from "react-visibility-sensor";
-// import Parallax from "parallax-js";
 import ReactOdometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import work_1 from "../assets/img/37367146_407467006408206_4380283471260549120_n.jpg";
 import work_2 from "../assets/img/38284453_421666701654903_3074187438420131840_n.jpg";
+library.add(fab, fas);
 
 class CourseMembers extends Component {
   constructor(props) {
@@ -60,8 +65,22 @@ class CourseMembers extends Component {
                       <div>{t("Member Title1")}</div>
                     </h2>
                     <ul>
-                      <li>{t("Member Description1-1")}</li>
-                      <li>{t("Member Description1-2")}</li>
+                      <li>
+                        {" "}
+                        <FontAwesomeIcon
+                          icon={["fas", "angle-right"]}
+                          size="1x"
+                        />{" "}
+                        {t("Member Description1-1")}
+                      </li>
+                      <li>
+                        {" "}
+                        <FontAwesomeIcon
+                          icon={["fas", "angle-right"]}
+                          size="1x"
+                        />{" "}
+                        {t("Member Description1-2")}
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -78,11 +97,31 @@ class CourseMembers extends Component {
                     <h2 className="heading">
                       <div>{t("Member Title2")}</div>
                     </h2>
-                      <ul>
-                        <li>{t("Member Description2-1")}</li>
-                        <li>{t("Member Description2-2")}</li>
-                        <li>{t("Member Description2-3")}</li>
-                      </ul>
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon
+                          icon={["fas", "angle-right"]}
+                          size="1x"
+                        />{" "}
+                        {t("Member Description2-1")}
+                      </li>
+                      <li>
+                        {" "}
+                        <FontAwesomeIcon
+                          icon={["fas", "angle-right"]}
+                          size="1x"
+                        />{" "}
+                        {t("Member Description2-2")}
+                      </li>
+                      <li>
+                        {" "}
+                        <FontAwesomeIcon
+                          icon={["fas", "angle-right"]}
+                          size="1x"
+                        />{" "}
+                        {t("Member Description2-3")}
+                      </li>
+                    </ul>
                   </div>
                   <div
                     className="image"

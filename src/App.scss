@@ -1,11 +1,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/variables";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400i&display=swap');
 
 $font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Tinos', serif;
+$font-secondary: 'Montserrat Alternates', sans-serif;
 
 $white: #fff;
 $black: #404044;
@@ -107,11 +106,21 @@ h1, h2, h3, h4, h5,
 	.navbar-nav {
 		> .nav-item {
 			button {
-				background: none;
+				background: transparent;
 				color: $white;
 				font-weight: 700;
-				border:none;
+				border:none; 
+				overflow: hidden;
+				outline:none;
+				line-height: 100%;
+				padding: 0;
+				margin:0 0.3em;
 			}
+			.active {
+				// text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.823);
+				border-bottom: 2px solid yellow;
+			}
+			
 			> .nav-link {
 				font-size: 16px;
 				// padding-top: .9rem;
@@ -295,7 +304,6 @@ h1, h2, h3, h4, h5,
 	h1 {
 		font-size: 40px;
 		color: $white;
-		line-height: 1.6;
 		font-weight: 200;
 		@include media-breakpoint-down(md) {
 			font-size: 40px;
@@ -444,6 +452,11 @@ h1, h2, h3, h4, h5,
 }
 #about-us{
 	margin-top: 65em;
+}
+#goals{
+	// background: linear-gradient(0deg, rgba(3,18,207,1) 0%, rgba(109,115,199,1) 46%, transparent 100%);
+	// background: linear-gradient(0deg, rgba(3,120,207,1) 0%, rgba(80,151,204,1) 2%, rgba(255,255,255,0) 100%);
+
 }
 .bg-primary{
 	background: $primary;
@@ -789,22 +802,23 @@ h1, h2, h3, h4, h5,
 			color: lighten($white,50%);
 		}
 		.heading {
+			font-family: $font-secondary !important;
+
 			font-size: 30px;
-			margin-bottom: 30px;
+			// margin-bottom: 10px;
 			color: $white;
 		}
-		p {
+		
+			ul{
 			color: $white;
-			&:last-child {
-				margin-bottom: 0;
-			}
-			a{
-				color: $white;
+
+				list-style: none;
+				padding: 0;
 				&:hover{
 					color: $white;
 				}
 			}
-		}
+		
 	}
 	.image {
 		background-size: cover;
@@ -1092,7 +1106,7 @@ textarea.form-control {
 
 
 .ftco-section {
-	padding: 8em 0;
+	padding: 6em 0;
 	position: relative;
 	@include media-breakpoint-down(sm){
 		padding: 6em 0;
@@ -1278,12 +1292,39 @@ textarea.form-control {
 		letter-spacing: 2px;
 		color: rgba(0,0,0,.2);
 	}
-	h2{
-		font-size: 28px;
+	
+	h1{
+		font-size: 16px;
 		font-weight: 700;
+		line-height: 2;
+		word-spacing: 2px;
+		letter-spacing: 1.5px;
 		@include media-breakpoint-down(sm){
 			font-size: 28px;
 		}
+		div{
+			position: relative;
+			margin-top: 5em;
+
+		.bg-quote-left{
+			top: -30px;
+			left: -30px;
+		}
+		.bg-quote-right{
+			bottom: -20px;
+			right: -20px;
+		}
+		.bg-quote{
+			color:$primary;
+			position: absolute;
+			opacity: 0.4;
+		}
+		.about-us-text{
+			font-family: $font-secondary;
+			line-height: 1.8;
+		}
+	}
+
 	}
 	&.heading-section-white{
 		.subheading{
@@ -1405,9 +1446,11 @@ textarea.form-control {
 		span{
 			font-size: 20px;
 			color: rgba(255,255,255,.7);
+
 		}
 	}
 	.counter-wrap{
+		
 		@include media-breakpoint-down(sm){
 			margin-bottom: 20px;
 		}
@@ -1458,6 +1501,7 @@ textarea.form-control {
 		border-top: 0;
 		border-radius: 2px;
 		.heading {
+			line-height: 100%;
 			font-size: 18px;
 			color: $primary;
 			font-weight: 700;
@@ -1472,17 +1516,11 @@ textarea.form-control {
 	}
 	.meta {
 		> div {
+			font-family: $font-secondary!important;
 			display: inline-block;
 			margin-right: 5px;
-			// margin-bottom: 5px;
+			margin-bottom: 2em;
 			font-size: 15px;
-			a {
-				color: $black;
-				font-size: 15px;
-				// &:hover {
-				// 	// color: lighten($black, 80%);
-				// }
-			}
 		}
 	}
 }
@@ -1495,13 +1533,14 @@ textarea.form-control {
 .promos {
 	width: 100%;
 	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 30px;
 
-	// margin-top: 50px;
   }
   .promo {
-	width: 19%;
-	height: 100%;
-	margin: 0 5px;
+	width: 19.1%;
+	min-height: 100%;
+	margin: 5px 5px;
 	// background: $primary;
 	@include gradient-background();	
 	color: $white;
@@ -1545,11 +1584,46 @@ textarea.form-control {
 	display: block;
 	margin: 10px 0 0 0;
   }
+  @media only screen and (max-width: 1169px){
+	  .promos{
+	margin-bottom: 100px;
+
+	  }
+	  .promo {
+		width: 30%;
+		min-height: 60%;
+	  }
+	  .block-3{
+		  .image{
+			  display: none;
+		  }
+	  }
+	  .block-18 {
+		.icon {
+			> span {
+				
+				font-size: 10px;
+			}
+		}
+		.text {
+			
+			span {
+				display: block;
+		  font-size: 0.9em;
+			}
+		}
+	}
+  }
   .scale {
 	transform: scale(1.2);
 	box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
   }
-
+  .vertical-timeline{
+	  &::before{
+		  background: #2196f3;
+		  z-index: 2;
+	  }
+  }
 .vertical-timeline-element{
 	background: $white;
 	margin:1em 0;
@@ -1557,6 +1631,15 @@ textarea.form-control {
 	.svg-inline--fa.fa-w-16,.svg-inline--fa.fa-w-14,.svg-inline--fa.fa-w-18  {
 		width: 0.3em;
 	}
+	.vertical-timeline-element-icon {
+		z-index: 10;
+		background: rgb(33, 150, 243);
+		color: #fff;
+		line-height: 100%;
+		font-size: 3.8em;
+		text-align: center
+	}
+	
 	.vertical-timeline-element-content {
 		// background:$primary;
 		@include gradient-background();
@@ -1589,6 +1672,10 @@ textarea.form-control {
 		border-left: 7px solid $white !important;
 	
 	}
+	.vertical-timeline-element-icon {
+		line-height: 100%;
+		font-size: 2.5em !important;
+	}
 }
 .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
 	border-right: 7px solid $primary;
@@ -1597,6 +1684,10 @@ textarea.form-control {
 .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(odd):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
 	border-left: 7px solid $secondary;
 
+}
+.container-gallery {
+	min-height: 350px;
+	margin-top: 30px;
 }
 div.gallery {
 	position: absolute;
@@ -1642,14 +1733,14 @@ div.gallery {
 	float: left;
 	width: 25%;
 	position: relative;
- width: 250px;
- height: 150px;
- overflow: hidden;
+	width: 15.85em;
+	height: 10.5em;
+	overflow: hidden;
   }
   
   @media only screen and (max-width: 700px) {
 	.responsive {
-	  width: 49.99999%;
+	  width: 45.99999%;
 	  margin: 6px 0;
 	}
   }
@@ -1799,6 +1890,9 @@ div.gallery {
 		}
 	}
 	.text {
+		.number{
+			font-family: $font-secondary !important;
+		}
 		strong {
 			font-size: 40px;
 			

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
-
 import VisibilitySensor from "react-visibility-sensor";
+// import Parallax from "parallax-js";
 import ReactOdometer from "react-odometerjs";
 import "odometer/themes/odometer-theme-default.css";
 
@@ -36,7 +36,7 @@ class CourseMembers extends Component {
       <Fade>
         <section className="ftco-section ftco-section-members">
           <div className="container">
-            <div className="row no-gutters justify-content-center mb-5 pb-5">
+            <div className="row no-gutters justify-content-center pb-5">
               <div className="col-md-9 text-center heading-section heading-section-white ftco-animate">
                 <span className="subheading">{t("Member Subheading")} </span>
                 <h2 className="mb-4">{t("Member Title")}</h2>
@@ -59,12 +59,10 @@ class CourseMembers extends Component {
                     <h2 className="heading">
                       <div>{t("Member Title1")}</div>
                     </h2>
-                    <p>
-                      <ul>
-                        <li>{t("Member Description1-1")}</li>
-                        <li>{t("Member Description1-2")}</li>
-                      </ul>
-                    </p>
+                    <ul>
+                      <li>{t("Member Description1-1")}</li>
+                      <li>{t("Member Description1-2")}</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -80,13 +78,11 @@ class CourseMembers extends Component {
                     <h2 className="heading">
                       <div>{t("Member Title2")}</div>
                     </h2>
-                    <p>
                       <ul>
                         <li>{t("Member Description2-1")}</li>
                         <li>{t("Member Description2-2")}</li>
                         <li>{t("Member Description2-3")}</li>
                       </ul>
-                    </p>
                   </div>
                   <div
                     className="image"

@@ -33,11 +33,8 @@ const StepItem = ({ date, title, subtitle, icon, text }) => (
   <VerticalTimelineElement
     className="vertical-timeline-element"
     date={date}
-    iconStyle={{
-      background: "rgb(33, 150, 243)",
-      color: "#fff"
-    }}
-    icon={<FontAwesomeIcon icon={icon} size="5x" />}
+    // icon={<FontAwesomeIcon icon={icon} size="5x" />}
+    icon={icon}
   >
     <h3 className="vertical-timeline-element-title">{title}</h3>
     <h2 className="vertical-timeline-element-subtitle">{subtitle}</h2>
@@ -100,37 +97,37 @@ class Education extends Component {
                 <StepItem
                   title={t("Education Line Stage1 Title")}
                   subtitle={t("Education Line Stage1 Date")}
-                  // icon="❶"
+                  icon="➀"
                   text={t("Education Line Stage1 Subtitle")}
-                  icon={["fas", "cat"]}
+                  // icon={["fas", "cat"]}
                 />
                 <StepItem
                   title={t("Education Line Stage2 Title")}
                   subtitle={t("Education Line Stage2 Date")}
-                  // icon="❶"
                   text={t("Education Line Stage2 Subtitle")}
-                  icon={["fas", "horse"]}
+                  icon="➁"
+                  // icon={["fas", "horse"]}
                 />
                 <StepItem
                   title={t("Education Line Stage3 Title")}
                   subtitle={t("Education Line Stage3 Date")}
-                  // icon="❶"
                   text={t("Education Line Stage3 Subtitle")}
-                  icon={["fas", "dove"]}
+                  icon="➂"
+                  // icon={["fas", "dove"]}
                 />
                 <StepItem
                   title={t("Education Line Stage4 Title")}
                   subtitle={t("Education Line Stage4 Date")}
-                  // icon="❶"
                   text={t("Education Line Stage4 Subtitle")}
-                  icon={["fas", "dog"]}
+                  icon="➃"
+                  // icon={["fas", "dog"]}
                 />
                 <StepItem
                   title={t("Education Line Stage5 Title")}
                   subtitle={t("Education Line Stage5 Date")}
-                  // icon="❶"
                   text={t("Education Line Stage5 Subtitle")}
-                  icon={["fas", "kiwi-bird"]}
+                  icon="➄"
+                  // icon={["fas", "kiwi-bird"]}
                 />
               </VerticalTimeline>
             </div>

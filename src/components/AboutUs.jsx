@@ -3,12 +3,18 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import image_1 from "../assets/img/50605809_516659252155647_7538535789169213440_n.jpg";
 import image_2 from "../assets/img/38878078_429647717523468_2305239364445143040_o.jpg";
 import image_3 from "../assets/img/DSC_0040.JPG";
 import image_4 from "../assets/img/DSC_0018.JPG";
 import image_5 from "../assets/img/45099222_474542216367351_4772021030237503488_o.jpg";
 import image_6 from "../assets/img/DSC_0047.JPG";
+library.add(fab, fas);
 // import person_1 from "../assets/img/DSC_0070.JPG";
 
 const PhotoItem = ({ img, size }) => (
@@ -72,10 +78,26 @@ class AboutUs extends Component {
                 </div>
                 <PhotoItem img={image_2} size={3} />
               </div>
-              <div className="row mt-5 d-flex justify-content-center">
+              <div className="row d-flex justify-content-center">
                 <div className="col-md-8 text-center heading-section ftco-animate">
-                  <h1 className="h5">
-                    {t("About Us Text")}
+                  <h1>
+                    <div>
+                      <FontAwesomeIcon
+                        className="bg-quote bg-quote-left"
+                        icon={["fas", "quote-left"]}
+                        size="2x"
+                      />
+                      <span className="about-us-text">
+                        {t("About Us Text")}
+                      </span>
+                      <FontAwesomeIcon
+                        className="bg-quote bg-quote-right"
+                        icon={["fas", "quote-right"]}
+                        size="2x"
+                      />
+                    </div>
+
+                    <br />
                     <br />
                     <span style={{ color: "#7B7B7B" }}>
                       {t("About Us Autor")}

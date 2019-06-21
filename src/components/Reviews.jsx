@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
+
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -61,9 +62,24 @@ class Reviews extends Component {
             <div className="row ftco-animate">
               <div className="col-md-12">
                 <OwlCarousel className="owl-theme" loop margin={10} nav>
-                  <Item autor={t("Testimonial Autor1")} age={t("Testimonial Age1")} img={person_1} text={t("Testimonial Text1")} />
-                  <Item autor={t("Testimonial Autor2")} age={t("Testimonial Age2")} img={person_2} text={t("Testimonial Text2")} />
-                  <Item autor={t("Testimonial Autor3")} age={t("Testimonial Age3")} img={person_3} text={t("Testimonial Text3")} />
+                  <Item
+                    autor={t("Testimonial Autor1")}
+                    age={t("Testimonial Age1")}
+                    img={person_1}
+                    text={t("Testimonial Text1")}
+                  />
+                  <Item
+                    autor={t("Testimonial Autor2")}
+                    age={t("Testimonial Age2")}
+                    img={person_2}
+                    text={t("Testimonial Text2")}
+                  />
+                  <Item
+                    autor={t("Testimonial Autor3")}
+                    age={t("Testimonial Age3")}
+                    img={person_3}
+                    text={t("Testimonial Text3")}
+                  />
                 </OwlCarousel>
               </div>
             </div>

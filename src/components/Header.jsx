@@ -13,19 +13,20 @@ import eu from "../assets/img/27018.jpg";
 library.add(fab, fas);
 
 class Header extends Component {
+  state = {
+    lang: "ru",
+    collapsed: "collapse"
+  };
+
   render() {
     const { t, i18n } = this.props;
     return (
       <Fade>
         <nav
-          // className="navbar  navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light navbar-fixed-top"
           className="navbar navbar-default navbar-expand-lg  ftco_navbar ftco-navbar-light navbar-fixed-top"
           id="ftco-navbar"
         >
           <div className="container">
-            {/* <a className="navbar-brand" href="index.html">
-              KSSDA
-            </a> */}
             <a className="navbar-brand" href="#!">
               <svg
                 id="logo_kssda"
@@ -133,20 +134,25 @@ class Header extends Component {
             <button
               className="navbar-toggler"
               type="button"
-              data-toggle="collapse"
-              data-target="#ftco-nav"
-              aria-controls="ftco-nav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              onClick={() => {
+                this.setState({
+                  collapsed: this.state.collapsed === "" ? "collapse" : ""
+                });
+              }}
             >
               <FontAwesomeIcon
                 icon={["fas", "bars"]}
                 className="align-self-center"
               />{" "}
-              Меню
+              {t("Menu")}
             </button>
 
-            <div className="collapse navbar-collapse" id="ftco-nav">
+            <div
+              className={`${
+                this.state.collapsed === "" ? "" : "collapse"
+              } navbar-collapse`}
+              id="ftco-nav"
+            >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item ">
                   <a href="#about-us" className="nav-link">
@@ -180,20 +186,29 @@ class Header extends Component {
                 </li>
                 <li className="nav-item">
                   <button
-                    className="btn-lang"
-                    onClick={() => i18n.changeLanguage("ru")}
+                    className={this.state.lang === "ru" ? "active" : ""}
+                    onClick={() => {
+                      i18n.changeLanguage("ru");
+                      this.setState({ lang: "ru" });
+                    }}
                   >
                     RU
                   </button>
                   <button
-                    className="btn-lang"
-                    onClick={() => i18n.changeLanguage("kg")}
+                    className={this.state.lang === "kg" ? "active" : ""}
+                    onClick={() => {
+                      i18n.changeLanguage("kg");
+                      this.setState({ lang: "kg" });
+                    }}
                   >
                     KG
                   </button>
                   <button
-                    className="btn-lang"
-                    onClick={() => i18n.changeLanguage("en")}
+                    className={this.state.lang === "en" ? "active" : ""}
+                    onClick={() => {
+                      i18n.changeLanguage("en");
+                      this.setState({ lang: "en" });
+                    }}
                   >
                     EN
                   </button>

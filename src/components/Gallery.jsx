@@ -6,7 +6,7 @@ import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
 
 const GROUP1 = [
-  "https://docs.google.com/uc?id=0B9o1MNFt5ld1N3k1cm9tVnZxQjg",
+  "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
   "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80"
 ];
 
@@ -47,8 +47,11 @@ class Gallery extends Component {
         target: ".mix"
       },
       animation: {
-        effects: "fade rotateZ(-180deg)" /* fade scale */,
-        duration: 700 /* 600 */
+        duration: 300,
+        effects: "fade stagger(100ms)",
+        staggerSequence: function(i) {
+          return 2 * i - 5 * (i / 3 - (1 / 3) * (i % 3));
+        }
       }
     });
     this.mix_container.current.addEventListener("mixEnd", () => {
@@ -78,8 +81,8 @@ class Gallery extends Component {
                   <div
                     className=" text-center"
                     style={{
-                      marginTop: "2em",
-                      paddingTop: "2em",
+                      // margin: "2em  ",
+                      // paddingTop: "2em",
                       width: "100%",
                       textAlign: "center"
                     }}
@@ -146,9 +149,9 @@ class Gallery extends Component {
                     width="835"
                     height="470"
                     src="https://www.youtube-nocookie.com/embed/fnNh66l7GRI"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   />
                 </div>
               </div>

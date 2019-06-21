@@ -34,8 +34,8 @@ class App extends Component {
           <Methodic />
           <Program />
           <Finance />
-          <Gallery />
           <Team />
+          <Gallery />
           <Reviews />
           <Footer />
         </LightgalleryProvider>

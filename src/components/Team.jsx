@@ -16,11 +16,11 @@ const Item = ({ name, img, prof, size }) => (
       <div className="block-20" style={{ backgroundImage: `url(${img})` }} />
       <div className="text p-4 d-block">
         <h3 className="heading">
-          <div href="#">{name}</div>
+          <div>{name}</div>
         </h3>
         <div className="meta mb-3">
           <div>
-            <div href="#">{prof}</div>
+            <div>{prof}</div>
           </div>
         </div>
       </div>
@@ -41,18 +41,18 @@ class Team extends Component {
                 <p>{t("Team Description1")}</p>
               </div>
             </div>
-            <div className="row justify-content-md-center">
+            <div className="row  justify-content-sm-center">
               <Item
                 name={t("Person1 name")}
                 img={person_1}
                 prof={t("Person1 prof")}
-                size="3"
+                size=""
               />
               <Item
                 name={t("Person2 name")}
                 img={person_2}
                 prof={t("Person2 prof")}
-                size="3"
+                size=""
               />
             </div>
             <div className="row justify-content-md-center">
@@ -60,25 +60,25 @@ class Team extends Component {
                 name={t("Person3 name")}
                 img={person_3}
                 prof={t("Person3456 prof")}
-                size="3"
+                size=""
               />
               <Item
                 name={t("Person4 name")}
                 img={person_4}
                 prof={t("Person3456 prof")}
-                size="3"
+                size=""
               />
               <Item
                 name={t("Person5 name")}
                 img={person_5}
                 prof={t("Person3456 prof")}
-                size="3"
+                size=""
               />
               <Item
                 name={t("Person6 name")}
                 img={person_6}
                 prof={t("Person3456 prof")}
-                size="3"
+                size=""
               />
             </div>
             <div className="row justify-content-center">

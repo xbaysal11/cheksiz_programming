@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -60,36 +64,44 @@ class Education extends Component {
             {/* {t("")} */}
             <div className="row">
               <div className="promos col-md-12">
-                <TableItem
-                  title={t("Education Stage1 Title")}
-                  date={t("Education Stage1 Date")}
-                  subtitle={t("Education Stage1 Subtitle")}
-                  location={t("Education Stage1 location")}
-                />
-                <TableItem
-                  title={t("Education Stage2 Title")}
-                  date={t("Education Stage2 Date")}
-                  subtitle={t("Education Stage2 Subtitle")}
-                  location={t("Education Stage2 location")}
-                />
-                <TableItem
-                  title={t("Education Stage3 Title")}
-                  date={t("Education Stage3 Date")}
-                  subtitle={t("Education Stage3 Subtitle")}
-                  location={t("Education Stage3 location")}
-                />
-                <TableItem
-                  title={t("Education Stage4 Title")}
-                  date={t("Education Stage4 Date")}
-                  subtitle={t("Education Stage4 Subtitle")}
-                  location={t("Education Stage4 location")}
-                />
-                <TableItem
-                  title={t("Education Stage5 Title")}
-                  date={t("Education Stage5 Date")}
-                  subtitle={t("Education Stage5 Subtitle")}
-                  location={t("Education Stage5 location")}
-                />
+                <OwlCarousel
+                  className="owl-theme"
+                  items={3}
+                  // loop
+                  margin={10}
+                  nav
+                >
+                  <TableItem
+                    title={t("Education Stage1 Title")}
+                    date={t("Education Stage1 Date")}
+                    subtitle={t("Education Stage1 Subtitle")}
+                    location={t("Education Stage1 location")}
+                  />
+                  <TableItem
+                    title={t("Education Stage2 Title")}
+                    date={t("Education Stage2 Date")}
+                    subtitle={t("Education Stage2 Subtitle")}
+                    location={t("Education Stage2 location")}
+                  />
+                  <TableItem
+                    title={t("Education Stage3 Title")}
+                    date={t("Education Stage3 Date")}
+                    subtitle={t("Education Stage3 Subtitle")}
+                    location={t("Education Stage3 location")}
+                  />
+                  <TableItem
+                    title={t("Education Stage4 Title")}
+                    date={t("Education Stage4 Date")}
+                    subtitle={t("Education Stage4 Subtitle")}
+                    location={t("Education Stage4 location")}
+                  />
+                  <TableItem
+                    title={t("Education Stage5 Title")}
+                    date={t("Education Stage5 Date")}
+                    subtitle={t("Education Stage5 Subtitle")}
+                    location={t("Education Stage5 location")}
+                  />
+                </OwlCarousel>
               </div>
             </div>
             <div className="row">

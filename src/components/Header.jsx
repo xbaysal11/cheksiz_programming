@@ -183,7 +183,7 @@ class Header extends Component {
                     {t("Header Contacts")}
                   </a>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item text-center">
                   <button
                     className={this.state.lang === "ru" ? "active" : ""}
                     onClick={() => {

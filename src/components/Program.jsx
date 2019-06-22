@@ -23,7 +23,7 @@ class Program extends Component {
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">
-                <div className="col-md-7 text-center heading-section  heading-section-black ">
+                <div className="col-md-7 text-center heading-section ">
                   <h2>{t("Program Title")}</h2>
                   <p>{t("Program Description")}</p>
                   <p>

@@ -51,7 +51,7 @@ class Education extends Component {
         <section className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 pb-5">
-              <div className="col-md-10 text-center heading-section ftco-animate">
+              <div className="col-md-10 text-center heading-section ">
                 <span className="subheading">{t("Education Subheading")}</span>
                 <h2 className="mb-4">{t("Education Title")}</h2>
                 <p>{t("Education Description")}</p>

@@ -42,7 +42,7 @@ class CourseMembers extends Component {
         <section className="ftco-section ftco-section-members">
           <div className="container">
             <div className="row no-gutters justify-content-center pb-5">
-              <div className="col-md-9 text-center heading-section heading-section-white ftco-animate">
+              <div className="col-md-9 text-center heading-section heading-section-white ">
                 <span className="subheading">{t("Member Subheading")} </span>
                 <h2 className="mb-4">{t("Member Title")}</h2>
                 <p>{t("Member Description")}</p>
@@ -51,7 +51,7 @@ class CourseMembers extends Component {
             <Fade left>
               <div className="row justify-content-start">
                 <div
-                  className="block-3 d-flex  ftco-animate"
+                  className="block-3 d-flex  "
                   data-scrollax-parent="true"
                 >
                   <div
@@ -89,7 +89,7 @@ class CourseMembers extends Component {
             <Fade right>
               <div className="row justify-content-end">
                 <div
-                  className="block-3 d-flex  ftco-animate"
+                  className="block-3 d-flex  "
                   data-scrollax-parent="true"
                 >
                   <div className="text">
@@ -133,7 +133,7 @@ class CourseMembers extends Component {
             </Fade>
 
             <div className="row">
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ">
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">
@@ -150,7 +150,7 @@ class CourseMembers extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ">
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">
@@ -167,7 +167,7 @@ class CourseMembers extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+              <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ">
                 <div className="block-18 text-center">
                   <div className="text text-white">
                     <strong className="number">

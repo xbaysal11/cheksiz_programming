@@ -15,7 +15,7 @@ class Home extends Component {
             data-scrollax-parent="true"
           >
             <div
-              className="col-md-8 ftco-animate text-center"
+              className="col-md-8  text-center"
               data-scrollax=" properties: { translateY: '70%' }"
             >
               <h1

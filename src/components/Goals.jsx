@@ -3,23 +3,15 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-
 import img1 from "../assets/img/1.png";
 import img2 from "../assets/img/2.png";
 import img3 from "../assets/img/3.png";
-library.add(fab, fas);
 
 const Item = ({ title, description, icon, color }) => (
-  <div className="col-md-8 col-lg-4 d-flex align-self-stretch ftco-animate row-block">
+  <div className="col-md-8 col-lg-4 d-flex align-self-stretch  row-block">
     <div className="media block-6 services d-block text-center">
       <div className="d-flex justify-content-center">
-        <div
-          className={`icon color-${color} d-flex justify-content-center mb-3`}
-        >
+        <div className={` color-${color} d-flex justify-content-center mb-3`}>
           <span>
             {/* <FontAwesomeIcon
               icon={icon}
@@ -46,7 +38,7 @@ class Goals extends Component {
         <section id="goals" className="ftco-section">
           <div className="container">
             <div className="row justify-content-center mb-5 ">
-              <div className="col-md-8 text-center heading-section ftco-animate">
+              <div className="col-md-8 text-center heading-section ">
                 <span className="subheading">{t("Goals Subheading")} </span>
                 <h2 className="mb-4">{t("Goals Title")}</h2>
                 <p>{t("Goals Description")}</p>

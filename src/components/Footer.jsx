@@ -3,14 +3,9 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-
 import eu from "../assets/img/27018.jpg";
-
-library.add(fab, fas);
+import facebook from "../assets/img/facebook.png";
+import instagram from "../assets/img/instagram.png";
 
 class Footer extends Component {
   render() {
@@ -120,7 +115,7 @@ class Footer extends Component {
                 </div>
               </div>
               <div className="col-md">
-                <div className="ftco-footer-widget ml-5">
+                <div className="ftco-footer-widget">
                   <h2 className="ftco-heading-2"> {t("Footer Links")}</h2>
                   <ul className="list-unstyled">
                     <li>
@@ -177,25 +172,27 @@ class Footer extends Component {
                 <div className="ftco-footer-widget">
                   <h2 className="ftco-heading-2"> {t("Footer Social")}</h2>
                   <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
-                    <li className="ftco-animate">
+                    <li className="">
                       <a
                         href="https://www.facebook.com/CheksizProgramming/"
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <span className="icon-facebook">
-                          <FontAwesomeIcon icon={["fab", "facebook"]} />
+                          {/* <FontAwesomeIcon icon={["fab", "facebook"]} /> */}
+                          <img src={facebook} alt="" />
                         </span>
                       </a>
                     </li>
-                    <li className="ftco-animate">
+                    <li className="">
                       <a
                         href="https://www.instagram.com/cheksizprogrammingkg/"
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <span className="icon-instagram">
-                          <FontAwesomeIcon icon={["fab", "instagram"]} />
+                          {/* <FontAwesomeIcon icon={["fab", "instagram"]} /> */}
+                          <img src={instagram} alt="" />
                         </span>
                       </a>
                     </li>

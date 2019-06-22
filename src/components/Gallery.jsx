@@ -84,7 +84,7 @@ class Gallery extends Component {
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">
-                <div className="col-md-12 text-center heading-section heading-section-white ftco-animate">
+                <div className="col-md-12 text-center heading-section heading-section-white ">
                   <h2>{t("Gallery Title")}</h2>
                   <p>{t("Gallery Description")}</p>
                   <div
@@ -153,15 +153,16 @@ class Gallery extends Component {
                     textAlign: "center"
                   }}
                 >
-                  <iframe
-                    title="video"
-                    width="835"
-                    height="470"
-                    src="https://www.youtube-nocookie.com/embed/fnNh66l7GRI"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <div className="iframe-container">
+                    <iframe
+                      title="video"
+                      className="video"
+                      src="https://www.youtube-nocookie.com/embed/fnNh66l7GRI"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
               </div>
             </div>

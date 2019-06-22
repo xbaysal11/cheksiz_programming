@@ -143,8 +143,7 @@ class Header extends Component {
               <FontAwesomeIcon
                 icon={["fas", "bars"]}
                 className="align-self-center"
-              />{" "}
-              {t("Menu")}
+              />
             </button>
 
             <div

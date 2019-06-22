@@ -12,7 +12,7 @@ class Methodic extends Component {
           <div className="parallax-img d-flex align-items-center">
             <div className="container">
               <div className="row d-flex justify-content-center">
-                <div className="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <div className="col-md-7 text-center heading-section heading-section-white ">
                   <h2>{t("Methodic Title")}</h2>
                   <p>
                     {t("Methodic Descrription1")}

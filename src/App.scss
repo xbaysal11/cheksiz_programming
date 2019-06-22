@@ -1,10 +1,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/variables";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400i&display=swap&subset=cyrillic');
 
 $font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Montserrat Alternates', sans-serif;
+$font-secondary: 'Lora', serif;
 
 $white: #fff;
 $black: #404044;
@@ -179,6 +179,8 @@ h1, h2, h3, h4, h5,
 		text-transform: uppercase;
 		font-size: 16px;
 		letter-spacing: .1em;
+		outline:none;
+		
 	}
 	
 	&.scrolled  {
@@ -299,14 +301,18 @@ h1, h2, h3, h4, h5,
   	right: 0;
   	bottom: 0;
 	  color: $white;
-	  font-family: $font-secondary !important;
+	//   font-family: $font-secondary !important;
 	  
+	@include media-breakpoint-down(md) {
+  		top: 0;
+
+	}
 	h1 {
 		font-size: 40px;
 		color: $white;
 		font-weight: 200;
 		@include media-breakpoint-down(md) {
-			font-size: 40px;
+			font-size: 20px;
 		}
 		strong{
 			font-weight: 800;
@@ -453,11 +459,6 @@ h1, h2, h3, h4, h5,
 }
 #about-us{
 	margin-top: 65em;
-}
-#goals{
-	// background: linear-gradient(0deg, rgba(3,18,207,1) 0%, rgba(109,115,199,1) 46%, transparent 100%);
-	// background: linear-gradient(0deg, rgba(3,120,207,1) 0%, rgba(80,151,204,1) 2%, rgba(255,255,255,0) 100%);
-
 }
 .bg-primary{
 	background: $primary;
@@ -779,7 +780,7 @@ h1, h2, h3, h4, h5,
 }
 
 .row-block{
-	padding-top:50px;
+	padding-top:30px;
 	&:hover{
 		box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 		transition: all 0.5s ease-in-out 0s;
@@ -800,8 +801,9 @@ h1, h2, h3, h4, h5,
 //### .block-3
 .block-3 {
 	width: 90%;
-	@include media-breakpoint-up(md){
-		margin-bottom: 7em;
+	@include media-breakpoint-down(sm){
+		// margin-bottom: 0;
+		width: 100%;
 	}
 	.text, .image {
 		width: 100%;
@@ -822,7 +824,6 @@ h1, h2, h3, h4, h5,
 		}
 		.heading {
 			font-family: $font-secondary !important;
-
 			font-size: 30px;
 			// margin-bottom: 10px;
 			color: $white;
@@ -854,7 +855,9 @@ h1, h2, h3, h4, h5,
 			box-shadow: 20px 20px 0 0 lighten($primary,25%);
 		}
 		&:hover{
+			
 			&:after{
+				transition: all 0.3s ease-in-out 0s;
 				box-shadow: 20px 20px 5px 5px lighten($primary,25%);
 			}
 		}
@@ -1146,6 +1149,10 @@ textarea.form-control {
 			margin-bottom: 40px;
 			font-size: 18px;
 			font-weight: 400;
+			@include media-breakpoint-down(sm){
+				margin-bottom: 10px;
+				margin-top: 20px;
+			}		
 		}
 		ul{
 			li{
@@ -1184,15 +1191,18 @@ textarea.form-control {
 			width: 50px;
 			display: block;
 			float: left;
-			background: rgba($white, .05);
+			// background: rgba($white, .05);
+			background: $white;
 			border-radius: 50%;
 			position: relative;
 			span {
 				position: absolute;
-				font-size: 26px;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+				img{
+					width: 35px;
+				}
 			}
 			&:hover {
 				color: $white;
@@ -1305,15 +1315,24 @@ textarea.form-control {
 		letter-spacing: 2px;
 		color: rgba(0,0,0,.2);
 	}
+	h2{
+		@include media-breakpoint-down(sm){
+			font-size: 22px;
+
+		}
+	}
 	
 	h1{
 		font-size: 16px;
-		font-weight: 700;
+		// font-weight: 700;
 		line-height: 2;
 		word-spacing: 2px;
 		letter-spacing: 1.5px;
 		@include media-breakpoint-down(sm){
-			font-size: 28px;
+			// font-size: 28px;
+			line-height: 1px;
+		word-spacing: 0;
+		letter-spacing:0;
 		}
 		div{
 			position: relative;
@@ -1347,6 +1366,10 @@ textarea.form-control {
 			font-size: 40px;
 			color: $white;
 			font-weight: 700;
+			@include media-breakpoint-down(sm){
+				font-size: 22px;
+	
+			}
 		}
 		p{
 			color: rgba(255,255,255,.7);
@@ -1420,6 +1443,7 @@ textarea.form-control {
 
 // magnific pop up
 
+
 .image-popup {
 	cursor: -webkit-zoom-in;
 	cursor: -moz-zoom-in;
@@ -1463,11 +1487,11 @@ textarea.form-control {
 		}
 	}
 	.counter-wrap{
-		
 		@include media-breakpoint-down(sm){
 			margin-bottom: 20px;
 		}
 	}
+	
 	.ftco-number {
 		display: block;
 		font-size: 72px;
@@ -1488,26 +1512,26 @@ textarea.form-control {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
 	border-radius: 50%;
 	position: relative;
 	display: block;
 	margin:0 auto;
 }
 .blog-entry{
+	margin: 0;
+	padding: 0;
 	// background: $white;
 	// -webkit-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
 	// -moz-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
 	// -ms-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
 	// -o-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
 	// box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-	// border: 1px solid lighten($black,71%);
 	@include media-breakpoint-up(md){
 		// margin-bottom: 30px;
 	}
 	@include media-breakpoint-down(sm){
-		// margin-bottom: 30px;
 	}
 	.text {
 		position: relative;
@@ -1559,7 +1583,6 @@ textarea.form-control {
 	@include gradient-background();	
 	color: $white;
 	font-size: 0.8em!important;
-
 	float: left;
   }
   .deal {
@@ -1575,6 +1598,7 @@ textarea.form-control {
   }
   .deal span:last-of-type {
 	font-size: 13px;
+	font-family: $font-secondary !important;
   }
   .promo .price {
 	display: block;
@@ -1599,13 +1623,14 @@ textarea.form-control {
 	margin: 10px 0 0 0;
   }
   @media only screen and (max-width: 1169px){
-	  .promos{
-	margin-bottom: 100px;
-
-	  }
+	  
 	  .promo {
-		width: 30%;
-		min-height: 60%;
+		width: 46%;
+		height: 300px;
+		min-height: 0;
+	  }
+	  .promo .price {
+		  height: auto;
 	  }
 	  .block-3{
 		  .image{
@@ -1623,7 +1648,7 @@ textarea.form-control {
 			
 			span {
 				display: block;
-		  font-size: 0.9em;
+		  		font-size: 0.9em;
 			}
 		}
 	}
@@ -1666,6 +1691,8 @@ textarea.form-control {
 		.vertical-timeline-element-subtitle{
 			color: darken($white,15%);
 			font-weight: 100;
+			font-family: $font-secondary !important;
+
 		}
 		.vertical-timeline-element-title{
 			font-weight: bold;
@@ -1676,7 +1703,33 @@ textarea.form-control {
 	}
 }
 
+.iframe-container {
+	overflow: hidden;
+	// Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+	padding-top: 56.25%;
+	position: relative;
+  iframe {
+	 border: 0;
+	 height: 100%;
+	 left: 0;
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+  }
+}
+
+
+
 @media only screen and (max-width: 1169px){
+	
+	.container-gallery {
+		min-height: 0;
+		margin-top: 0;
+	}
+	.bg-quote{
+		font-size: 5px;
+		display: none;
+	}
 	.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
 		border-right: 7px solid $primary;
 	
@@ -1702,6 +1755,17 @@ textarea.form-control {
 .container-gallery {
 	min-height: 350px;
 	margin-top: 30px;
+}
+@media only screen and (max-width: 1169px){
+	.hero-wrap .overlay {
+		bottom: 0;
+	}
+	.ftco-section-featured{
+		margin-top: -500px;
+	}
+	.heading-section h2 div{
+		margin-top:0;
+	}
 }
 div.gallery {
 	position: absolute;
@@ -1892,6 +1956,7 @@ div.gallery {
 
 //### .block-18 
 .block-18 {
+
 	.icon {
 		> span {
 			
@@ -1899,7 +1964,16 @@ div.gallery {
 		}
 	}
 	.text {
+		
+		margin-top: 50px;
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+			.col-md-6 , .col-lg-4{
+				width: 50%!important;
+			}
+		}
 		.number{
+
 			font-family: $font-secondary !important;
 		}
 		strong {

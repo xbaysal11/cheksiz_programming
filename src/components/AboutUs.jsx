@@ -52,7 +52,7 @@ class AboutUs extends Component {
     return (
       <Fade>
         <div id="about-us" className="bg-light">
-          <section className="ftco-section-featured ftco-animate">
+          <section className="ftco-section-featured ">
             <div className="container-fluid" data-scrollax-parent="true">
               <div
                 className="row no-gutters d-flex align-items-center"
@@ -79,7 +79,7 @@ class AboutUs extends Component {
                 <PhotoItem img={image_2} size={3} />
               </div>
               <div className="row d-flex justify-content-center">
-                <div className="col-md-8 text-center heading-section ftco-animate">
+                <div className="col-md-10 text-center heading-section ">
                   <h1>
                     <div className="row-block3">
                       <FontAwesomeIcon
@@ -99,10 +99,10 @@ class AboutUs extends Component {
 
                     <br />
                     <br />
-                    <span style={{ color: "#7B7B7B" }}>
-                      {t("About Us Autor")}
-                    </span>
                   </h1>
+                  <span style={{ color: "#7B7B7B" }}>
+                    {t("About Us Autor")}
+                  </span>
                 </div>
               </div>
             </div>

@@ -28,6 +28,7 @@ const Item = ({ img, text, autor, age }) => (
         }}
       >
         <span className="quote d-flex align-items-center justify-content-center">
+          {/* <img src={left} alt="" /> */}
           <FontAwesomeIcon
             className="icon-quote-left"
             icon={["fas", "quote-left"]}
@@ -53,13 +54,13 @@ class Testimonial extends Component {
         >
           <div className="container">
             <div className="row justify-content-center mb-5 ">
-              <div className="col-md-7 text-center heading-section ftco-animate">
+              <div className="col-md-7 text-center heading-section ">
                 <span className="subheading">{t("Testimonial Title")}</span>
                 <h2 className="mb-4">{t("Testimonial Subtitle")}</h2>
                 <p>{t("Testimonial Description")}</p>
               </div>
             </div>
-            <div className="row justify-content-center ftco-animate">
+            <div className="row justify-content-center ">
               <div className="col-md-10 ">
                 <OwlCarousel
                   className="owl-theme"

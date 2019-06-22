@@ -27,13 +27,12 @@ class Program extends Component {
                   <h2>{t("Program Title")}</h2>
                   <p>{t("Program Description")}</p>
                   <p>
-                    <a
-                      href="#!"
+                    <button
                       onClick={this.onOpenModal}
                       className="btn btn-primary mt-3 py-3 px-5"
                     >
                       {t("Program Title")}
-                    </a>
+                    </button>
                   </p>
                 </div>
               </div>
@@ -41,462 +40,814 @@ class Program extends Component {
           </div>
         </section>
         <Modal open={this.state.open} onClose={this.onCloseModal}>
-          <h5>
-            Front-end web development
-            <br />
-            <br />
-            1 Introduction
-            <br />
-            1.1 Web development
-            <br />
-            1.2 Front-end development
-            <br />
-            1.3 Back-end development
-            <br />
-            <br />
-            2 HTML
-            <br />
-            2.1 Introduction
-            <br />
-            2.1.1 Internet and the Web
-            <br />
-            2.1.2 Internet protocols
-            <br />
-            2.1.3 History of Internet <br />
-            2.1.4 History of the Web
-            <br />
-            2.1.5 History of web browsers
-            <br />
-            2.2 How the Web works
-            <br />
-            2.2.1 Hypertext and hypermedia
-            <br />
-            2.2.2 URLs
-            <br />
-            2.2.3 Domain name
-            <br />
-            2.2.4 IP address and Domain Name System
-            <br />
-            2.2.5 How we connect to the Internet
-            <br />
-            2.3 Creation of web pages
-            <br />
-            2.3.1 Web standards
-            <br />
-            2.3.2 Web development
-            <br />
-            2.3.3 Content management system
-            <br />
-            2.3.4 Blogger
-            <br />
-            2.4 HTML: Basics
-            <br />
-            2.4.1 History of HTML
-            <br />
-            2.4.2 Structure of a web page
-            <br />
-            2.4.3 Structure of a web page in HTML5: <br />
-            2.4.4 Basic tags and attributes
-            <br />
-            2.4.5 Encoding and charset
-            <br />
-            2.4.6 Headings
-            <br />
-            2.4.7 Defining text <br />
-            2.4.8 Lists <br />
-            2.4.9 Hyperlinks
-            <br />
-            2.5 HTML: Multimedia
-            <br />
-            2.5.1 Images
-            <br />
-            2.5.2 Image map
-            <br />
-            2.5.3 Audio and video
-            <br />
-            2.6 Publication of a website
-            <br />
-            2.6.1 How to buy a domain name
-            <br />
-            2.6.2 Hosting
-            <br />
-            2.6.3 FTP
-            <br />
-            2.6.4 How to publish a website
-            <br />
-            2.7 HTML: Forms
-            <br />
-            2.7.1 Basic controls: input (text, checkbox, radio, file, password,
-            hidden, button, submit, image, reset), button
-            <br />
-            2.7.2 Advanced controls: select (option, optgroup), textarea, label,
-            fieldset, legend
-            <br />
-            2.7.3 Form controls in HTML5
-            <br />
-            2.7.4 Attributes
-            <br />
-            2.7.5 Sending a form: GET and POST
-            <br />
-            2.8 HTML: Tables
-            <br />
-            2.8.1 Basic tags: table, tr, th, td
-            <br />
-            2.8.2 Advanced tags: thead, tbody, tfoot, caption, colgroup, col
-            <br />
-            2.9 Writing correct HTML
-            <br />
-            2.9.1 Validation
-            <br />
-            2.9.2 Typical errors
-            <br />
-            <br />
-            3 CSS
-            <br />
-            3.1 Basics
-            <br />
-            3.1.1 History of CSS
-            <br />
-            3.1.2 Structure of a stylesheet
-            <br />
-            3.1.3 Linking CSS with HTML
-            <br />
-            3.1.4 Basic properties and attributes
-            <br />
-            3.1.5 Basic selectors
-            <br />
-            3.1.6 Advanced selectors
-            <br />
-            3.1.7 Colours
-            <br />
-            3.1.8 Encoding and charset
-            <br />
-            3.1.9 CSS3 new properties
-            <br />
-            3.2 Formatting text
-            <br />
-            3.2.1 Font properties
-            <br />
-            3.2.2 Text properties
-            <br />
-            3.2.3 Other properties: letter-spacing, word-spacing, line-height,
-            white-space
-            <br />
-            3.3 Formatting lists
-            <br />
-            3.4 Cascade and Inheritance
-            <br />
-            3.4.1 Cascade
-            <br />
-            3.4.2 Specificity
-            <br />
-            3.4.3 Inheritance
-            <br />
-            3.4.4 Declared values, cascaded value, computed value, actual value
-            <br />
-            3.5 Box model
-            <br />
-            3.5.1 Box properties: width and height
-            <br />
-            3.5.2 Types of boxes: display
-            <br />
-            3.5.3 Border properties
-            <br />
-            3.5.4 Padding properties
-            <br />
-            3.5.5 Margin properties
-            <br />
-            3.5.6 Other properties: overflow, outline
-            <br />
-            3.6 Layout of a web page
-            <br />
-            3.6.1 Fix design
-            <br />
-            3.6.2 Elastic design
-            <br />
-            3.6.3 Liquid design
-            <br />
-            3.6.4 Responsive design
-            <br />
-            3.6.5 Grid design
-            <br />
-            3.6.6 Layout of a form
-            <br />
-            3.7 Responsive Web Design
-            <br />
-            3.7.1 One Web
-            <br />
-            3.7.2 Flexbox
-            <br />
-            3.7.3 Media query
-            <br />
-            3.8 Frameworks
-            <br />
-            3.8.1 What is a framework?
-            <br />
-            3.8.2 Grid design
-            <br />
-            3.8.3 Bootstrap 3<br />
-            3.8.4 Bootstrap 4 new features
-            <br />
-            3.8.5 Templates
-            <br />
-            3.9 Pre-processors
-            <br />
-            3.9.1 Less/Sass
-            <br />
-            3.9.2 Variables
-            <br />
-            3.9.3 Loops
-            <br />
-            3.10 Writing correct CSS
-            <br />
-            3.10.1 Validation
-            <br />
-            3.10.2 Sorting a CSS
-            <br />
-            3.10.3 Typical errors
-            <br />
-            <br />
-            4 Web design
-            <br />
-            4.1 Prototypes
-            <br />
-            4.2 Wireframes
-            <br />
-            4.3 Mockups
-            <br />
-            4.4 Typography
-            <br />
-            4.5 Colour
-            <br />
-            <br />
-            5 JavaScript
-            <br />
-            5.1 Basics
-            <br />
-            5.1.1 History of JavaScript
-            <br />
-            5.1.2 Linking JavaScript with HTML and CSS
-            <br />
-            5.1.3 Syntax
-            <br />
-            5.1.3.1 Variables
-            <br />
-            5.1.3.2 Data types
-            <br />
-            5.1.3.3 Expressions
-            <br />
-            5.1.3.4 Operators
-            <br />
-            5.1.3.5 Blocks of code
-            <br />
-            5.1.3.6 Control flow statements
-            <br />
-            5.1.3.6.1 Conditional
-            <br />
-            5.1.3.6.2 Loops
-            <br />
-            5.2 Functions
-            <br />
-            5.2.1 Declaration
-            <br />
-            5.2.2 Parameters
-            <br />
-            5.2.3 Return statement
-            <br />
-            5.2.4 Default parameters
-            <br />
-            5.2.5 Rest parameters
-            <br />
-            5.2.6 Arrow functions
-            <br />
-            5.2.7 Anonymous function
-            <br />
-            5.2.8 Closures
-            <br />
-            5.2.9 The arguments object
-            <br />
-            5.2.10 Predefined functions: decodeURI(), encodeURI(), escape(),
-            eval(), parseFloat(), parseInt(), unescape()
-            <br />
-            5.3 Document Object Model
-            <br />
-            5.3.1 Hierarchy of objects
-            <br />
-            5.3.2 Important objects: window, document
-            <br />
-            5.4 Browser Object Model
-            <br />
-            5.4.1 Important objects: cookies, history, location, navigator
-            <br />
-            5.5 Object oriented programming
-            <br />
-            5.5.1 Reference this
-            <br />
-            5.5.2 Properties and methods
-            <br />
-            5.5.3 Inheritance
-            <br />
-            5.5.4 Namespace
-            <br />
-            5.6 Changing the content and style of a web page
-            <br />
-            5.6.1 Functions for traversing a DOM
-            <br />
-            5.6.2 Property style
-            <br />
-            5.7 Events
-            <br />
-            5.7.1 Types of events
-            <br />
-            5.7.2 Add event
-            <br />
-            5.8 Frameworks
-            <br />
-            5.8.1 What is a framework?
-            <br />
-            5.8.2 JQuery
-            <br />
-            5.8.2.1 Selectors
-            <br />
-            5.8.2.2 Events
-            <br />
-            5.8.2.3 Append and prepend functions
-            <br />
-            <br />
-            6 Search Engine Optimization
-            <br />
-            6.1 How search engines work
-            <br />
-            6.2 Basic techniques
-            <br />
-            6.3 Advanced techniques
-            <br />
-            <br />
-            7 Web accessibility
-            <br />
-            7.1 What is web accessibility?
-            <br />
-            7.1.1 Definition
-            <br />
-            7.1.2 Examples of web accessibility problems
-            <br />
-            7.1.3 How the Web can improve the life of people with disability
-            <br />
-            7.1.4 Myths
-            <br />
-            7.1.5 Benefits
-            <br />
-            7.1.6 Examples of accessible websites
-            <br />
-            7.2 People with disability and the Web
-            <br />
-            7.2.1 People with disability
-            <br />
-            7.2.2 Different disabilities that can affect web accessibility
-            <br />
-            7.2.2.1 People with visual impairment
-            <br />
-            7.2.2.2 People with hearing impairment
-            <br />
-            7.2.2.3 People with motor impairment
-            <br />
-            7.2.2.4 People with cognitive impairment
-            <br />
-            7.2.2.5 People with speech and language disorder
-            <br />
-            7.2.2.6 People with multiple impairments
-            <br />
-            7.2.2.7 Elderly people
-            <br />
-            7.2.3 Assistive technology
-            <br />
-            7.3 Guidelines and laws
-            <br />
-            7.3.1 WCAG 1.0
-            <br />
-            7.3.2 WCAG 2.0
-            <br />
-            7.3.3 New features of WCAG 2.1
-            <br />
-            7.3.4 Laws
-            <br />
-            7.3.4.1 Examples
-            <br />
-            7.3.4.2 Kyrgyzstan
-            <br />
-            7.4 Accessible content
-            <br />
-            7.4.1 Four most problematic items
-            <br />
-            7.4.2 Images
-            <br />
-            7.4.3 Audio and video
-            <br />
-            7.4.4 Subtitles
-            <br />
-            7.4.5 Headings
-            <br />
-            7.4.6 Paragraphs and quotes
-            <br />
-            7.4.7 Language
-            <br />
-            7.4.8 Tables
-            <br />
-            7.4.9 Forms
-            <br />
-            7.4.10 Captchas
-            <br />
-            7.4.11 Electronic documents: Word and PDF
-            <br />
-            7.5 Accessible navigation
-            <br />
-            7.5.1 Title
-            <br />
-            7.5.2 Links
-            <br />
-            7.5.3 &ldquo;Skip to&rdquo; link
-            <br />
-            7.5.4 Keyboard navigation
-            <br />
-            7.5.5 Multiple ways and location
-            <br />
-            7.6 Accessible design
-            <br />
-            7.6.1 Contrast
-            <br />
-            7.6.2 Colour
-            <br />
-            7.6.3 Typography and dyslexia
-            <br />
-            7.6.4 Responsive web design
-            <br />
-            7.7 Accessible interaction
-            <br />
-            7.7.1 JavaScript
-            <br />
-            7.7.2 WAI-ARIA
-            <br />
-            7.8 Accessibility and Search Engine Optimization (SEO)
-            <br />
-            7.8.1 Introduction to Search Engine Optimization
-            <br />
-            7.8.2 Accessibility and Search Engine Optimization
-            <br />
-            7.9 Evaluation of web accessibility
-            <br />
-            7.9.1 Website Accessibility Conformance Evaluation Methodology
-            (WCAG-EM)
-            <br />
-            7.9.2 Automatic evaluation tools
-            <br />
-            7.9.2.1 AChecker
-            <br />
-            7.9.2.2 TAW
-            <br />
-            7.9.2.3 WAVE
-          </h5>
+          <p>Front-end web development</p>
+          <ol>
+            <li>
+              <h1>Introduction</h1>
+              <ol>
+                <li>
+                  <h2>Web development</h2>
+                </li>
+                <li>
+                  <h2>Front-end development</h2>
+                </li>
+                <li>
+                  <h2>Back-end development</h2>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="2">
+            <li>
+              <h1>HTML</h1>
+              <ol>
+                <li>
+                  <h2>Introduction</h2>
+                  <ol>
+                    <li>
+                      <h3>Internet and the Web</h3>
+                    </li>
+                    <li>
+                      <h3>Internet protocols</h3>
+                    </li>
+                    <li>
+                      <h3>History of Internet</h3>
+                    </li>
+                    <li>
+                      <h3>History of the Web</h3>
+                    </li>
+                    <li>
+                      <h3>History of web browsers</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>How the Web works</h2>
+                  <ol>
+                    <li>
+                      <h3>Hypertext and hypermedia</h3>
+                    </li>
+                    <li>
+                      <h3>URLs</h3>
+                    </li>
+                    <li>
+                      <h3>Domain name</h3>
+                    </li>
+                    <li>
+                      <h3>IP address and Domain Name System</h3>
+                    </li>
+                    <li>
+                      <h3>How we connect to the Internet</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Creation of web pages</h2>
+                  <ol>
+                    <li>
+                      <h3>Web standards</h3>
+                    </li>
+                    <li>
+                      <h3>Web development</h3>
+                    </li>
+                    <li>
+                      <h3>Content management system</h3>
+                    </li>
+                    <li>
+                      <h3>Blogger</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>HTML: Basics</h2>
+                  <ol>
+                    <li>
+                      <h3>History of HTML</h3>
+                    </li>
+                    <li>
+                      <h3>Structure of a web page</h3>
+                    </li>
+                    <li>
+                      <h3>Structure of a web page in HTML5:</h3>
+                    </li>
+                    <li>
+                      <h3>Basic tags and attributes</h3>
+                    </li>
+                    <li>
+                      <h3>Encoding and charset</h3>
+                    </li>
+                    <li>
+                      <h3>Headings</h3>
+                    </li>
+                    <li>
+                      <h3>Defining text</h3>
+                    </li>
+                    <li>
+                      <h3>Lists</h3>
+                    </li>
+                    <li>
+                      <h3>Hyperlinks</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>HTML: Multimedia</h2>
+                  <ol>
+                    <li>
+                      <h3>Images</h3>
+                    </li>
+                    <li>
+                      <h3>Image map</h3>
+                    </li>
+                    <li>
+                      <h3>Audio and video</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Publication of a website</h2>
+                  <ol>
+                    <li>
+                      <h3>How to buy a domain name</h3>
+                    </li>
+                    <li>
+                      <h3>Hosting</h3>
+                    </li>
+                    <li>
+                      <h3>FTP</h3>
+                    </li>
+                    <li>
+                      <h3>How to publish a website</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>HTML: Forms</h2>
+                  <ol>
+                    <li>
+                      <h3>
+                        Basic controls: input (text, checkbox, radio, file,
+                        password, hidden, button, submit, image, reset), button
+                      </h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Advanced controls: select (option, optgroup), textarea,
+                        label, fieldset, legend
+                      </h3>
+                    </li>
+                    <li>
+                      <h3>Form controls in HTML5</h3>
+                    </li>
+                    <li>
+                      <h3>Attributes</h3>
+                    </li>
+                    <li>
+                      <h3>Sending a form: GET and POST</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>HTML: Tables</h2>
+                  <ol>
+                    <li>
+                      <h3>Basic tags: table, tr, th, td</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Advanced tags: thead, tbody, tfoot, caption, colgroup,
+                        col
+                      </h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Writing correct HTML</h2>
+                  <ol>
+                    <li>
+                      <h3>Validation</h3>
+                    </li>
+                    <li>
+                      <h3>Typical errors</h3>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="3">
+            <li>
+              <h1>CSS</h1>
+              <ol>
+                <li>
+                  <h2>Basics</h2>
+                  <ol>
+                    <li>
+                      <h3>History of CSS</h3>
+                    </li>
+                    <li>
+                      <h3>Structure of a stylesheet</h3>
+                    </li>
+                    <li>
+                      <h3>Linking CSS with HTML</h3>
+                    </li>
+                    <li>
+                      <h3>Basic properties and attributes</h3>
+                    </li>
+                    <li>
+                      <h3>Basic selectors</h3>
+                    </li>
+                    <li>
+                      <h3>Advanced selectors</h3>
+                    </li>
+                    <li>
+                      <h3>Colours</h3>
+                    </li>
+                    <li>
+                      <h3>Encoding and charset</h3>
+                    </li>
+                    <li>
+                      <h3>CSS3 new properties</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Formatting text</h2>
+                  <ol>
+                    <li>
+                      <h3>Font properties</h3>
+                    </li>
+                    <li>
+                      <h3>Text properties</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Other properties: letter-spacing, word-spacing,
+                        line-height, white-space
+                      </h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Formatting lists</h2>
+                </li>
+                <li>
+                  <h2>Cascade and Inheritance</h2>
+                  <ol>
+                    <li>
+                      <h3>Cascade</h3>
+                    </li>
+                    <li>
+                      <h3>Specificity</h3>
+                    </li>
+                    <li>
+                      <h3>Inheritance</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Declared values, cascaded value, computed value, actual
+                        value
+                      </h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Box model</h2>
+                  <ol>
+                    <li>
+                      <h3>Box properties: width and height</h3>
+                    </li>
+                    <li>
+                      <h3>Types of boxes: display</h3>
+                    </li>
+                    <li>
+                      <h3>Border properties</h3>
+                    </li>
+                    <li>
+                      <h3>Padding properties</h3>
+                    </li>
+                    <li>
+                      <h3>Margin properties</h3>
+                    </li>
+                    <li>
+                      <h3>Other properties: overflow, outline</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Layout of a web page</h2>
+                  <ol>
+                    <li>
+                      <h3>Fix design</h3>
+                    </li>
+                    <li>
+                      <h3>Elastic design</h3>
+                    </li>
+                    <li>
+                      <h3>Liquid design</h3>
+                    </li>
+                    <li>
+                      <h3>Responsive design</h3>
+                    </li>
+                    <li>
+                      <h3>Grid design</h3>
+                    </li>
+                    <li>
+                      <h3>Layout of a form</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Responsive Web Design</h2>
+                  <ol>
+                    <li>
+                      <h3>One Web</h3>
+                    </li>
+                    <li>
+                      <h3>Flexbox</h3>
+                    </li>
+                    <li>
+                      <h3>Media query</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Frameworks</h2>
+                  <ol>
+                    <li>
+                      <h3>What is a framework?</h3>
+                    </li>
+                    <li>
+                      <h3>Grid design</h3>
+                    </li>
+                    <li>
+                      <h3>Bootstrap 3</h3>
+                    </li>
+                    <li>
+                      <h3>Bootstrap 4 new features</h3>
+                    </li>
+                    <li>
+                      <h3>Templates</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Pre-processors</h2>
+                  <ol>
+                    <li>
+                      <h3>Less/Sass</h3>
+                    </li>
+                    <li>
+                      <h3>Variables</h3>
+                    </li>
+                    <li>
+                      <h3>Loops</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Writing correct CSS</h2>
+                  <ol>
+                    <li>
+                      <h3>Validation</h3>
+                    </li>
+                    <li>
+                      <h3>Sorting a CSS</h3>
+                    </li>
+                    <li>
+                      <h3>Typical errors</h3>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="4">
+            <li>
+              <h1>Web design</h1>
+              <ol>
+                <li>
+                  <h2>Prototypes</h2>
+                </li>
+                <li>
+                  <h2>Wireframes</h2>
+                </li>
+                <li>
+                  <h2>Mockups</h2>
+                </li>
+                <li>
+                  <h2>Typography</h2>
+                </li>
+                <li>
+                  <h2>Colour</h2>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="5">
+            <li>
+              <h1>JavaScript</h1>
+              <ol>
+                <li>
+                  <h2>Basics</h2>
+                  <ol>
+                    <li>
+                      <h3>History of JavaScript</h3>
+                    </li>
+                    <li>
+                      <h3>Linking JavaScript with HTML and CSS</h3>
+                    </li>
+                    <li>
+                      <h3>Syntax</h3>
+                      <ol>
+                        <li>
+                          <h4>Variables</h4>
+                        </li>
+                        <li>
+                          <h4>Data types</h4>
+                        </li>
+                        <li>
+                          <h4>Expressions</h4>
+                        </li>
+                        <li>
+                          <h4>Operators</h4>
+                        </li>
+                        <li>
+                          <h4>Blocks of code</h4>
+                        </li>
+                        <li>
+                          <h4>Control flow statements</h4>
+                          <ol>
+                            <li>
+                              <h5>Conditional</h5>
+                            </li>
+                            <li>
+                              <h5>Loops</h5>
+                            </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Functions</h2>
+                  <ol>
+                    <li>
+                      <h3>Declaration</h3>
+                    </li>
+                    <li>
+                      <h3>Parameters</h3>
+                    </li>
+                    <li>
+                      <h3>Return statement</h3>
+                    </li>
+                    <li>
+                      <h3>Default parameters</h3>
+                    </li>
+                    <li>
+                      <h3>Rest parameters</h3>
+                    </li>
+                    <li>
+                      <h3>Arrow functions</h3>
+                    </li>
+                    <li>
+                      <h3>Anonymous function</h3>
+                    </li>
+                    <li>
+                      <h3>Closures</h3>
+                    </li>
+                    <li>
+                      <h3>The arguments object</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Predefined functions: decodeURI(), encodeURI(),
+                        escape(), eval(), parseFloat(), parseInt(), unescape()
+                      </h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Document Object Model</h2>
+                  <ol>
+                    <li>
+                      <h3>Hierarchy of objects</h3>
+                    </li>
+                    <li>
+                      <h3>Important objects: window, document</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Browser Object Model</h2>
+                  <ol>
+                    <li>
+                      <h3>
+                        Important objects: cookies, history, location, navigator
+                      </h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Object oriented programming</h2>
+                  <ol>
+                    <li>
+                      <h3>Reference this</h3>
+                    </li>
+                    <li>
+                      <h3>Properties and methods</h3>
+                    </li>
+                    <li>
+                      <h3>Inheritance</h3>
+                    </li>
+                    <li>
+                      <h3>Namespace</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Changing the content and style of a web page</h2>
+                  <ol>
+                    <li>
+                      <h3>Functions for traversing a DOM</h3>
+                    </li>
+                    <li>
+                      <h3>Property style</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Events</h2>
+                  <ol>
+                    <li>
+                      <h3>Types of events</h3>
+                    </li>
+                    <li>
+                      <h3>Add event</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Frameworks</h2>
+                  <ol>
+                    <li>
+                      <h3>What is a framework?</h3>
+                    </li>
+                    <li>
+                      <h3>JQuery</h3>
+                      <ol>
+                        <li>
+                          <h4>Selectors</h4>
+                        </li>
+                        <li>
+                          <h4>Events</h4>
+                        </li>
+                        <li>
+                          <h4>Append and prepend functions</h4>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="6">
+            <li>
+              <h1>Search Engine Optimization</h1>
+              <ol>
+                <li>
+                  <h2>How search engines work</h2>
+                </li>
+                <li>
+                  <h2>Basic techniques</h2>
+                </li>
+                <li>
+                  <h2>Advanced techniques</h2>
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <ol start="7">
+            <li>
+              <h1>Web accessibility</h1>
+              <ol>
+                <li>
+                  <h2>What is web accessibility?</h2>
+                  <ol>
+                    <li>
+                      <h3>Definition</h3>
+                    </li>
+                    <li>
+                      <h3>Examples of web accessibility problems</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        How the Web can improve the life of people with
+                        disability
+                      </h3>
+                    </li>
+                    <li>
+                      <h3>Myths</h3>
+                    </li>
+                    <li>
+                      <h3>Benefits</h3>
+                    </li>
+                    <li>
+                      <h3>Examples of accessible websites</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>People with disability and the Web</h2>
+                  <ol>
+                    <li>
+                      <h3>People with disability</h3>
+                    </li>
+                    <li>
+                      <h3>
+                        Different disabilities that can affect web accessibility
+                      </h3>
+                      <ol>
+                        <li>
+                          <h4>People with visual impairment</h4>
+                        </li>
+                        <li>
+                          <h4>People with hearing impairment</h4>
+                        </li>
+                        <li>
+                          <h4>People with motor impairment</h4>
+                        </li>
+                        <li>
+                          <h4>People with cognitive impairment</h4>
+                        </li>
+                        <li>
+                          <h4>People with speech and language disorder</h4>
+                        </li>
+                        <li>
+                          <h4>People with multiple impairments</h4>
+                        </li>
+                        <li>
+                          <h4>Elderly people</h4>
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <h3>Assistive technology</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Guidelines and laws</h2>
+                  <ol>
+                    <li>
+                      <h3>WCAG 1.0</h3>
+                    </li>
+                    <li>
+                      <h3>WCAG 2.0</h3>
+                    </li>
+                    <li>
+                      <h3>New features of WCAG 2.1</h3>
+                    </li>
+                    <li>
+                      <h3>Laws</h3>
+                      <ol>
+                        <li>
+                          <h4>Examples</h4>
+                        </li>
+                        <li>
+                          <h4>Kyrgyzstan</h4>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Accessible content</h2>
+                  <ol>
+                    <li>
+                      <h3>Four most problematic items</h3>
+                    </li>
+                    <li>
+                      <h3>Images</h3>
+                    </li>
+                    <li>
+                      <h3>Audio and video</h3>
+                    </li>
+                    <li>
+                      <h3>Subtitles</h3>
+                    </li>
+                    <li>
+                      <h3>Headings</h3>
+                    </li>
+                    <li>
+                      <h3>Paragraphs and quotes</h3>
+                    </li>
+                    <li>
+                      <h3>Language</h3>
+                    </li>
+                    <li>
+                      <h3>Tables</h3>
+                    </li>
+                    <li>
+                      <h3>Forms</h3>
+                    </li>
+                    <li>
+                      <h3>Captchas</h3>
+                    </li>
+                    <li>
+                      <h3>Electronic documents: Word and PDF</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Accessible navigation</h2>
+                  <ol>
+                    <li>
+                      <h3>Title</h3>
+                    </li>
+                    <li>
+                      <h3>Links</h3>
+                    </li>
+                    <li>
+                      <h3>“Skip to” link</h3>
+                    </li>
+                    <li>
+                      <h3>Keyboard navigation</h3>
+                    </li>
+                    <li>
+                      <h3>Multiple ways and location</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Accessible design</h2>
+                  <ol>
+                    <li>
+                      <h3>Contrast</h3>
+                    </li>
+                    <li>
+                      <h3>Colour</h3>
+                    </li>
+                    <li>
+                      <h3>Typography and dyslexia</h3>
+                    </li>
+                    <li>
+                      <h3>Responsive web design</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Accessible interaction</h2>
+                  <ol>
+                    <li>
+                      <h3>JavaScript</h3>
+                    </li>
+                    <li>
+                      <h3>WAI-ARIA</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Accessibility and Search Engine Optimization (SEO)</h2>
+                  <ol>
+                    <li>
+                      <h3>Introduction to Search Engine Optimization</h3>
+                    </li>
+                    <li>
+                      <h3>Accessibility and Search Engine Optimization</h3>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h2>Evaluation of web accessibility</h2>
+                  <ol>
+                    <li>
+                      <h3>
+                        Website Accessibility Conformance Evaluation Methodology
+                        (WCAG-EM)
+                      </h3>
+                    </li>
+                    <li>
+                      <h3>Automatic evaluation tools</h3>
+                      <ol>
+                        <li>
+                          <h4>AChecker</h4>
+                        </li>
+                        <li>
+                          <h4>TAW</h4>
+                        </li>
+                        <li>
+                          <h4>WAVE</h4>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
         </Modal>
       </div>
     );

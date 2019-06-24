@@ -13,12 +13,12 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import work_1 from "../assets/img/DSC_0019-min.JPG";
 import work_2 from "../assets/img/DSC_0057-min.JPG";
+
 library.add(fab, fas);
 
 class CourseMembers extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       requested: 0,
       choosed: 0,
@@ -33,7 +33,6 @@ class CourseMembers extends Component {
   onChange(isVisible) {
     console.log("Element is now %s", isVisible ? "visible" : "hidden");
   }
-
   render() {
     const { t } = this.props;
     const { requested, graduated, choosed } = this.state;
@@ -54,7 +53,6 @@ class CourseMembers extends Component {
                   <div
                     className="image"
                     style={{ backgroundImage: `url(${work_1})` }}
-                    // data-scrollax=" properties: { translateY: '-20%'}"
                   />
                   <div className="text">
                     <h4 className="subheading">{t("Member Subheading1")}</h4>
@@ -120,12 +118,10 @@ class CourseMembers extends Component {
                   <div
                     className="image"
                     style={{ backgroundImage: `url(${work_2})` }}
-                    // data-scrollax=" properties: { translateY: '-20%'}"
                   />
                 </div>
               </div>
             </Fade>
-
             <div className="row">
               <div className="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ">
                 <div className="block-18 text-center">

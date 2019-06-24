@@ -30,7 +30,6 @@ class Footer extends Component {
                         xmlns="http://www.w3.org/2000/svg"
                         xlink="http://www.w3.org/1999/xlink"
                       >
-                        {/* <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch --> */}
                         <title>logo_color</title>
                         <desc>Created with Sketch.</desc>
                         <defs />
@@ -179,7 +178,6 @@ class Footer extends Component {
                         rel="noreferrer noopener"
                       >
                         <span className="icon-facebook">
-                          {/* <FontAwesomeIcon icon={["fab", "facebook"]} /> */}
                           <img src={facebook} alt="" />
                         </span>
                       </a>
@@ -191,7 +189,6 @@ class Footer extends Component {
                         rel="noreferrer noopener"
                       >
                         <span className="icon-instagram">
-                          {/* <FontAwesomeIcon icon={["fab", "instagram"]} /> */}
                           <img src={instagram} alt="" />
                         </span>
                       </a>

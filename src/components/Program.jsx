@@ -6,15 +6,12 @@ class Program extends Component {
   state = {
     open: false
   };
-
   onOpenModal = () => {
     this.setState({ open: true });
   };
-
   onCloseModal = () => {
     this.setState({ open: false });
   };
-
   render() {
     const { t } = this.props;
     return (

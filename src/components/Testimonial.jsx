@@ -24,7 +24,6 @@ const Item = ({ img, text, autor, age }) => (
         }}
       >
         <span className="quote d-flex align-items-center justify-content-center">
-          {/* <img src={left} alt="" /> */}
           <FontAwesomeIcon
             className="icon-quote-left"
             icon={["fas", "quote-left"]}
@@ -99,14 +98,7 @@ class Testimonial extends Component {
             </div>
             <div className="row justify-content-center ">
               <div className="col-md-10 ">
-                <Slider
-                  {...slickSettings}
-                  // className="owl-theme"
-                  // items={1}
-                  // loop
-                  // margin={10}
-                  // nav
-                >
+                <Slider {...slickSettings}>
                   <Item
                     autor={t("Testimonial Autor1")}
                     age={t("Testimonial Age1")}

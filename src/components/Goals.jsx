@@ -13,11 +13,6 @@ const Item = ({ title, description, icon, color }) => (
       <div className="d-flex justify-content-center">
         <div className={` color-${color} d-flex justify-content-center mb-3`}>
           <span>
-            {/* <FontAwesomeIcon
-              icon={icon}
-              className="align-self-center"
-              size="3x"
-            /> */}
             <img src={icon} alt="" style={{ height: "100%" }} />
           </span>
         </div>
@@ -32,7 +27,6 @@ const Item = ({ title, description, icon, color }) => (
 class Goals extends Component {
   render() {
     const { t } = this.props;
-
     return (
       <Fade>
         <section id="goals" className="ftco-section">
@@ -48,21 +42,18 @@ class Goals extends Component {
               <Item
                 title={t("Goals Start")}
                 description={t("Goals Start Description")}
-                // icon={["fas", "hourglass-start"]}
                 icon={img1}
                 color="2"
               />
               <Item
                 title={t("Goals Short")}
                 description={t("Goals Short Description")}
-                // icon={["fas", "hourglass-half"]}
                 icon={img2}
                 color="1"
               />
               <Item
                 title={t("Goals Long")}
                 description={t("Goals Long Description")}
-                // icon={["fas", "hourglass-end"]}
                 icon={img3}
                 color="3"
               />

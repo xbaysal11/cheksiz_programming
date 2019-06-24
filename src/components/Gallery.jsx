@@ -16,13 +16,11 @@ const PhotoItem = ({ category, gallery_category, order, img, text }) => (
               <img src={img} alt="" />
             </LightgalleryItem>
           </Pulse>
-          {/* <div className="desc">{text}</div> */}
         </div>
       </Masonry>
     </div>
   </div>
 );
-
 const Button = ({ categoryName, dataFilter, ...props }) => (
   <button
     {...props}
@@ -34,7 +32,6 @@ const Button = ({ categoryName, dataFilter, ...props }) => (
     {categoryName}
   </button>
 );
-
 class Gallery extends Component {
   state = {
     photos: [],
@@ -42,11 +39,9 @@ class Gallery extends Component {
     assets: [],
     currentCategory: null
   };
-
   componentDidMount() {
     this.fetchImages();
   }
-
   fetchImages = async () => {
     const response = await fetch(
       "https://cdn.contentful.com/spaces/9odcsb42457k/environments/master/entries?access_token=9O1ReKZAMMbZMz0BUBoLTRC_EIj5WZySKpRrEQs3T6k"
@@ -63,16 +58,13 @@ class Gallery extends Component {
     });
     console.log(data);
   };
-
   mix_container = createRef();
-
   render() {
     const m_state = this.mixer ? this.mixer.getState() : undefined;
     if (m_state) {
       console.log(m_state.activeFilter.selector);
     }
     const { t } = this.props;
-
     return (
       <Fade>
         <section id="gallery" className="ftco-section-parallax">
@@ -85,8 +77,6 @@ class Gallery extends Component {
                   <div
                     className=" text-center"
                     style={{
-                      // margin: "2em  ",
-                      // paddingTop: "2em",
                       width: "100%",
                       textAlign: "center"
                     }}
@@ -110,7 +100,6 @@ class Gallery extends Component {
                         }}
                       />
                     ))}
-
                     <div ref={this.mix_container} className="container-gallery">
                       {this.state.photos
                         .filter(photo =>

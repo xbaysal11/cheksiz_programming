@@ -19,28 +19,7 @@ library.add(fab, fas);
 const PhotoItem = ({ img, size }) => (
   <div className={`col-md-${size}`}>
     <div className="featured-img">
-      {/* <div className="text-1 p-4 d-flex align-items-center">
-      <h3>
-        Racks
-        <br />
-        <span className="tag">Website</span>
-      </h3>
-    </div> */}
       <img src={img} className="img-fluid" alt="" />
-      {/* <div className="text p-4 d-flex align-items-center">
-      <div className="user d-flex align-items-center">
-        <div
-          className="user-img mr-3"
-          style={{
-            backgroundImage: `url(${person_1})`
-          }}
-        />
-        <h3>
-          John Bruce <br />
-          <span className="position">Designer</span>
-        </h3>
-      </div>
-    </div> */}
     </div>
   </div>
 );
@@ -66,7 +45,6 @@ class AboutUs extends Component {
                         <PhotoItem img={image_4} size={4} />
                       </div>
                     </div>
-
                     <div className="col-md-12">
                       <div className="row no-gutters d-flex align-items-start">
                         <PhotoItem img={image_6} size={8} />
@@ -95,7 +73,6 @@ class AboutUs extends Component {
                         size="2x"
                       />
                     </div>
-
                     <br />
                     <br />
                   </h1>

@@ -5,7 +5,6 @@ import { withTranslation } from "react-i18next";
 class Home extends Component {
   render() {
     const { t } = this.props;
-
     return (
       <div className="hero-wrap js-fullheight">
         <div className="overlay" />

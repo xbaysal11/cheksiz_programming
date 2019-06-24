@@ -15,6 +15,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, fas);
+
 const TableItem = ({ title, subtitle, date, location, scale }) => (
   <div className={` promo ${scale} row-block2`}>
     <div className="deal">
@@ -41,7 +42,6 @@ const StepItem = ({ date, title, subtitle, icon, text }) => (
     <p className="vertical-timeline-element-text">{text}</p>
   </VerticalTimelineElement>
 );
-
 class Education extends Component {
   render() {
     const { t } = this.props;
@@ -98,7 +98,6 @@ class Education extends Component {
                 <p>{t("Education Description")}</p>
               </div>
             </div>
-            {/* {t("")} */}
             <div className="row">
               <div className="promos col-md-12">
                 <Slider {...slickSettings}>
@@ -140,37 +139,32 @@ class Education extends Component {
                 <StepItem
                   title={t("Education Line Stage1 Title")}
                   subtitle={t("Education Line Stage1 Date")}
-                  icon="➀"
+                  icon="1"
                   text={t("Education Line Stage1 Subtitle")}
-                  // icon={["fas", "cat"]}
                 />
                 <StepItem
                   title={t("Education Line Stage2 Title")}
                   subtitle={t("Education Line Stage2 Date")}
                   text={t("Education Line Stage2 Subtitle")}
-                  icon="➁"
-                  // icon={["fas", "horse"]}
+                  icon="2"
                 />
                 <StepItem
                   title={t("Education Line Stage3 Title")}
                   subtitle={t("Education Line Stage3 Date")}
                   text={t("Education Line Stage3 Subtitle")}
-                  icon="➂"
-                  // icon={["fas", "dove"]}
+                  icon="3"
                 />
                 <StepItem
                   title={t("Education Line Stage4 Title")}
                   subtitle={t("Education Line Stage4 Date")}
                   text={t("Education Line Stage4 Subtitle")}
-                  icon="➃"
-                  // icon={["fas", "dog"]}
+                  icon="4"
                 />
                 <StepItem
                   title={t("Education Line Stage5 Title")}
                   subtitle={t("Education Line Stage5 Date")}
                   text={t("Education Line Stage5 Subtitle")}
-                  icon="➄"
-                  // icon={["fas", "kiwi-bird"]}
+                  icon="5"
                 />
               </VerticalTimeline>
             </div>

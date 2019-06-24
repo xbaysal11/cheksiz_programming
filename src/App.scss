@@ -49,7 +49,6 @@ $quarternary: #79efb4;
 }
 
 html {
-  // overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -105,21 +104,15 @@ h5,
   background-color: #fff;
 }
 .ftco-navbar-light {
-  // background: transparent!important;
   @include gradient-background();
-  // position: absolute;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 3;
-  // top: 30px;
   top: 0;
   @include media-breakpoint-down(md) {
-    // background: $black!important;
-    // background: transparent!important;
     @include gradient-background();
     top: 0;
-    // position: relative;
     position: fixed;
   }
 
@@ -141,14 +134,11 @@ h5,
         margin: 0 0.3em;
       }
       .active {
-        // text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.823);
         border-bottom: 2px solid yellow;
       }
 
       > .nav-link {
         font-size: 16px;
-        // padding-top: .9rem;
-        // padding-bottom: .9rem;
         padding: 0 10px;
         color: darken($white, 15%);
         font-weight: 400;
@@ -327,7 +317,6 @@ ol {
   right: 0;
   bottom: 0;
   color: $white;
-  //   font-family: $font-secondary !important;
 
   @include media-breakpoint-down(md) {
     top: 0;
@@ -345,7 +334,6 @@ ol {
     .text-highl {
       color: $primary !important;
       background: rgba(250, 242, 19, 0.918);
-      // color:lighten($primary,25%)!important;
     }
   }
   p {
@@ -404,7 +392,6 @@ ol {
   right: -50px;
 }
 .bg-light {
-  // background: #dad9ff!important;
   background: transparent !important;
 }
 #about-us {
@@ -430,7 +417,6 @@ ol {
   }
   &.btn-primary {
     background: lighten($primary, 15%);
-    // background: $primary;
     border: 2px solid lighten($primary, 15%);
     color: $white;
     &:hover {
@@ -522,7 +508,6 @@ ol {
       opacity: 0;
       height: 80px;
       background: $white;
-      // border: 1px solid lighten($black,70%);
       border-top: none;
       z-index: -1;
       @include transition(0.3s);
@@ -535,7 +520,6 @@ ol {
       opacity: 0;
       height: 80px;
       background: $white;
-      // border: lighten($black,60%);
       border-bottom: none;
       z-index: -1;
       @include transition(0.3s);
@@ -549,9 +533,6 @@ ol {
       -o-transform: scale(0.92);
       transform: scale(0.92);
       @include transition(0.3s);
-      // padding: 4px;
-      // background: $white;
-      // @include border-radius(4px);
     }
     &:hover {
       z-index: 1;
@@ -712,11 +693,6 @@ ol {
     padding: 10em 0;
     @include gradient-background();
   }
-  // .heading-section-white {
-  //   h2 {
-  //     font-weight: 400 !important;
-  //   }
-  // }
 }
 .ftco-section-program {
   position: relative;
@@ -758,7 +734,6 @@ ol {
 .block-3 {
   width: 90%;
   @include media-breakpoint-down(sm) {
-    // margin-bottom: 0;
     width: 100%;
   }
   .text,
@@ -781,13 +756,11 @@ ol {
     .heading {
       font-family: $font-secondary !important;
       font-size: 30px;
-      // margin-bottom: 10px;
       color: $white;
     }
 
     ul {
       color: $white;
-
       list-style: none;
       padding: 0;
       &:hover {
@@ -912,7 +885,6 @@ ol {
       line-height: 1.4;
       color: $white;
       font-size: 14px;
-      // text-transform: uppercase;
       span {
         display: inline-block;
         margin-right: 10px;
@@ -959,7 +931,6 @@ ol {
     content: "";
     width: 360%;
     background: lighten($primary, 10%);
-    // background: #333644;
   }
   @include media-breakpoint-down(sm) {
     background: transparent;
@@ -1107,7 +1078,6 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: $primary;
-  // padding: 8em 0 8em 0;
   .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -1160,7 +1130,6 @@ textarea.form-control {
       width: 50px;
       display: block;
       float: left;
-      // background: rgba($white, .05);
       background: $white;
       border-radius: 50%;
       position: relative;
@@ -1239,7 +1208,6 @@ textarea.form-control {
 }
 
 // Map
-
 #map {
   height: 400px;
   width: 100%;
@@ -1247,10 +1215,6 @@ textarea.form-control {
     height: 300px;
   }
 }
-// .container-fluid {
-// 	padding-left: 0 !important;
-// 	padding-right: 0 !important;
-// }
 
 @-webkit-keyframes pulse {
   0% {
@@ -1290,8 +1254,6 @@ textarea.form-control {
     font-size: 30px;
     letter-spacing: 1px;
     font-family: $font-secondary !important;
-    // font-family: !important;
-    // font-weight: 700;
     @include media-breakpoint-down(sm) {
       font-size: 22px;
     }
@@ -1299,12 +1261,10 @@ textarea.form-control {
 
   h1 {
     font-size: 16px;
-    // font-weight: 700;
     line-height: 2;
     word-spacing: 1.2px;
     letter-spacing: 1px;
     @include media-breakpoint-down(sm) {
-      // font-size: 28px;
       line-height: 1px;
       word-spacing: 0;
       letter-spacing: 0;
@@ -1339,9 +1299,7 @@ textarea.form-control {
     h2 {
       font-size: 30px;
       font-family: $font-secondary !important;
-
       color: $white;
-      // font-weight: 700;
       @include media-breakpoint-down(sm) {
         font-size: 22px;
       }
@@ -1414,7 +1372,6 @@ textarea.form-control {
 }
 
 // magnific pop up
-
 .image-popup {
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
@@ -1491,15 +1448,6 @@ textarea.form-control {
 .blog-entry {
   margin: 0;
   padding: 0;
-  // background: $white;
-  // -webkit-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-  // -moz-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-  // -ms-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-  // -o-box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-  // box-shadow: 0px 4px 18px -12px rgba(0,0,0,0.75);
-  @include media-breakpoint-up(md) {
-    // margin-bottom: 30px;
-  }
   @include media-breakpoint-down(sm) {
   }
   .text {
@@ -1545,11 +1493,8 @@ textarea.form-control {
 }
 .promo {
   width: 90%;
-  // width: 19.1%;
   margin: 0 auto;
   height: 100%;
-  // margin: 5px 5px;
-  // background: $primary;
   @include gradient-background();
   color: $white;
   font-size: 0.8em !important;
@@ -1574,8 +1519,6 @@ textarea.form-control {
   display: block;
   height: 90px;
   background: $primary;
-  // background: darken($primary,3%);
-  // @include gradient-background();
   margin: 15px 0 10px 0;
   text-align: center;
   font-size: 1.4em;
@@ -1644,8 +1587,9 @@ textarea.form-control {
     z-index: 10;
     background: rgb(33, 150, 243);
     color: #fff;
-    line-height: 100%;
-    font-size: 3.8em;
+    line-height: 1.45;
+    font-size: 2.5em;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
   }
 
@@ -1678,7 +1622,6 @@ textarea.form-control {
 
 .iframe-container {
   overflow: hidden;
-  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
   padding-top: 56.25%;
   position: relative;
   iframe {
@@ -1773,10 +1716,8 @@ div.gallery:hover img {
 }
 
 div.gallery img {
-  // display: block;
   width: 100%;
   border-radius: 5px;
-  // height: auto;
 }
 
 div.desc {
@@ -1794,10 +1735,6 @@ div.desc {
   cursor: pointer;
   float: left;
   width: 24%;
-  // position: relative;
-  // height: 12.5em;
-  // height: auto !important;
-
   overflow: hidden;
 }
 
@@ -1859,7 +1796,6 @@ div.desc {
 .block-17 {
   form {
     .fields {
-      // width: calc(100% - 140px);
       width: 100%;
       position: relative;
       @include media-breakpoint-down(md) {
@@ -1875,9 +1811,6 @@ div.desc {
           padding-right: 0;
           margin-bottom: 10px;
         }
-        // &:first-child {
-        // 	// padding-left: 0;
-        // }
         &:last-child {
           border-right: none;
         }
@@ -1896,19 +1829,15 @@ div.desc {
         width: 100%;
         @include border-radius(4px);
         &::-webkit-input-placeholder {
-          /* Chrome/Opera/Safari */
           color: lighten($black, 30%);
         }
         &::-moz-placeholder {
-          /* Firefox 19+ */
           color: lighten($black, 30%);
         }
         &:-ms-input-placeholder {
-          /* IE 10+ */
           color: lighten($black, 30%);
         }
         &:-moz-placeholder {
-          /* Firefox 18- */
           color: lighten($black, 30%);
         }
       }
@@ -2405,19 +2334,15 @@ div.desc {
       color: rgba(255, 255, 255, 0.8) !important;
       @include border-radius(30px);
       &::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
         color: rgba(255, 255, 255, 0.8) !important;
       }
       &::-moz-placeholder {
-        /* Firefox 19+ */
         color: rgba(255, 255, 255, 0.8) !important;
       }
       &:-ms-input-placeholder {
-        /* IE 10+ */
         color: rgba(255, 255, 255, 0.8) !important;
       }
       &:-moz-placeholder {
-        /* Firefox 18- */
         color: rgba(255, 255, 255, 0.8) !important;
       }
     }

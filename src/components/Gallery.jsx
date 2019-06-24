@@ -2,44 +2,30 @@ import React, { Component, createRef } from "react";
 
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
 import Masonry from "react-masonry-component";
-import mixitup from "mixitup";
 import { LightgalleryItem } from "react-lightgallery";
 
-const GROUP1 = [
-  "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
-  "https://images.unsplash.com/photo-1551633550-64761da5342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
-  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-];
-
-const GROUP2 = [
-  "https://images.unsplash.com/photo-1551833726-deb5e781c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-  "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  "https://images.unsplash.com/photo-1551833726-deb5e781c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-  "https://images.unsplash.com/photo-1551803021-92431219e83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-  "https://images.unsplash.com/photo-1551852284-ce16dd4d63d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-];
-
 const PhotoItem = ({ category, gallery_category, order, img, text }) => (
-  <div className={`mix ${category}`} data-order={order}>
-    <div className="responsive">
-      <Masonry>
-        <div className="gallery">
-          <LightgalleryItem group={gallery_category} src={img}>
-            <img src={img} alt="" />
-          </LightgalleryItem>
-          {/* <div className="desc">{text}</div> */}
-        </div>
-      </Masonry>
+  <Pulse>
+    <div className={`mix ${category}`} data-order={order}>
+      <div className="responsive">
+        <Masonry>
+          <div className="gallery">
+            <LightgalleryItem group={gallery_category} src={img}>
+              <img src={img} alt="" />
+            </LightgalleryItem>
+            {/* <div className="desc">{text}</div> */}
+          </div>
+        </Masonry>
+      </div>
     </div>
-  </div>
+  </Pulse>
 );
 
-const Button = ({ categoryName, dataFilter }) => (
+const Button = ({ categoryName, dataFilter, ...props }) => (
   <button
+    {...props}
     type="button"
     data-filter={`${dataFilter}`}
     style={{ width: "180px", margin: "15px", padding: "8px 15px" }}
@@ -50,24 +36,33 @@ const Button = ({ categoryName, dataFilter }) => (
 );
 
 class Gallery extends Component {
+  state = {
+    photos: [],
+    categories: [],
+    assets: [],
+    currentCategory: null
+  };
+
   componentDidMount() {
-    this.mixer = mixitup(".container-gallery", {
-      selectors: {
-        target: ".mix"
-      },
-      animation: {
-        duration: 300,
-        effects: "fade stagger(100ms)",
-        staggerSequence: function(i) {
-          return 2 * i - 5 * (i / 3 - (1 / 3) * (i % 3));
-        }
-      }
-    });
-    this.mix_container.current.addEventListener("mixEnd", () => {
-      this.forceUpdate();
-    });
-    this.forceUpdate();
+    this.fetchImages();
   }
+
+  fetchImages = async () => {
+    const response = await fetch(
+      "https://cdn.contentful.com/spaces/9odcsb42457k/environments/master/entries?access_token=9O1ReKZAMMbZMz0BUBoLTRC_EIj5WZySKpRrEQs3T6k"
+    );
+    const data = await response.json();
+    this.setState({
+      photos: data.items.filter(i => i.sys.contentType.sys.id === "group"),
+      categories: data.items.filter(
+        i => i.sys.contentType.sys.id === "galleryCategory"
+      ),
+      assets: data.includes.Asset.reduce((acc, currentItem) => {
+        return { ...acc, [currentItem.sys.id]: currentItem.fields.file.url };
+      }, {})
+    });
+    console.log(data);
+  };
 
   mix_container = createRef();
 
@@ -98,45 +93,42 @@ class Gallery extends Component {
                   >
                     <Button
                       categoryName={t("Gallery Tab all")}
-                      dataFilter="all"
+                      onClick={() => {
+                        this.setState({ currentCategory: null });
+                      }}
                     />
-                    {[GROUP1, GROUP2].map((_, idx) =>
-                      idx === 0 ? (
-                        <Button
-                          key={idx}
-                          categoryName={t("Gallery Tab 2")}
-                          dataFilter={`.group_${idx}`}
-                        />
-                      ) : (
-                        <Button
-                          key={idx}
-                          categoryName={t("Gallery Tab 1")}
-                          dataFilter={`.group_${idx}`}
-                        />
-                      )
-                    )}
+                    {this.state.categories.map((category, idx) => (
+                      <Button
+                        key={idx}
+                        categoryName={
+                          category.fields.title === "Bishkek"
+                            ? t("Gallery Tab 1")
+                            : t("Gallery Tab 2")
+                        }
+                        onClick={() => {
+                          this.setState({ currentCategory: category.sys.id });
+                        }}
+                      />
+                    ))}
 
                     <div ref={this.mix_container} className="container-gallery">
-                      {[GROUP1, GROUP2]
-                        .reduce((acc, current, idx) => {
-                          return [
-                            ...acc,
-                            ...current.map(u => ({
-                              url: u,
-                              group: `group_${idx}`
-                            }))
-                          ];
-                        }, [])
+                      {this.state.photos
+                        .filter(photo =>
+                          !this.state.currentCategory
+                            ? true
+                            : photo.fields.reference.sys.id ===
+                              this.state.currentCategory
+                        )
                         .map((po, idx) => (
                           <PhotoItem
                             key={idx}
-                            img={po.url}
-                            category={po.group}
+                            img={this.state.assets[po.fields.image.sys.id]}
+                            category={po.fields.reference.sys.id}
                             gallery_category={
                               m_state &&
                               m_state.activeFilter.selector === ".mix"
                                 ? "alls"
-                                : po.group
+                                : po.fields.reference.sys.id
                             }
                             order="1"
                             text="description"

@@ -10,6 +10,7 @@
     "animate": "^1.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
+    "contentful": "^7.8.0",
     "i18next": "^17.0.4",
     "i18next-browser-languagedetector": "^3.0.1",
     "mixitup": "^3.3.1",
@@ -27,10 +28,12 @@
     "react-responsive-modal": "^4.0.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.0.1",
+    "react-slick": "^0.24.0",
     "react-vertical-timeline-component": "^2.3.1",
     "react-visibility-sensor": "^5.0.2",
     "reactjs-popup": "^1.4.1",
-    "scrollax": "^1.0.0"
+    "scrollax": "^1.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

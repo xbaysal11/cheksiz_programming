@@ -3,15 +3,12 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import Slider from "react-slick";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -37,7 +34,6 @@ const StepItem = ({ date, title, subtitle, icon, text }) => (
   <VerticalTimelineElement
     className="vertical-timeline-element"
     date={date}
-    // icon={<FontAwesomeIcon icon={icon} size="5x" />}
     icon={icon}
   >
     <h3 className="vertical-timeline-element-title">{title}</h3>
@@ -49,7 +45,48 @@ const StepItem = ({ date, title, subtitle, icon, text }) => (
 class Education extends Component {
   render() {
     const { t } = this.props;
-
+    const slickSettings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      autoplaySpeed: 2000,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
+          }
+        }
+      ]
+    };
     return (
       <Fade>
         <section className="ftco-section">
@@ -64,13 +101,7 @@ class Education extends Component {
             {/* {t("")} */}
             <div className="row">
               <div className="promos col-md-12">
-                <OwlCarousel
-                  className="owl-theme"
-                  items={3}
-                  // loop
-                  margin={10}
-                  nav
-                >
+                <Slider {...slickSettings}>
                   <TableItem
                     title={t("Education Stage1 Title")}
                     date={t("Education Stage1 Date")}
@@ -101,7 +132,7 @@ class Education extends Component {
                     subtitle={t("Education Stage5 Subtitle")}
                     location={t("Education Stage5 location")}
                   />
-                </OwlCarousel>
+                </Slider>
               </div>
             </div>
             <div className="row">

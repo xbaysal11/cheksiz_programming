@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
+import { css } from "@emotion/core";
 import { LightgalleryProvider } from "react-lightgallery";
+import { PulseLoader } from "react-spinners";
 
 import {
   Header,
@@ -20,10 +21,28 @@ import {
 
 import "./App.scss";
 
+const override = css`
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+`;
 class App extends Component {
+  state = {
+    isLoading: false
+  };
+  onLoading = () => {
+    this.setState({ isLoading: true });
+  };
   render() {
     return (
-      <div className="App">
+      <div className="App" onLoad={this.onLoading}>
         <LightgalleryProvider>
           <Header />
           <Home />
@@ -39,31 +58,14 @@ class App extends Component {
           <Testimonial />
           <Footer />
         </LightgalleryProvider>
-
-        {/* loader */}
-        {/* <div id="ftco-loader" className="show fullscreen">
-          <svg className="circular" width="48px" height="48px">
-            <circle
-              className="path-bg"
-              cx="24"
-              cy="24"
-              r="22"
-              fill="none"
-              strokeWidth="4"
-              stroke="#eeeeee"
-            />
-            <circle
-              className="path"
-              cx="24"
-              cy="24"
-              r="22"
-              fill="none"
-              strokeWidth="4"
-              stroke-miterlimit="10"
-              stroke="#F96D00"
-            />
-          </svg>
-        </div> */}
+        {!this.state.isLoading && (
+          <PulseLoader
+            css={override}
+            sizeUnit={"px"}
+            size={10}
+            color={"#0312cf"}
+          />
+        )}
       </div>
     );
   }

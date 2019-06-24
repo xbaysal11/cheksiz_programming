@@ -3,9 +3,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Slider from "react-slick";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -45,6 +43,47 @@ const Item = ({ img, text, autor, age }) => (
 );
 class Testimonial extends Component {
   render() {
+    const slickSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            arrows: false
+          }
+        }
+      ]
+    };
     const { t } = this.props;
     return (
       <Fade>
@@ -62,12 +101,13 @@ class Testimonial extends Component {
             </div>
             <div className="row justify-content-center ">
               <div className="col-md-10 ">
-                <OwlCarousel
-                  className="owl-theme"
-                  items={1}
-                  loop
-                  margin={10}
-                  nav
+                <Slider
+                  {...slickSettings}
+                  // className="owl-theme"
+                  // items={1}
+                  // loop
+                  // margin={10}
+                  // nav
                 >
                   <Item
                     autor={t("Testimonial Autor1")}
@@ -87,7 +127,7 @@ class Testimonial extends Component {
                     img={person_3}
                     text={t("Testimonial Text3")}
                   />
-                </OwlCarousel>
+                </Slider>
               </div>
             </div>
           </div>

@@ -1,5 +1,8 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/variables";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 
@@ -90,6 +93,17 @@ h5,
   color: $primary !important;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
 .ftco-navbar-light {
   // background: transparent!important;
   @include gradient-background();
@@ -378,90 +392,17 @@ ol {
   font-size: 20px;
 }
 
-//OWL CAROUSEL
-.owl-carousel {
-  position: relative;
-  .owl-item {
-    opacity: 0.4;
-    &.active {
-      opacity: 1;
-    }
-  }
-
-  .owl-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    .owl-prev,
-    .owl-next {
-      outline: none;
-      position: absolute;
-      transform: translateY(-50%);
-      margin-top: -10px;
-      @include transition(0.7s);
-      span {
-        color: $primary;
-
-        font-size: 100px;
-      }
-      opacity: 0;
-    }
-    .owl-prev {
-      left: 0;
-    }
-    .owl-next {
-      right: 0;
-    }
-  }
-  .owl-dots {
-    text-align: center;
-    .owl-dot {
-      width: 10px;
-      height: 10px;
-      margin: 5px;
-      border-radius: 50%;
-      background: lighten($black, 60%);
-      &.active {
-        background: $secondary;
-      }
-      span {
-        display: none;
-      }
-    }
-  }
-  &:hover {
-    .owl-nav {
-      .owl-prev,
-      .owl-next {
-        opacity: 1;
-        background: none;
-      }
-      .owl-prev {
-        left: -50px;
-      }
-      .owl-next {
-        right: -50px;
-      }
-    }
-  }
+.slick-prev:before,
+.slick-next:before {
+  color: lighten($primary, 25%);
+  font-size: 40px;
 }
-// .owl-custom-nav {
-// 	float: right;
-// 	position: relative;
-// 	z-index: 10;
-// 	border: 1px solid red;
-// 	.owl-custom-prev,
-// 	.owl-custom-next {
-// 		padding: 10px;
-// 		font-size: 30px;
-// 		// background: #ccc;
-// 		line-height: 0;
-// 		width: 60px;
-// 		text-align: center;
-// 		display: inline-block;
-// 	}
-// }
-
+.slick-prev {
+  left: -50px;
+}
+.slick-next {
+  right: -50px;
+}
 .bg-light {
   // background: #dad9ff!important;
   background: transparent !important;
@@ -1436,11 +1377,6 @@ textarea.form-control {
   }
 }
 .testimony-wrap {
-  -webkit-box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
-  -ms-box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
-  -o-box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
   background: $white;
   display: block;
   position: relative;
@@ -1608,10 +1544,10 @@ textarea.form-control {
   margin-bottom: 30px;
 }
 .promo {
-  width: 100%;
-  // margin: 0 10px;
+  width: 90%;
   // width: 19.1%;
-  min-height: 100%;
+  margin: 0 auto;
+  height: 100%;
   // margin: 5px 5px;
   // background: $primary;
   @include gradient-background();
@@ -1658,9 +1594,10 @@ textarea.form-control {
 }
 @media only screen and (max-width: 1169px) {
   .promo {
-    width: 46%;
     height: 300px;
+    width: 100%;
     min-height: 0;
+    margin: 0;
   }
   .promo .price {
     height: auto;

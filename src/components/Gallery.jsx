@@ -7,20 +7,20 @@ import Masonry from "react-masonry-component";
 import { LightgalleryItem } from "react-lightgallery";
 
 const PhotoItem = ({ category, gallery_category, order, img, text }) => (
-  <Pulse>
-    <div className={`mix ${category}`} data-order={order}>
-      <div className="responsive">
-        <Masonry>
-          <div className="gallery">
+  <div className={`mix ${category}`} data-order={order}>
+    <div className="responsive">
+      <Masonry>
+        <div className="gallery">
+          <Pulse>
             <LightgalleryItem group={gallery_category} src={img}>
               <img src={img} alt="" />
             </LightgalleryItem>
-            {/* <div className="desc">{text}</div> */}
-          </div>
-        </Masonry>
-      </div>
+          </Pulse>
+          {/* <div className="desc">{text}</div> */}
+        </div>
+      </Masonry>
     </div>
-  </Pulse>
+  </div>
 );
 
 const Button = ({ categoryName, dataFilter, ...props }) => (

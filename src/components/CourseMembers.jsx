@@ -11,8 +11,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
-import work_1 from "../assets/img/37367146_407467006408206_4380283471260549120_n.jpg";
-import work_2 from "../assets/img/38284453_421666701654903_3074187438420131840_n.jpg";
+import work_1 from "../assets/img/DSC_0019-min.JPG";
+import work_2 from "../assets/img/DSC_0057-min.JPG";
 library.add(fab, fas);
 
 class CourseMembers extends Component {
@@ -50,10 +50,7 @@ class CourseMembers extends Component {
             </div>
             <Fade left>
               <div className="row justify-content-start">
-                <div
-                  className="block-3 d-flex  "
-                  data-scrollax-parent="true"
-                >
+                <div className="block-3 d-flex  " data-scrollax-parent="true">
                   <div
                     className="image"
                     style={{ backgroundImage: `url(${work_1})` }}
@@ -88,10 +85,7 @@ class CourseMembers extends Component {
             </Fade>
             <Fade right>
               <div className="row justify-content-end">
-                <div
-                  className="block-3 d-flex  "
-                  data-scrollax-parent="true"
-                >
+                <div className="block-3 d-flex  " data-scrollax-parent="true">
                   <div className="text">
                     <h4 className="subheading">{t("Member Subheading2")}</h4>
                     <h2 className="heading">

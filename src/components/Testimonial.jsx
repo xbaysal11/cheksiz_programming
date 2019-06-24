@@ -11,8 +11,6 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import person_1 from "../assets/img/person_1.jpg";
-import person_2 from "../assets/img/person_2.jpg";
-import person_3 from "../assets/img/person_3.jpg";
 
 library.add(fab, fas);
 
@@ -118,13 +116,13 @@ class Testimonial extends Component {
                   <Item
                     autor={t("Testimonial Autor2")}
                     age={t("Testimonial Age2")}
-                    img={person_2}
+                    img={person_1}
                     text={t("Testimonial Text2")}
                   />
                   <Item
                     autor={t("Testimonial Autor3")}
                     age={t("Testimonial Age3")}
-                    img={person_3}
+                    img={person_1}
                     text={t("Testimonial Text3")}
                   />
                 </Slider>

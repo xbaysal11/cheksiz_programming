@@ -8,14 +8,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
-import image_1 from "../assets/img/50605809_516659252155647_7538535789169213440_n.jpg";
-import image_2 from "../assets/img/38878078_429647717523468_2305239364445143040_o.jpg";
-import image_3 from "../assets/img/DSC_0040.JPG";
-import image_4 from "../assets/img/DSC_0018.JPG";
-import image_5 from "../assets/img/45099222_474542216367351_4772021030237503488_o.jpg";
-import image_6 from "../assets/img/DSC_0047.JPG";
+import image_1 from "../assets/img/DSC_0019-min.JPG";
+import image_2 from "../assets/img/DSC_0878-min.JPG";
+import image_3 from "../assets/img/DSC_0041-min.JPG";
+import image_4 from "../assets/img/DSC_0018-min.JPG";
+import image_5 from "../assets/img/DSC_0690-min.JPG";
+import image_6 from "../assets/img/DSC_0057-min.JPG";
 library.add(fab, fas);
-// import person_1 from "../assets/img/DSC_0070.JPG";
 
 const PhotoItem = ({ img, size }) => (
   <div className={`col-md-${size}`}>

@@ -4,11 +4,6 @@ import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
 import person_1 from "../assets/img/person_1.jpg";
-import person_2 from "../assets/img/person_2.jpg";
-import person_3 from "../assets/img/person_3.jpg";
-import person_4 from "../assets/img/person_4.jpg";
-import person_5 from "../assets/img/person_1.jpg";
-import person_6 from "../assets/img/person_2.jpg";
 
 const Item = ({ name, img, prof, size }) => (
   <div className={`col-lg-${size} text-center   `}>
@@ -50,7 +45,7 @@ class Team extends Component {
               />
               <Item
                 name={t("Person2 name")}
-                img={person_2}
+                img={person_1}
                 prof={t("Person2 prof")}
                 size="3 "
               />
@@ -58,25 +53,25 @@ class Team extends Component {
             <div className="row justify-content-md-center">
               <Item
                 name={t("Person3 name")}
-                img={person_3}
+                img={person_1}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person4 name")}
-                img={person_4}
+                img={person_1}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person5 name")}
-                img={person_5}
+                img={person_1}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person6 name")}
-                img={person_6}
+                img={person_1}
                 prof={t("Person3456 prof")}
                 size="3"
               />

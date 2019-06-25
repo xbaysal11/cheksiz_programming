@@ -3,7 +3,12 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import { withTranslation } from "react-i18next";
 
-import person_1 from "../assets/img/person_1.jpg";
+import sergio from "../assets/img/sergio_lujan_mora.jpg";
+import timur from "../assets/img/timur_amanov.jpg";
+import kozhonazar from "../assets/img/kozhonazar_rysbaev.jpg";
+import almaz from "../assets/img/almaz_zholdoshbekov.jpg";
+import maksat from "../assets/img/maksat_abdykaparov.jpg";
+import elis from "../assets/img/elis_matiev.png";
 
 const Item = ({ name, img, prof, size }) => (
   <div className={`col-lg-${size} text-center   `}>
@@ -39,13 +44,13 @@ class Team extends Component {
             <div className="row justify-content-center">
               <Item
                 name={t("Person1 name")}
-                img={person_1}
+                img={sergio}
                 prof={t("Person1 prof")}
                 size="3"
               />
               <Item
                 name={t("Person2 name")}
-                img={person_1}
+                img={maksat}
                 prof={t("Person2 prof")}
                 size="3 "
               />
@@ -53,25 +58,25 @@ class Team extends Component {
             <div className="row justify-content-md-center">
               <Item
                 name={t("Person3 name")}
-                img={person_1}
+                img={timur}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person4 name")}
-                img={person_1}
+                img={kozhonazar}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person5 name")}
-                img={person_1}
+                img={elis}
                 prof={t("Person3456 prof")}
                 size="3"
               />
               <Item
                 name={t("Person6 name")}
-                img={person_1}
+                img={almaz}
                 prof={t("Person3456 prof")}
                 size="3"
               />

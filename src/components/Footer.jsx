@@ -15,7 +15,7 @@ class Footer extends Component {
         <footer id="contacts" className="ftco-footer ftco-bg-dark ftco-section">
           <div className="container">
             <div className="row ">
-              <div className="col-md">
+              <div className="col-md-4">
                 <div className="ftco-footer-widget ">
                   <h2 className="ftco-heading-2">
                     {" "}
@@ -113,7 +113,7 @@ class Footer extends Component {
                   <p>{t("Footer Description")}</p>
                 </div>
               </div>
-              <div className="col-md">
+              <div className="col-md-2">
                 <div className="ftco-footer-widget">
                   <h2 className="ftco-heading-2"> {t("Footer Links")}</h2>
                   <ul className="list-unstyled">
@@ -150,7 +150,7 @@ class Footer extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="col-md">
+              <div className="col-md-3">
                 <div className="ftco-footer-widget">
                   <h2 className="ftco-heading-2">{t("Header Contacts")}</h2>
                   <ul className="list-unstyled">
@@ -167,7 +167,7 @@ class Footer extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="col-md">
+              <div className="col-md-3">
                 <div className="ftco-footer-widget">
                   <h2 className="ftco-heading-2"> {t("Footer Social")}</h2>
                   <ul className="ftco-footer-social list-unstyled float-md-left float-lft">

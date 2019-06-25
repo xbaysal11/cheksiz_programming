@@ -30,9 +30,6 @@ class CourseMembers extends Component {
     this.setState({ choosed: 35 });
     this.setState({ graduated: 20 });
   }
-  onChange(isVisible) {
-    console.log("Element is now %s", isVisible ? "visible" : "hidden");
-  }
   render() {
     const { t } = this.props;
     const { requested, graduated, choosed } = this.state;

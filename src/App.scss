@@ -92,17 +92,6 @@ h5,
   color: $primary !important;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-}
 .ftco-navbar-light {
   @include gradient-background();
   position: fixed;
@@ -1323,6 +1312,20 @@ textarea.form-control {
   background-position: center center;
 }
 
+.container .modalText {
+  ul,
+  li,
+  h1,
+  h2,
+  h3 {
+    color: $black !important;
+    margin: 0;
+  }
+  h1 {
+    text-decoration: underline overline;
+  }
+}
+
 //TESTIMONY
 .testimony-section {
   position: relative;
@@ -1348,7 +1351,7 @@ textarea.form-control {
     position: relative;
     .quote {
       position: absolute;
-      bottom: -10px;
+      bottom: 0;
       right: 0;
       width: 40px;
       height: 40px;
@@ -1360,12 +1363,13 @@ textarea.form-control {
     }
   }
   .name {
-    font-weight: 500;
-    font-size: 16px;
-    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 20px;
     color: $primary;
+    margin: 0;
   }
   .position {
+    margin-bottom: 20px;
     font-size: 13px;
     color: lighten($primary, 10%);
   }
@@ -1482,7 +1486,7 @@ textarea.form-control {
 .odometer-inside {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .promos {
@@ -1537,7 +1541,7 @@ textarea.form-control {
 }
 @media only screen and (max-width: 1169px) {
   .promo {
-    height: 300px;
+    height: auto;
     width: 100%;
     min-height: 0;
     margin: 0;
@@ -1594,7 +1598,6 @@ textarea.form-control {
   }
 
   .vertical-timeline-element-content {
-    // background:$primary;
     @include gradient-background();
     box-shadow: 0 7px 20px -5px rgba(0, 0, 0, 0.2);
     h1,
@@ -1662,7 +1665,7 @@ textarea.form-control {
   }
   .vertical-timeline-element-icon {
     line-height: 100%;
-    font-size: 2.5em !important;
+    font-size: 1.8em !important;
   }
 }
 .vertical-timeline--two-columns
@@ -1684,8 +1687,6 @@ textarea.form-control {
 .container-gallery {
   min-height: 350px;
   margin-top: 30px;
-}
-@media only screen and (max-width: 1169px) {
   .hero-wrap .overlay {
     bottom: 0;
   }
@@ -1717,7 +1718,6 @@ div.gallery:hover img {
 
 div.gallery img {
   width: 100%;
-  border-radius: 5px;
 }
 
 div.desc {

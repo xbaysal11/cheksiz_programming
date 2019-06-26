@@ -9,6 +9,8 @@ import kozhonazar from "../assets/img/kozhonazar_rysbaev.jpg";
 import almaz from "../assets/img/almaz_zholdoshbekov.jpg";
 import maksat from "../assets/img/maksat_abdykaparov.jpg";
 import elis from "../assets/img/elis_matiev.png";
+import gulzada from "../assets/img/gulzada_urgunalieva.jpg";
+import shirin from "../assets/img/shirin_mukanbetova.jpg";
 
 const Item = ({ name, img, prof, size }) => (
   <div className={`col-lg-${size} text-center   `}>
@@ -42,6 +44,18 @@ class Team extends Component {
               </div>
             </div>
             <div className="row justify-content-center">
+              <Item
+                name={t("Person7 name")}
+                img={shirin}
+                prof={t("Person7 prof")}
+                size="3"
+              />
+              <Item
+                name={t("Person8 name")}
+                img={gulzada}
+                prof={t("Person8 prof")}
+                size="3 "
+              />
               <Item
                 name={t("Person1 name")}
                 img={sergio}

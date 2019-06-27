@@ -1312,17 +1312,29 @@ textarea.form-control {
   background-position: center center;
 }
 
-.container .modalText {
+.styles_modal__gNwvD {
   ul,
   li,
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $black !important;
     margin: 0;
+    font-size: 1em !important;
   }
   h1 {
-    text-decoration: underline overline;
+    font-weight: 900;
+    // text-decoration: underline;
+  }
+  h2 {
+    font-weight: 700;
+    font-style: oblique;
+  }
+  h4 {
+    font-weight: 300;
   }
 }
 
@@ -1494,6 +1506,26 @@ textarea.form-control {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
+  .slick-dots {
+    top: 0;
+    width: auto;
+    li {
+      button {
+        &::before {
+          color: lighten($secondary, 30%);
+          opacity: 0.6;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &::before {
+          color: $white;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 .promo {
   width: 90%;
@@ -1540,6 +1572,19 @@ textarea.form-control {
   margin: 10px 0 0 0;
 }
 @media only screen and (max-width: 1169px) {
+  .styles_modal__gNwvD {
+    ul,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 0.95em !important;
+      padding: 0 10px;
+    }
+  }
   .promo {
     height: auto;
     width: 100%;

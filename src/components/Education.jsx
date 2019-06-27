@@ -61,7 +61,7 @@ class Education extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: false,
-            dots: false,
+            dots: true,
             arrows: false
           }
         },
@@ -71,7 +71,7 @@ class Education extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: false,
-            dots: false,
+            dots: true,
             arrows: false
           }
         },
@@ -81,7 +81,7 @@ class Education extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: false,
-            dots: false,
+            dots: true,
             arrows: false
           }
         }

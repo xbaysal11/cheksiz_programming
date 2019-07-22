@@ -26,7 +26,42 @@ class Header extends Component {
           id="ftco-navbar"
         >
           <div className="container">
-            <a className="navbar-brand" href="#!">
+            <a
+              className="navbar-brand"
+              href="#!"
+              style={{
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "spacce-between"
+                }}
+              >
+                <img
+                  style={{
+                    width: "3.0em",
+                    height: "1.5em",
+                    margin: "0 auto"
+                  }}
+                  src={eu}
+                  alt=""
+                />
+                <span
+                  style={{
+                    fontSize: "8px",
+                    textAlign: "center",
+                    margin: "3px 0"
+                  }}
+                >
+                  {t("US")}
+                  <br />
+                  {t("US1")}
+                </span>
+              </div>
               <svg
                 id="logo_kssda"
                 width="73px"
@@ -35,6 +70,7 @@ class Header extends Component {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xlink="http://www.w3.org/1999/xlink"
+                style={{ margin: " 0 10px" }}
               >
                 <title>Logo</title>
                 <desc>Created with Sketch.</desc>
@@ -99,14 +135,7 @@ class Header extends Component {
               <span style={{ fontSize: "0.8em", margin: "0 10px 0 10px" }}>
                 KSSDA
               </span>
-              <img
-                style={{
-                  width: "4.2em",
-                  height: "2.2em"
-                }}
-                src={eu}
-                alt=""
-              />
+
               <div className="ripple-container" />
             </a>
             <button

@@ -119,7 +119,7 @@ class Gallery extends Component {
                   </div>
                 </div>
               </div>
-              <div
+              {/* <div
                 style={{
                   marginTop: "2em",
                   paddingTop: "2em",
@@ -137,7 +137,7 @@ class Gallery extends Component {
                     allowFullScreen
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
